@@ -1,0 +1,482 @@
+export const stats = [
+  { value: "R$ 154 mil", label: "Receita em operação local" },
+  { value: "1,86", label: "ROAS com lucro de 46%" },
+  { value: "1.016", label: "Vendas rastreadas em um ciclo" },
+  { value: "7+", label: "Negócios locais em destaque" },
+] as const;
+
+export const aggregateStats = [
+  { value: "+R$ 250M", label: "em faturamento gerado para clientes" },
+  { value: "+R$ 50M", label: "gerenciados em tráfego pago" },
+  { value: "+10M", label: "leads qualificados gerados" },
+  { value: "+20", label: "projetos estratégicos entregues" },
+] as const;
+
+export const clients = [
+  { name: "Briston Wear", segment: "Moda", slug: "briston-wear" },
+  { name: "Rainha Marketing", segment: "Serviços", slug: "rainha-marketing" },
+  { name: "Vidas em Movimento", segment: "Saúde", slug: "vidas-em-movimento" },
+  { name: "Focopill", segment: "Saúde", slug: "focopill" },
+  { name: "Solaria Doceria", segment: "Alimentação", slug: "solaria-doceria" },
+  { name: "Rota Delas", segment: "Serviços", slug: "rota-delas" },
+  { name: "Marcelo Antonio Imóveis", segment: "Imobiliário", slug: "marcelo-antonio-imoveis" },
+] as const;
+
+export const pillars = [
+  {
+    slug: "neuromarketing",
+    title: "Neuromarketing",
+    kicker: "Diferencial técnico",
+    summary:
+      "Gatilhos mentais, jornada de decisão e copy que falam com o cérebro — não com o achismo.",
+  },
+  {
+    slug: "trafego-pago",
+    title: "Tráfego pago",
+    kicker: "Aquisição",
+    summary:
+      "Meta Ads e Google Ads com funil, tracking e otimização pelo caixa, não pela vaidade.",
+  },
+  {
+    slug: "conteudo",
+    title: "Conteúdo",
+    kicker: "Percepção",
+    summary:
+      "Identidade de conteúdo e calendário editorial que posicionam o negócio local como referência.",
+  },
+  {
+    slug: "branding",
+    title: "Branding",
+    kicker: "Marca",
+    summary:
+      "Identidade visual, naming e posicionamento para o cliente escolher você — e não o concorrente da esquina.",
+  },
+] as const;
+
+export const services = [
+  {
+    slug: "neuromarketing",
+    title: "Neuromarketing aplicado",
+    audience: "Negócios locais que vendem no presencial, no WhatsApp ou no e-commerce.",
+    description:
+      "Aplicamos ciência da decisão no comercial: o que o cliente sente, o que ele compara e o que o faz fechar. Sem jargão vazio — gatilhos, prova e oferta no lugar certo da jornada.",
+    includes: [
+      "Mapeamento da jornada de decisão do cliente local",
+      "Gatilhos mentais por etapa do funil",
+      "Copy persuasiva para anúncio, bio, landing e WhatsApp",
+      "Estrutura de oferta, prova social e objeção",
+      "Testes de mensagem com leitura de conversão",
+    ],
+  },
+  {
+    slug: "trafego-pago",
+    title: "Tráfego pago",
+    audience: "Quem já investe em anúncio e não vê o caixa crescer — ou quem vai começar com método.",
+    description:
+      "Campanhas de Meta Ads e Google Ads montadas como sistema de aquisição: público certo, criativo de resposta direta, tracking e escala só quando o número fecha.",
+    includes: [
+      "Estratégia e estrutura de campanhas",
+      "Criativo e copy de resposta direta",
+      "Funil e pixel / conversões da API",
+      "Otimização contínua por ROAS e lucro",
+      "Relatório com leitura de caixa, não só de clique",
+    ],
+  },
+  {
+    slug: "conteudo",
+    title: "Produção de conteúdo",
+    audience: "Marcas locais que postam sem consistência ou sem uma voz que venda.",
+    description:
+      "Conteúdo deixa de ser 'postar todo dia' e vira ativo de posicionamento: o cliente te reconhece, confia e chega no comercial já aquecido.",
+    includes: [
+      "Identidade de conteúdo e tom de voz",
+      "Calendário editorial por objetivo comercial",
+      "Roteiros para Reels, stories e carrossel",
+      "Integração com anúncio e WhatsApp",
+      "Direção criativa alinhada ao branding",
+    ],
+  },
+  {
+    slug: "branding",
+    title: "Branding empresarial",
+    audience: "Negócios que competem por preço porque a marca ainda não ocupa um lugar na cabeça do cliente.",
+    description:
+      "Posicionamento, identidade visual e naming para o negócio local parecer — e ser — a escolha óbvia da região.",
+    includes: [
+      "Diagnóstico de percepção e concorrência local",
+      "Posicionamento e território de marca",
+      "Identidade visual e aplicações",
+      "Naming e sistema verbal",
+      "Guia de uso para equipe e fornecedores",
+    ],
+  },
+  {
+    slug: "automacao",
+    title: "Automação e atendimento",
+    audience: "Operações que perdem venda no follow-up, no atraso do WhatsApp ou na falta de CRM.",
+    description:
+      "WhatsApp, CRM e follow-up automatizado — a mesma lógica de despacho e operação que usamos em sistemas como o Vyria, aplicada ao comercial do negócio local.",
+    includes: [
+      "Fluxos de WhatsApp com qualificação",
+      "CRM e pipeline comercial",
+      "Follow-up automático de orçamento e carrinho",
+      "Integração com anúncios e cardápio / catálogo",
+      "Painel de pedidos e indicadores do mês",
+    ],
+  },
+  {
+    slug: "inteligencia-artificial",
+    title: "Soluções de IA",
+    audience: "Empresas que precisam atender mais sem inflar o time.",
+    description:
+      "Agentes de IA para atendimento, qualificação e venda assistida. A máquina faz a triagem; o time fecha o que importa.",
+    includes: [
+      "Agentes de atendimento no WhatsApp e no site",
+      "Qualificação e priorização de leads",
+      "Scripts treinados na oferta e no tom da marca",
+      "Handoff humano com contexto",
+      "Métricas de resposta, conversão e SLA",
+    ],
+  },
+  {
+    slug: "posicionamento",
+    title: "Estratégias de posicionamento",
+    audience: "Quem depende de indicação e ainda não ocupa um lugar claro no mercado local.",
+    description:
+      "Definimos categoria, promessa, prova e linguagem para o negócio ser lembrado — e escolhido — na hora da compra.",
+    includes: [
+      "Pesquisa de categoria e concorrentes locais",
+      "Promessa única e território de comunicação",
+      "Arquitetura de prova (números, cases, autoridade)",
+      "Plano de ocupação de canais",
+      "Alinhamento de oferta e preço percebido",
+    ],
+  },
+  {
+    slug: "vendas-online",
+    title: "Vendas online",
+    audience: "Lojas, delivery, infoproduto e marcas que precisam vender fora do balcão.",
+    description:
+      "Do catálogo ao checkout: funil, página, copy, pixel e operação para o pedido entrar todos os dias — não só quando 'o Instagram pega'.",
+    includes: [
+      "Estrutura de loja, landing ou cardápio digital",
+      "Oferta, kit e ticket médio",
+      "Checkout e recuperação de venda",
+      "Tráfego e remarketing de compra",
+      "Leitura de conversão, ticket e margem",
+    ],
+  },
+  {
+    slug: "sistemas-personalizados",
+    title: "Sistemas personalizados",
+    audience: "Operações que já cresceram no improviso e agora precisam de ferramenta própria.",
+    description:
+      "Apps, painéis e automações sob medida — da gestão de pedidos ao despacho. Tecnologia a serviço do faturamento, não o contrário.",
+    includes: [
+      "Diagnóstico do gargalo operacional",
+      "Painéis de gestão e indicadores",
+      "Apps web e fluxos internos",
+      "Integração com WhatsApp, ads e pagamentos",
+      "Operação replicável para o time",
+    ],
+  },
+] as const;
+
+export const cases = [
+  {
+    slug: "focopill",
+    client: "Focopill",
+    segment: "Saúde",
+    featured: true,
+    challenge:
+      "Marca de nootrópico com venda 100% online precisava de funil, copy e mídia que sustentassem compra — sem depender só de disparo de anúncio.",
+    action:
+      "Posicionamento da oferta, copy de neuromarketing, estrutura de kits, tráfego e leitura de conversão e ticket.",
+    result:
+      "E-commerce de suplemento com jornada de compra desenhada para decisão, não só para clique.",
+  },
+  {
+    slug: "solaria-doceria",
+    client: "Solaria Doceria",
+    segment: "Alimentação",
+    featured: true,
+    challenge:
+      "Doceria local competindo por impulso e encomenda. Precisava de percepção de marca e de um canal que transformasse interesse em pedido.",
+    action:
+      "Branding, conteúdo e jornada de pedido no digital — da vitrine à conversa comercial.",
+    result:
+      "Presença comercial contínua para um negócio de alimentação que vive de recorrência e data comemorativa.",
+  },
+  {
+    slug: "briston-wear",
+    client: "Briston Wear",
+    segment: "Varejo",
+    featured: true,
+    challenge:
+      "Marca goiana de moda casual unissex precisava ocupar o digital com identidade própria — não só produzir e vender no improviso.",
+    action:
+      "Posicionamento de marca, conteúdo e estrutura de vendas online para a linha casual.",
+    result:
+      "Território visual e comercial definido para crescer além da indicação.",
+  },
+  {
+    slug: "vidas-em-movimento",
+    client: "Vidas em Movimento",
+    segment: "Saúde",
+    featured: false,
+    challenge:
+      "Serviço de saúde e movimento precisava de comunicação que gerasse confiança e agenda — não só alcance.",
+    action:
+      "Neuromarketing na jornada de escolha (risco, prova, autoridade) e conteúdo contínuo.",
+    result:
+      "Posicionamento para um público local que decide por confiança, não por promoção.",
+  },
+  {
+    slug: "rota-delas",
+    client: "Rota Delas",
+    segment: "Serviços",
+    featured: false,
+    challenge:
+      "Marca de serviço com público específico precisava de território de comunicação e captação previsível.",
+    action:
+      "Estratégia de posicionamento, conteúdo e canais de aquisição alinhados ao público.",
+    result:
+      "Narrativa de marca e caminho comercial para um serviço que não pode parecer genérico.",
+  },
+  {
+    slug: "rainha-marketing",
+    client: "Rainha Marketing",
+    segment: "Serviços",
+    featured: false,
+    challenge:
+      "Operação de marketing que precisava de estrutura, marca e sistema — não só execução solta.",
+    action:
+      "Branding, posicionamento e apoio em sistemas e operação digital.",
+    result:
+      "Identidade e processo para uma empresa de serviço que vende confiança.",
+  },
+  {
+    slug: "marcelo-antonio-imoveis",
+    client: "Marcelo Antonio Imóveis",
+    segment: "Imobiliário",
+    featured: false,
+    challenge:
+      "Imobiliária local com ciclo longo de decisão. O lead esfria se a percepção e o follow-up falham.",
+    action:
+      "Posicionamento, captação com tráfego e nutrição no WhatsApp e no CRM.",
+    result:
+      "Caminho comercial para um mercado em que prova e consistência vencem o anúncio isolado.",
+  },
+] as const;
+
+export const proofs = [
+  {
+    src: "/proofs/proof-roas.png",
+    title: "Lucro e margem reais",
+    metric: "ROAS 1,86 · margem 46,1%",
+    detail:
+      "Faturamento líquido de R$ 99.377,92, gasto de R$ 53.536,53, lucro de R$ 45.841,39 e 1.016 vendas.",
+  },
+  {
+    src: "/proofs/proof-whatsapp-recorde.png",
+    title: "Recorde no comercial",
+    metric: "Megapiso + 20% no alvo",
+    detail:
+      "Print de cliente: bateu o maior piso na primeira quinzena, subiu a meta 20% e fechou o mês com recorde de vendas, pedidos e ticket médio.",
+  },
+  {
+    src: "/proofs/proof-vendas.png",
+    title: "E-commerce em volume",
+    metric: "703 vendas · R$ 154.580,99",
+    detail: "Receita de R$ 154.580,99 com ticket médio de R$ 219,89 em operação rastreada.",
+  },
+  {
+    src: "/proofs/proof-conversao.png",
+    title: "Checkout que converte",
+    metric: "20,21% de conversão",
+    detail:
+      "R$ 9.472,63 em vendas no dia, 38 pedidos e ticket de R$ 249,28 — com funil de checkout visível.",
+  },
+  {
+    src: "/proofs/proof-whatsapp-feedback.png",
+    title: "WhatsApp + site",
+    metric: "183 conversões no mês",
+    detail:
+      "256 conversas, 183 conversões, R$ 23.800 no WhatsApp e R$ 29.200 no site. Recorde de vendas no fechamento.",
+  },
+  {
+    src: "/proofs/proof-ads.png",
+    title: "Conversão de mídia",
+    metric: "R$ 4.101,24 em conversão",
+    detail: "Campanhas com valor de conversão somado e 2.327 visualizações de página no recorte.",
+  },
+  {
+    src: "/proofs/proof-vyria.png",
+    title: "Operação de alimentação",
+    metric: "R$ 33.030,50 no mês",
+    detail:
+      "Painel de pedidos: item mais vendido com 1.002 unidades e faturamento mensal de R$ 33.030,50.",
+  },
+] as const;
+
+export const methodSteps = [
+  {
+    n: "01",
+    title: "Diagnóstico",
+    text: "Olhamos o comercial de verdade: oferta, canal, atendimento, número e concorrência local. Sem slide genérico.",
+  },
+  {
+    n: "02",
+    title: "Estratégia",
+    text: "Neuromarketing entra aqui: jornada de decisão, gatilhos, prova e mensagem. O plano nasce do cérebro do cliente, não do gosto do time.",
+  },
+  {
+    n: "03",
+    title: "Execução",
+    text: "Tráfego, conteúdo, branding, IA e sistemas no mesmo rumo. Cada peça empurra a mesma venda.",
+  },
+  {
+    n: "04",
+    title: "Otimização",
+    text: "Cortamos o que não paga. Escalamos o que o caixa confirma. Semanal, com critério.",
+  },
+  {
+    n: "05",
+    title: "Relatório",
+    text: "Você vê venda, custo, margem e o que muda na semana seguinte. Relatório a serviço da decisão — não da vaidade.",
+  },
+] as const;
+
+export const testimonials = [
+  {
+    author: "Cliente — operação local",
+    source: "WhatsApp",
+    quote:
+      "Batemo o Megapiso na primeira quinzena, ajustei 20% para cima e finalizamos o mês com recorde em vendas, pedidos e ticket médio.",
+    image: "/proofs/proof-whatsapp-recorde.png",
+  },
+  {
+    author: "Feedback de mês",
+    source: "WhatsApp",
+    quote:
+      "256 conversas, 183 conversões, R$ 23.800 no WhatsApp e R$ 29.200 no site. Recorde de vendas.",
+    image: "/proofs/proof-whatsapp-feedback.png",
+  },
+] as const;
+
+export const posts = [
+  {
+    slug: "neuromarketing-negocio-local",
+    title: "Neuromarketing para negócio local: o que muda na venda do mês",
+    excerpt:
+      "Gatilho mental não é frase de efeito. É desenhar a decisão do cliente da rua — do primeiro look no Instagram ao 'manda o pix'.",
+    date: "2026-08-12",
+    body: [
+      "Negócio local perde venda em três lugares: na percepção ('não me lembro de vocês'), na prova ('será que é bom mesmo?') e no fechamento ('depois eu vejo'). Neuromarketing trata esses três pontos com método.",
+      "O cérebro do cliente da região não compara você com uma multinacional. Compara com o concorrente do bairro, com o preço que viu no grupo da família e com o risco de se arrepender. Por isso a mensagem precisa reduzir incerteza: prova, autoridade local, oferta clara e um próximo passo óbvio.",
+      "Na Arcano, isso vira copy, criativo, roteiro de WhatsApp e estrutura de página. O diferencial técnico não é 'usar gatilho'. É saber em que etapa da jornada aquele gatilho paga.",
+    ],
+  },
+  {
+    slug: "trafego-sem-posicionamento",
+    title: "Tráfego pago sem posicionamento queima verba",
+    excerpt:
+      "Anúncio bom em marca fraca vira clique barato e conversa fria. Posicionamento é o que deixa o lead chegar quente.",
+    date: "2026-07-28",
+    body: [
+      "Muita empresa local aumenta o orçamento de anúncio quando o mês aperta. O que costuma faltar não é verba — é um lugar claro na cabeça do cliente.",
+      "Se a marca não diz para quem é, por que agora e por que você, o anúncio vira um convite genérico. O custo sobe, o WhatsApp enche de curiosos e o time culpa o tráfego.",
+      "A ordem que usamos: posicionamento e oferta primeiro, mídia depois. Tráfego acelera o que já está decidido na percepção. Sem isso, você só compra ruído mais rápido.",
+    ],
+  },
+  {
+    slug: "whatsapp-canal-de-venda",
+    title: "WhatsApp é canal de venda — não recado da secretária",
+    excerpt:
+      "O pedido morre no silêncio. Automação, IA e roteiro comercial transformam conversa em caixa.",
+    date: "2026-07-09",
+    body: [
+      "No negócio local, a venda acontece no WhatsApp. Se a resposta demora, se o cardápio está desatualizado ou se ninguém faz follow-up, o anúncio mais caro do mundo não salva o mês.",
+      "Tratamos atendimento como etapa do funil: qualificação, prova, oferta e fechamento. IA e automação entram para não deixar lead esfriar — e o humano entra quando a venda pede critério.",
+      "Sistemas personalizados (do tipo que já operamos em painéis de pedido e despacho) existem para o time ver o que entrou, o que travou e o que precisa de ação hoje. Marketing sem operação é relatório.",
+    ],
+  },
+] as const;
+
+export const resultOps = [
+  {
+    slug: "ecommerce-volume",
+    title: "E-commerce local",
+    segment: "Varejo",
+    challenge:
+      "Venda online sem leitura clara de ticket, volume e criativo que realmente fecha.",
+    action:
+      "Funil de compra, copy de neuromarketing e mídia com tracking de conversão.",
+    result: "703 vendas · R$ 154.580,99 de receita · ticket R$ 219,89",
+    proof: "/proofs/proof-vendas.png",
+  },
+  {
+    slug: "roas-lucro",
+    title: "Mídia com lucro",
+    segment: "Varejo",
+    challenge:
+      "Investimento em anúncio que gerava clique, mas a conta de margem não aparecia no relatório.",
+    action:
+      "Estrutura de campanha, oferta e otimização pelo lucro — não pela vaidade de impressão.",
+    result: "ROAS 1,86 · lucro R$ 45.841,39 · margem 46,1% · 1.016 vendas",
+    proof: "/proofs/proof-roas.png",
+  },
+  {
+    slug: "alimentacao-mes",
+    title: "Alimentação e delivery",
+    segment: "Alimentação",
+    challenge:
+      "Cardápio forte, operação no improviso: o item que mais saía não virava estratégia de mídia e de pedido.",
+    action:
+      "Sistema de pedidos, destaque dos mais vendidos e captação contínua no digital.",
+    result: "R$ 33.030,50 no mês · 1.002 unidades do item líder",
+    proof: "/proofs/proof-vyria.png",
+  },
+  {
+    slug: "checkout-conversao",
+    title: "Checkout de alta conversão",
+    segment: "Varejo",
+    challenge:
+      "Tráfego chegava e o pedido morria no funil de dados, entrega e pagamento.",
+    action:
+      "Leitura de funil, copy e UX de checkout com neuromarketing na objeção de cada etapa.",
+    result: "20,21% de conversão · R$ 9.472,63 no dia · ticket R$ 249,28",
+    proof: "/proofs/proof-conversao.png",
+  },
+  {
+    slug: "whatsapp-recorde",
+    title: "Comercial no WhatsApp",
+    segment: "Serviços",
+    challenge:
+      "Meta do mês travada. Time comercial sem previsibilidade e sem leitura de piso.",
+    action:
+      "Oferta, follow-up e pressão positiva de meta com operação acompanhada de perto.",
+    result: "Megapiso na 1ª quinzena · meta +20% · recorde de vendas, pedidos e TM",
+    proof: "/proofs/proof-whatsapp-recorde.png",
+  },
+  {
+    slug: "whatsapp-site",
+    title: "Leads que fecham",
+    segment: "Serviços",
+    challenge:
+      "Conversas demais, fechamento de menos. Site e WhatsApp desconectados.",
+    action:
+      "Roteiro, tráfego e leitura unificada de conversão entre conversa e site.",
+    result: "256 conversas · 183 conversões · R$ 53 mil no consolidado do mês",
+    proof: "/proofs/proof-whatsapp-feedback.png",
+  },
+] as const;
+
+export const segments = [
+  "Todos",
+  "Alimentação",
+  "Saúde",
+  "Varejo",
+  "Serviços",
+  "Imobiliário",
+] as const;

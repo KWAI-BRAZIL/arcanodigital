@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arcano Digital — Site institucional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #050505;
+      --gold: #c9a227;
+      --gold2: #e8c96a;
+      --cream: #f4eee0;
+      --muted: #9c9484;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: var(--ink);
+      color: var(--cream);
+      font-family: Montserrat, sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    @page { size: A4; margin: 12mm; }
+    .page { break-after: page; padding: 8px 4px 18px; }
+    .page:last-child { break-after: auto; }
+    .kicker {
+      color: var(--gold);
+      letter-spacing: .32em;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    h1, h2, h3 { font-family: Cinzel, serif; font-weight: 600; }
+    h1 { font-size: 28px; line-height: 1.2; }
+    h2 { font-size: 24px; line-height: 1.25; margin: 8px 0 14px; }
+    p, li { font-size: 12px; line-height: 1.55; color: var(--muted); }
+    .gold { color: var(--gold2); }
+    .rule {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 16px 0;
+    }
+    .cover {
+      min-height: 250mm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .cover img { width: 280px; margin-bottom: 28px; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+    .grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 8px; }
+    .card {
+      border: 1px solid rgba(201,162,39,.28);
+      background: #0e0c0a;
+      padding: 14px;
+    }
+    .stat { font-family: Cinzel, serif; font-size: 20px; color: var(--gold2); }
+    .label { font-size: 9px; letter-spacing: .14em; text-transform: uppercase; margin-top: 4px; color: var(--muted); }
+    .proof {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      background: #000;
+    }
+    .client {
+      font-family: Cinzel, serif;
+      font-size: 15px;
+      color: var(--cream);
+    }
+    footer.mini {
+      margin-top: 18px;
+      font-size: 9px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+    }
+    ol.steps { list-style: none; }
+    ol.steps li { display: grid; grid-template-columns: 48px 1fr; gap: 10px; margin-bottom: 10px; }
+    .n { font-family: Cinzel, serif; font-size: 22px; color: var(--gold); }
+    .strong { color: var(--cream); }
+  </style>
+</head>
+<body>
+  <section class="page cover">
+    <img src="/brand/logo.png" alt="Arcano Digital" />
+    <p class="kicker">Site institucional · Goiás</p>
+    <div class="rule" style="width:70%"></div>
+    <h1 style="max-width:520px">Agência especializada em negócios locais que usam neuromarketing, conteúdo e branding pra vender mais todo mês.</h1>
+    <p style="margin-top:18px;max-width:460px;color:#f4eee0">Goiânia · Senador Canedo · região metropolitana</p>
+    <p class="kicker" style="margin-top:28px">Estratégia · Percepção · Resultados</p>
+    <footer class="mini">Arcano Digital Ltda · CNPJ 63.745.900/0001-88</footer>
+  </section>
+
+  <section class="page">
+    <p class="kicker">Prova acima da dobra</p>
+    <h2>Números que o empresário local reconhece.</h2>
+    <div class="grid4">
+      <div class="card"><div class="stat">R$ 154 mil</div><div class="label">Receita em operação local</div></div>
+      <div class="card"><div class="stat">1,86</div><div class="label">ROAS com lucro de 46%</div></div>
+      <div class="card"><div class="stat">1.016</div><div class="label">Vendas rastreadas em um ciclo</div></div>
+      <div class="card"><div class="stat">7+</div><div class="label">Negócios locais em destaque</div></div>
+    </div>
+    <div class="rule"></div>
+    <p class="kicker">Autoridade acumulada</p>
+    <div class="grid4" style="margin-top:10px">
+      <div class="card"><div class="stat">+R$ 250M</div><div class="label">em faturamento gerado</div></div>
+      <div class="card"><div class="stat">+R$ 50M</div><div class="label">gerenciados em tráfego pago</div></div>
+      <div class="card"><div class="stat">+10M</div><div class="label">leads qualificados</div></div>
+      <div class="card"><div class="stat">+20</div><div class="label">projetos estratégicos</div></div>
+    </div>
+    <div class="rule"></div>
+    <p class="kicker">Quatro pilares</p>
+    <h2>Neuromarketing como diferencial técnico.</h2>
+    <div class="grid2">
+      <div class="card"><p class="kicker">Diferencial técnico</p><h3 class="gold" style="margin:8px 0">Neuromarketing</h3><p>Gatilhos mentais, jornada de decisão e copy que falam com o cérebro — não com o achismo.</p></div>
+      <div class="card"><p class="kicker">Aquisição</p><h3 class="gold" style="margin:8px 0">Tráfego pago</h3><p>Meta Ads e Google Ads com funil, tracking e otimização pelo caixa, não pela vaidade.</p></div>
+      <div class="card"><p class="kicker">Percepção</p><h3 class="gold" style="margin:8px 0">Conteúdo</h3><p>Identidade de conteúdo e calendário editorial que posicionam o negócio local como referência.</p></div>
+      <div class="card"><p class="kicker">Marca</p><h3 class="gold" style="margin:8px 0">Branding</h3><p>Identidade visual, naming e posicionamento para o cliente escolher você — e não o concorrente da esquina.</p></div>
+    </div>
+  </section>
+
+  <section class="page">
+    <p class="kicker">Soluções</p>
+    <h2>O comercial completo — da percepção ao sistema.</h2>
+    <div class="grid3">
+      <div class="card"><h3 style="font-size:14px;margin-bottom:6px">Neuromarketing aplicado</h3><p>Jornada de decisão, gatilhos, copy, oferta e prova no lugar certo do funil.</p></div>
+      <div class="card"><h3 style="font-size:14px;margin-bottom:6px">Tráfego pago</h3><p>Meta Ads, Google Ads, criativo de resposta direta e leitura de ROAS/lucro.</p></div>
+      <div class="card"><h3 style="font-size:14px;margin-bottom:6px">Produção de conteúdo</h3><p>Tom de voz, calendário editorial e conteúdo que aquece o comercial.</p></div>
+      <div class="card"><h3 style="font-size:14px;margin-bottom:6px">Branding empresarial</h3><p>Posicionamento, identidade visual, naming e território de marca.</p></div>
+      <div class="card"><h3 style="font-size:14px;margin-bottom:6px">Automação e atendimento</h3><p>WhatsApp, CRM e follow-up — a lógica de despacho que já operamos no Vyria.</p></div>
+      <div class="card"><h3 style="font-size:14px;margin-bottom:6px">Soluções de IA</h3><p>Agentes de atendimento, qualificação e handoff humano com contexto.</p></div>
+      <div class="card"><h3 style="font-size:14px;margin-bottom:6px">Estratégias de posicionamento</h3><p>Categoria, promessa, prova e ocupação de canal no mercado local.</p></div>
+      <div class="card"><h3 style="font-size:14px;margin-bottom:6px">Vendas online</h3><p>Loja, landing, checkout, remarketing e leitura de ticket e margem.</p></div>
+      <div class="card"><h3 style="font-size:14px;margin-bottom:6px">Sistemas personalizados</h3><p>Painéis, apps e integrações para a operação acompanhar o crescimento.</p></div>
+    </div>
+    <div class="rule"></div>
+    <p class="kicker">Marcas</p>
+    <h2>Negócios locais que já caminham com a Arcano.</h2>
+    <div class="grid2">
+      <div class="card"><p class="kicker">Moda</p><p class="client">Briston Wear</p></div>
+      <div class="card"><p class="kicker">Serviços</p><p class="client">Rainha Marketing</p></div>
+      <div class="card"><p class="kicker">Saúde</p><p class="client">Vidas em Movimento</p></div>
+      <div class="card"><p class="kicker">Saúde</p><p class="client">Focopill</p></div>
+      <div class="card"><p class="kicker">Alimentação</p><p class="client">Solaria Doceria</p></div>
+      <div class="card"><p class="kicker">Serviços</p><p class="client">Rota Delas</p></div>
+      <div class="card" style="grid-column:1 / -1"><p class="kicker">Imobiliário</p><p class="client">Marcelo Antonio Imóveis</p></div>
+    </div>
+  </section>
+
+  <section class="page">
+    <p class="kicker">Prova social visual</p>
+    <h2>Prints reais — painel, checkout e WhatsApp.</h2>
+    <div class="grid2">
+      <div class="card">
+        <img class="proof" src="/proofs/proof-roas.png" alt="ROAS 1,86" />
+        <p class="kicker" style="margin-top:8px">ROAS 1,86 · margem 46,1%</p>
+        <p>Faturamento líquido R$ 99.377,92 · lucro R$ 45.841,39 · 1.016 vendas.</p>
+      </div>
+      <div class="card">
+        <img class="proof" src="/proofs/proof-vendas.png" alt="703 vendas" />
+        <p class="kicker" style="margin-top:8px">703 vendas · R$ 154.580,99</p>
+        <p>Ticket médio de R$ 219,89 em operação rastreada.</p>
+      </div>
+      <div class="card">
+        <img class="proof" src="/proofs/proof-conversao.png" alt="Checkout" />
+        <p class="kicker" style="margin-top:8px">20,21% de conversão</p>
+        <p>R$ 9.472,63 no dia · 38 pedidos · ticket R$ 249,28.</p>
+      </div>
+      <div class="card">
+        <img class="proof" src="/proofs/proof-vyria.png" alt="Vyria" />
+        <p class="kicker" style="margin-top:8px">R$ 33.030,50 no mês</p>
+        <p>Painel de pedidos · 1.002 unidades do item líder.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <p class="kicker">WhatsApp e mídia</p>
+    <h2>O recado que circula no comercial.</h2>
+    <div class="grid2">
+      <div class="card">
+        <img class="proof" src="/proofs/proof-whatsapp-recorde.png" alt="Recorde" />
+        <p class="kicker" style="margin-top:8px">Megapiso + 20% no alvo</p>
+        <p>Recorde de vendas, pedidos e ticket médio — print de cliente.</p>
+      </div>
+      <div class="card">
+        <img class="proof" src="/proofs/proof-whatsapp-feedback.png" alt="Feedback" />
+        <p class="kicker" style="margin-top:8px">183 conversões no mês</p>
+        <p>256 conversas · R$ 23.800 no WhatsApp · R$ 29.200 no site.</p>
+      </div>
+      <div class="card" style="grid-column:1 / -1">
+        <img class="proof" style="height:180px" src="/proofs/proof-ads.png" alt="Ads" />
+        <p class="kicker" style="margin-top:8px">R$ 4.101,24 em conversão</p>
+        <p>Campanhas com valor de conversão somado e 2.327 visualizações no recorte.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <p class="kicker">Cases · desafio → ação → resultado</p>
+    <h2>Segmento importa. Negócio local não é genérico.</h2>
+    <div class="card" style="margin-bottom:10px"><p><span class="strong">E-commerce local.</span> Funil, copy e mídia com tracking. <span class="gold">703 vendas · R$ 154.580,99 · ticket R$ 219,89.</span></p></div>
+    <div class="card" style="margin-bottom:10px"><p><span class="strong">Mídia com lucro.</span> Otimização pelo caixa. <span class="gold">ROAS 1,86 · lucro R$ 45.841,39 · margem 46,1% · 1.016 vendas.</span></p></div>
+    <div class="card" style="margin-bottom:10px"><p><span class="strong">Alimentação e delivery.</span> Sistema de pedidos e captação. <span class="gold">R$ 33.030,50 no mês · 1.002 unidades do item líder.</span></p></div>
+    <div class="card" style="margin-bottom:10px"><p><span class="strong">Checkout.</span> Funil de dados, entrega e pagamento. <span class="gold">20,21% de conversão · R$ 9.472,63 no dia.</span></p></div>
+    <div class="card" style="margin-bottom:10px"><p><span class="strong">WhatsApp comercial.</span> Oferta e follow-up. <span class="gold">Megapiso na 1ª quinzena · recorde de vendas, pedidos e TM.</span></p></div>
+    <div class="card"><p><span class="strong">Leads que fecham.</span> Site e conversa conectados. <span class="gold">256 conversas · 183 conversões · ~R$ 53 mil no mês.</span></p></div>
+    <div class="rule"></div>
+    <p class="kicker">Marcas no portfólio</p>
+    <p style="margin-top:8px;color:#f4eee0">Briston Wear · Focopill · Solaria Doceria · Vidas em Movimento · Rota Delas · Rainha Marketing · Marcelo Antonio Imóveis</p>
+  </section>
+
+  <section class="page">
+    <p class="kicker">Metodologia</p>
+    <h2>Cinco etapas. Nenhuma no escuro.</h2>
+    <ol class="steps">
+      <li><div class="n">01</div><div><h3>Diagnóstico</h3><p>Oferta, canal, atendimento, número e concorrência local. Sem slide genérico.</p></div></li>
+      <li><div class="n">02</div><div><h3>Estratégia</h3><p>Neuromarketing: jornada de decisão, gatilhos, prova e mensagem.</p></div></li>
+      <li><div class="n">03</div><div><h3>Execução</h3><p>Tráfego, conteúdo, branding, IA e sistemas no mesmo rumo.</p></div></li>
+      <li><div class="n">04</div><div><h3>Otimização</h3><p>Cortamos o que não paga. Escalamos o que o caixa confirma.</p></div></li>
+      <li><div class="n">05</div><div><h3>Relatório</h3><p>Venda, custo, margem e o que muda na semana seguinte.</p></div></li>
+    </ol>
+    <div class="rule"></div>
+    <p class="kicker">Sobre</p>
+    <h2>Nascemos para o negócio local parar de improvisar o mês.</h2>
+    <p style="margin-bottom:10px">A Arcano Digital estrutura percepção e aquisição para comércio, serviço e marca local venderem com método. Neuromarketing é o critério técnico — não acessório.</p>
+    <p>Operação liderada por <span class="strong">Nara Rubia</span>. Decisão por gatilho mental e dado. O palpite fica fora da reunião.</p>
+  </section>
+
+  <section class="page">
+    <p class="kicker">Contato</p>
+    <h2>O caminho é o WhatsApp.</h2>
+    <div class="grid2">
+      <div class="card">
+        <p class="kicker">WhatsApp</p>
+        <p class="client" style="margin-top:8px">(62) 99559-7811</p>
+        <p style="margin-top:8px">wa.me/5562995597811</p>
+      </div>
+      <div class="card">
+        <p class="kicker">E-mail</p>
+        <p class="client" style="margin-top:8px;font-size:13px">arcanodigital.com.br@gmail.com</p>
+      </div>
+      <div class="card">
+        <p class="kicker">Endereço</p>
+        <p class="strong" style="margin-top:8px">Rua Dinamarca, 01 — Alvorada</p>
+        <p>Senador Canedo — GO · CEP 75259-809</p>
+        <p>Goiânia, Senador Canedo e região metropolitana</p>
+      </div>
+      <div class="card">
+        <p class="kicker">Empresa</p>
+        <p class="strong" style="margin-top:8px">Arcano Digital Ltda</p>
+        <p>CNPJ 63.745.900/0001-88</p>
+        <p>arcano-agency.vercel.app</p>
+      </div>
+    </div>
+    <div class="rule"></div>
+    <p class="kicker">Mapa do site</p>
+    <p style="margin-top:10px;color:#f4eee0">Home · Sobre · Soluções (9 frentes) · Cases · Metodologia · Blog · Depoimentos · Contato</p>
+    <p style="margin-top:10px">Blog: neuromarketing para negócio local · tráfego sem posicionamento · WhatsApp como canal de venda.</p>
+    <div style="margin-top:36px;text-align:center">
+      <img src="/brand/logo.png" alt="Arcano Digital" style="width:180px" />
+      <p class="kicker" style="margin-top:14px">Estratégia · Percepção · Resultados</p>
+    </div>
+  </section>
+</body>
+</html>

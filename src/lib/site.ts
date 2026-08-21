@@ -1,0 +1,30 @@
+export const site = {
+  name: "Arcano Digital",
+  legalName: "Arcano Digital Ltda",
+  tagline: "Estratégia · Percepção · Resultados",
+  positioning:
+    "Agência especializada em negócios locais que usam neuromarketing, conteúdo e branding pra vender mais todo mês.",
+  city: "Goiânia",
+  region: "Goiás",
+  area: "Goiânia, Senador Canedo e região metropolitana",
+  address: {
+    street: "Rua Dinamarca, 01 — Alvorada",
+    city: "Senador Canedo",
+    state: "GO",
+    postalCode: "75259-809",
+    country: "BR",
+  },
+  phoneDisplay: "(62) 99559-7811",
+  phoneE164: "5562995597811",
+  email: "arcanodigital.com.br@gmail.com",
+  cnpj: "63.745.900/0001-88",
+  founder: "Nara Rubia",
+  url: "https://arcano-agency.vercel.app",
+} as const;
+
+export function whatsappUrl(message?: string) {
+  const text =
+    message ??
+    "Olá, Arcano Digital. Quero entender como neuromarketing, conteúdo e branding podem vender mais no meu negócio local.";
+  return `https://wa.me/${site.phoneE164}?text=${encodeURIComponent(text)}`;
+}
