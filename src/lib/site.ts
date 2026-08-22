@@ -5,13 +5,9 @@ export const site = {
   positioning:
     "Agência especializada em negócios locais que usam neuromarketing, conteúdo e branding pra vender mais todo mês.",
   city: "Goiânia",
-  region: "Goiás",
-  area: "Goiânia, Senador Canedo e região metropolitana",
+  region: "Centro-Oeste",
+  area: "Brasília, Caldas Novas, Goiânia e região metropolitana",
   address: {
-    street: "Rua Dinamarca, 01 — Alvorada",
-    city: "Senador Canedo",
-    state: "GO",
-    postalCode: "75259-809",
     country: "BR",
   },
   phoneDisplay: "(62) 99559-7811",

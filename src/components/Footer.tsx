@@ -25,13 +25,9 @@ export function Footer() {
           </div>
         </div>
         <div>
-          <p className="text-[11px] uppercase tracking-[0.22em] text-gold">Goiás</p>
+          <p className="text-[11px] uppercase tracking-[0.22em] text-gold">Atuação</p>
           <div className="mt-4 space-y-2 text-sm text-muted">
             <p>{site.area}</p>
-            <p>{site.address.street}</p>
-            <p>
-              {site.address.city} — {site.address.state}
-            </p>
             <a href={whatsappUrl()} className="block text-cream hover:text-gold">
               {site.phoneDisplay}
             </a>

@@ -5,7 +5,7 @@ import { site, whatsappUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contato",
   description:
-    "Fale com a Arcano Digital no WhatsApp. Agência em Senador Canedo e Goiânia para negócios locais que querem vender mais todo mês.",
+    "Fale com a Arcano Digital no WhatsApp. Atendimento em Brasília, Caldas Novas, Goiânia e região metropolitana.",
 };
 
 export default function ContatoPage() {
@@ -30,23 +30,10 @@ export default function ContatoPage() {
             </div>
           </article>
           <article className="panel p-8">
-            <p className="text-[11px] uppercase tracking-[0.22em] text-gold">Endereço / SEO local</p>
-            <p className="mt-3 text-cream">{site.address.street}</p>
-            <p className="text-cream">
-              {site.address.city} — {site.address.state} · CEP {site.address.postalCode}
-            </p>
+            <p className="text-[11px] uppercase tracking-[0.22em] text-gold">Onde atuamos</p>
+            <p className="mt-3 font-display text-2xl text-cream">{site.area}</p>
             <p className="mt-4 text-sm text-muted">{site.email}</p>
             <p className="mt-2 text-sm text-muted">CNPJ {site.cnpj}</p>
-            <a
-              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                `${site.address.street}, ${site.address.city} ${site.address.state}`,
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-block text-[11px] uppercase tracking-[0.18em] text-gold"
-            >
-              Ver no mapa
-            </a>
           </article>
         </div>
         <p className="mt-10 text-sm text-muted">

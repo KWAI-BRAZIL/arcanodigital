@@ -26,16 +26,17 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Arcano Digital | Agência de neuromarketing para negócios locais em Goiás",
+    default: "Arcano Digital | Agência de neuromarketing para negócios locais em Brasília, Caldas Novas e Goiânia",
     template: "%s | Arcano Digital",
   },
   description:
-    "Agência especializada em negócios locais em Goiânia e Senador Canedo que usam neuromarketing, conteúdo e branding pra vender mais todo mês. Tráfego pago, IA, vendas online e sistemas.",
+    "Agência especializada em negócios locais em Brasília, Caldas Novas, Goiânia e região metropolitana que usam neuromarketing, conteúdo e branding pra vender mais todo mês. Tráfego pago, IA, vendas online e sistemas.",
   keywords: [
     "agência de marketing Goiânia",
+    "agência de marketing Brasília",
+    "marketing Caldas Novas",
     "neuromarketing Goiás",
     "marketing para negócios locais",
-    "tráfego pago Senador Canedo",
     "branding Goiânia",
     "Arcano Digital",
   ],

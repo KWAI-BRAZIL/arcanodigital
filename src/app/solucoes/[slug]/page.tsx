@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return {};
   return {
     title: service.title,
-    description: `${service.title} para negócios locais em Goiânia e Goiás. ${service.description}`,
+    description: `${service.title} para negócios locais em Brasília, Caldas Novas, Goiânia e região. ${service.description}`,
   };
 }
 

@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Sobre a Arcano Digital",
   description:
-    "Origem e propósito da Arcano Digital em Goiânia e Senador Canedo: neuromarketing, dado e operação para negócios locais venderem mais todo mês.",
+    "Origem e propósito da Arcano Digital em Brasília, Caldas Novas e Goiânia: neuromarketing, dado e operação para negócios locais venderem mais todo mês.",
 };
 
 export default function SobrePage() {
@@ -19,9 +19,9 @@ export default function SobrePage() {
         <div className="mt-10 grid gap-10 md:grid-cols-[1.2fr_0.8fr]">
           <div className="space-y-5 text-base leading-relaxed text-muted">
             <p>
-              A Arcano Digital existe porque a maior parte das empresas da região metropolitana
-              de Goiânia ainda trata marketing como post, anúncio solto ou “alguém que mexe no
-              Instagram”. O caixa não espera o algoritmo.
+              A Arcano Digital existe porque a maior parte das empresas em Brasília,
+              Caldas Novas, Goiânia e região ainda trata marketing como post, anúncio
+              solto ou “alguém que mexe no Instagram”. O caixa não espera o algoritmo.
             </p>
             <p>
               Nosso propósito é direto: estruturar percepção e aquisição para o comércio, o
@@ -31,17 +31,12 @@ export default function SobrePage() {
             </p>
             <p>
               A operação é liderada por {site.founder}, com trajetória em estratégia digital
-              no mercado goiano. Atendemos de {site.area}. CNPJ {site.cnpj}.
+              no mercado do Centro-Oeste. Atendemos {site.area}. CNPJ {site.cnpj}.
             </p>
           </div>
           <aside className="panel p-6">
             <p className="text-[11px] uppercase tracking-[0.22em] text-gold">Onde atuamos</p>
             <p className="mt-3 font-display text-2xl text-cream">{site.area}</p>
-            <p className="mt-4 text-sm text-muted">
-              {site.address.street}
-              <br />
-              {site.address.city} — {site.address.state}, {site.address.postalCode}
-            </p>
             <p className="mt-6 text-sm text-cream">“{site.tagline}”</p>
           </aside>
         </div>
