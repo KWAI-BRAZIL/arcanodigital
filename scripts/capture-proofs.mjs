@@ -23,12 +23,17 @@ const browser = await puppeteer.launch({
   args: ["--no-sandbox"],
 });
 const page = await browser.newPage();
-await page.setViewport({ width: 780, height: 1040, deviceScaleFactor: 2 });
+await page.setViewport({ width: 780, height: 1040, deviceScaleFactor: 3 });
 await page.goto(html, { waitUntil: "networkidle0" });
+await page.evaluate(() => document.fonts.ready);
 
 for (const [id, file] of shots) {
   const el = await page.$(`#${id}`);
-  await el.screenshot({ path: path.join(out, file), type: "png" });
+  await el.screenshot({
+    path: path.join(out, file),
+    type: "png",
+    captureBeyondViewport: false,
+  });
   console.log("wrote", file);
 }
 

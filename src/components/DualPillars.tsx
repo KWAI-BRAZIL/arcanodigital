@@ -9,7 +9,7 @@ function PillarCard({ item, accent }: { item: Pillar; accent: "brass" | "teal" }
   const kicker = accent === "teal" ? "text-teal" : "text-gold";
 
   return (
-    <Link href={`/solucoes/${item.slug}`} className={`${border} p-6`}>
+    <Link href={`/solucoes/${item.slug}`} className={`${border} p-5 md:p-6`}>
       <p className={`font-mono text-[11px] uppercase tracking-[0.22em] ${kicker}`}>{item.kicker}</p>
       <h3 className="mt-3 font-display text-2xl text-cream">{item.title}</h3>
       <p className="mt-3 text-sm leading-relaxed text-muted">{item.summary}</p>
@@ -26,7 +26,7 @@ function PillarCard({ item, accent }: { item: Pillar; accent: "brass" | "teal" }
 
 export function DualPillars() {
   return (
-    <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_auto_1fr] lg:items-stretch">
+    <div className="mt-8 grid gap-10 lg:mt-10 lg:grid-cols-[1fr_auto_1fr] lg:items-stretch">
       <div>
         <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-gold">
           Marketing & Psicologia aplicada
@@ -37,6 +37,7 @@ export function DualPillars() {
           ))}
         </div>
       </div>
+      <div className="h-px bg-gradient-to-r from-gold via-line to-teal lg:hidden" aria-hidden />
       <div
         className="hidden w-px bg-gradient-to-b from-gold via-line to-teal lg:block"
         aria-hidden

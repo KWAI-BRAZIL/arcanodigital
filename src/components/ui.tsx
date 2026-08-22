@@ -39,14 +39,16 @@ export function WhatsAppCta({
 export function GhostLink({
   href,
   children,
+  className = "",
 }: {
   href: string;
   children: React.ReactNode;
+  className?: string;
 }) {
   return (
     <Link
       href={href}
-      className="inline-flex items-center justify-center rounded-sm border border-gold/40 px-6 py-3 font-mono text-[12px] font-semibold uppercase tracking-[0.18em] text-gold hover:border-gold hover:text-gold-bright"
+      className={`inline-flex items-center justify-center rounded-sm border border-gold/40 px-6 py-3 font-mono text-[12px] font-semibold uppercase tracking-[0.18em] text-gold hover:border-gold hover:text-gold-bright ${className}`}
     >
       {children}
     </Link>
@@ -55,8 +57,8 @@ export function GhostLink({
 
 export function CtaBand() {
   return (
-    <section className="grain border-y border-line bg-ink-2">
-      <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-5 py-16 md:flex-row md:items-center md:justify-between">
+    <section className="border-y border-line bg-ink-2">
+      <div className="mx-auto flex max-w-6xl flex-col items-stretch gap-6 px-5 py-12 md:flex-row md:items-center md:justify-between md:py-16">
         <div>
           <Kicker>Próximo passo</Kicker>
           <h2 className="mt-3 max-w-xl font-display text-3xl text-cream md:text-4xl">
@@ -66,7 +68,7 @@ export function CtaBand() {
             Diagnóstico inicial sem custo, para negócios em Goiânia, Brasília, Caldas Novas e região.
           </p>
         </div>
-        <WhatsAppCta>Falar no WhatsApp</WhatsAppCta>
+        <WhatsAppCta className="w-full md:w-auto">Falar no WhatsApp</WhatsAppCta>
       </div>
     </section>
   );

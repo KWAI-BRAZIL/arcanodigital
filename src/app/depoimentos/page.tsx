@@ -25,8 +25,8 @@ export default function DepoimentosPage() {
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {testimonials.map((item) => (
             <article key={item.quote} className="panel overflow-hidden">
-              <div className="relative h-80">
-                <Image src={item.image} alt={item.author} fill className="object-cover object-top" />
+              <div className="relative h-96 bg-[#111]">
+                <Image src={item.image} alt={item.author} fill unoptimized className="object-contain object-top" />
               </div>
               <div className="p-6">
                 <p className="text-sm leading-relaxed text-cream">“{item.quote}”</p>

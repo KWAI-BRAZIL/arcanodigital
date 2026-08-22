@@ -13,7 +13,7 @@ export function LocalMarketPage({ market }: { market: LocalMarket }) {
 
   return (
     <main>
-      <section className="grain relative overflow-x-hidden pt-28">
+      <section className="relative overflow-x-hidden pt-28">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-16 pt-10 md:grid-cols-[1.15fr_0.85fr] md:pb-24">
           <div>
             <Kicker>{market.kicker}</Kicker>

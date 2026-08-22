@@ -19,21 +19,22 @@ export function ProofGallery({
 
   return (
     <>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="-mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-3">
         {list.map((item, i) => (
           <button
             key={item.src}
             type="button"
             onClick={() => setActive(i)}
-            className="panel group overflow-hidden text-left"
+            className="panel group w-[85%] shrink-0 snap-start overflow-hidden text-left sm:w-auto sm:shrink"
           >
-            <div className="relative aspect-[4/5] overflow-hidden bg-ink">
+            <div className="relative aspect-[3/4] overflow-hidden bg-[#111]">
               <Image
                 src={item.src}
                 alt={item.title}
                 fill
-                sizes="(min-width: 1024px) 33vw, 50vw"
-                className="object-cover object-top transition duration-500 group-hover:scale-[1.03]"
+                unoptimized
+                sizes="(min-width: 1024px) 360px, 90vw"
+                className="object-contain object-top"
               />
             </div>
             <div className="p-4">
@@ -53,8 +54,9 @@ export function ProofGallery({
             <Image
               src={selected.src}
               alt={selected.title}
-              width={1200}
-              height={1600}
+              width={2340}
+              height={3120}
+              unoptimized
               className="max-h-[80vh] w-full object-contain"
             />
             <p className="mt-3 text-center text-sm text-muted">{selected.detail}</p>

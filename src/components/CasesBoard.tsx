@@ -39,8 +39,14 @@ export function CasesBoard() {
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {ops.map((item) => (
             <article key={item.slug} className="panel overflow-hidden">
-              <div className="relative h-64 bg-ink">
-                <Image src={item.proof} alt={item.title} fill className="object-cover object-top" />
+              <div className="relative h-80 bg-[#111]">
+                <Image
+                  src={item.proof}
+                  alt={item.title}
+                  fill
+                  unoptimized
+                  className="object-contain object-top"
+                />
               </div>
               <div className="space-y-3 p-6">
                 <p className="text-[11px] uppercase tracking-[0.22em] text-gold">{item.segment}</p>

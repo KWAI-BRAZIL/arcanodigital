@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { JsonLd } from "@/components/JsonLd";
+import { ScrollProgress } from "@/components/ScrollProgress";
 import { site } from "@/lib/site";
 
 const fraunces = Fraunces({
@@ -75,6 +76,7 @@ export default function RootLayout({
       <body className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable} antialiased bg-ink text-cream`}>
         <JsonLd />
         <Header />
+        <ScrollProgress />
         {children}
         <Footer />
         <WhatsAppFloat />
