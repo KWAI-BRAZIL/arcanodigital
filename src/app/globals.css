@@ -1,30 +1,50 @@
 @import "tailwindcss";
 
 :root {
-  --arcano-bg: #0b0a08;
-  --arcano-surface: #151310;
-  --arcano-surface-alt: #1c1915;
-  --arcano-gold: #d4a537;
-  --arcano-gold-muted: #8a7230;
-  --arcano-tech: #4f8ab8;
-  --arcano-tech-deep: #2c5574;
-  --arcano-text: #f2efe9;
-  --arcano-text-muted: #a39c8e;
-  --arcano-line: rgba(242, 239, 233, 0.08);
+  --void: #05080f;
+  --panel: #0b1524;
+  --panel-2: #102033;
+  --gold: #c9a24a;
+  --gold-soft: #e4c97a;
+  --tech: #6b8ca8;
+  --lilac: #9bb4c8;
+  --ivory: #f4f0e8;
+  --mist: #9b958a;
+  --rule: rgba(201, 162, 74, 0.16);
 
-  --ink: var(--arcano-bg);
-  --ink-2: var(--arcano-surface);
-  --ink-3: var(--arcano-surface-alt);
-  --brass: var(--arcano-gold);
-  --gold: var(--arcano-gold);
-  --gold-bright: #e4c15a;
+  --arcano-bg: var(--void);
+  --arcano-surface: var(--panel);
+  --arcano-surface-alt: var(--panel-2);
+  --arcano-gold: var(--gold);
+  --arcano-gold-muted: #8a7230;
+  --arcano-tech: var(--tech);
+  --arcano-tech-deep: #3d5a70;
+  --arcano-text: var(--ivory);
+  --arcano-text-muted: var(--mist);
+  --arcano-line: var(--rule);
+
+  --ink: var(--void);
+  --ink-2: var(--panel);
+  --ink-3: var(--panel-2);
+  --brass: var(--gold);
+  --gold-bright: var(--gold-soft);
   --gold-deep: var(--arcano-gold-muted);
-  --cream: var(--arcano-text);
-  --muted: var(--arcano-text-muted);
-  --line: var(--arcano-line);
+  --cream: var(--ivory);
+  --muted: var(--mist);
+  --line: var(--rule);
 }
 
 @theme inline {
+  --color-void: var(--void);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-tech: var(--tech);
+  --color-lilac: var(--lilac);
+  --color-ivory: var(--ivory);
+  --color-mist: var(--mist);
+  --color-rule: var(--rule);
   --color-arcano-bg: var(--arcano-bg);
   --color-arcano-surface: var(--arcano-surface);
   --color-arcano-surface-alt: var(--arcano-surface-alt);
@@ -39,7 +59,6 @@
   --color-ink-2: var(--ink-2);
   --color-ink-3: var(--ink-3);
   --color-brass: var(--brass);
-  --color-gold: var(--gold);
   --color-gold-bright: var(--gold-bright);
   --color-gold-deep: var(--gold-deep);
   --color-cream: var(--cream);
@@ -52,6 +71,7 @@
 
 html {
   scroll-behavior: smooth;
+  background: #05080f;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -69,9 +89,34 @@ html {
 }
 
 body {
-  background: var(--arcano-bg);
-  color: var(--arcano-text);
+  background: var(--void);
+  background-attachment: fixed;
+  color: var(--ivory);
   font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+body::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.09;
+  background-image:
+    linear-gradient(rgba(107, 140, 168, 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107, 140, 168, 0.22) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at 50% 30%, black 15%, transparent 72%);
 }
 
 .font-display {
@@ -83,12 +128,12 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--arcano-gold);
+  outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
 
 .gold-text {
-  background: linear-gradient(180deg, #f0d78a 0%, #d4a537 48%, #4f8ab8 100%);
+  background: linear-gradient(180deg, #e4c97a 0%, #c9a24a 52%, #6b8ca8 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -96,45 +141,65 @@ body {
 
 .gold-rule {
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--arcano-gold), var(--arcano-tech), transparent);
+  background: linear-gradient(90deg, transparent, var(--gold), var(--tech), transparent);
 }
 
 .gold-btn {
-  background: var(--arcano-gold);
-  color: #140f05;
+  background: var(--gold);
+  color: #120e08;
+  transition: filter 0.25s ease-out, transform 0.25s ease-out;
   box-shadow:
-    0 8px 24px rgba(212, 165, 55, 0.18),
-    0 0 32px rgba(79, 138, 184, 0.12);
+    0 10px 28px rgba(201, 162, 74, 0.2),
+    0 0 40px rgba(107, 140, 168, 0.14);
 }
 
 .gold-btn:hover {
-  filter: brightness(1.06);
+  filter: brightness(1.07);
+  transform: translateY(-1px);
+}
+
+.glass {
+  background: rgba(11, 21, 36, 0.52);
+  border: 1px solid var(--rule);
+  backdrop-filter: blur(18px);
 }
 
 .panel {
-  background: var(--arcano-surface);
-  border: 1px solid var(--arcano-line);
+  background: rgba(11, 21, 36, 0.48);
+  border: 1px solid var(--rule);
+  backdrop-filter: blur(14px);
+  transition: border-color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.panel:hover {
+  border-color: rgba(201, 162, 74, 0.4);
 }
 
 .snap-x {
   scrollbar-width: thin;
-  scrollbar-color: rgba(212, 165, 55, 0.35) rgba(79, 138, 184, 0.15);
+  scrollbar-color: rgba(201, 162, 74, 0.35) rgba(107, 140, 168, 0.15);
 }
 
-@keyframes orb-drift {
-  from { transform: translate3d(0, 0, 0) scale(1); opacity: 1; }
-  to { transform: translate3d(0, 28px, 0) scale(1.08); opacity: 0.85; }
+@keyframes proof-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.proof-marquee {
+  animation: proof-marquee 48s linear infinite;
+  width: max-content;
+}
+
+.proof-marquee.is-paused {
+  animation-play-state: paused;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal,
-  .reveal-in {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-
-  .hero-orb {
+  .proof-marquee {
     animation: none;
   }
 }

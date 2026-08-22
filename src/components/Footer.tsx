@@ -4,7 +4,7 @@ import { site, whatsappUrl } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="relative z-[1] border-t border-arcano-line bg-arcano-surface">
+    <footer className="relative z-[1] border-t border-rule bg-transparent">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
           <Logo size="md" />
@@ -27,7 +27,7 @@ export function Footer() {
           </div>
         </div>
         <div>
-          <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-arcano-tech">Atuação</p>
+          <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-lilac">Atuação</p>
           <div className="mt-4 space-y-2 text-sm text-muted">
             <Link href="/goiania" className="block hover:text-cream">Goiânia</Link>
             <Link href="/brasilia" className="block hover:text-cream">Brasília</Link>

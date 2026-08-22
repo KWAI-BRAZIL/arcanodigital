@@ -25,7 +25,7 @@ export const localMarkets: LocalMarket[] = [
     lead: "Se a última agência vendeu pacote e entregou clique, o critério aqui é outro: custo, margem e diagnóstico antes de comprometer orçamento enxuto. Sem “aumente suas vendas”.",
     cta: "Quero um diagnóstico gratuito",
     whatsapp:
-      "Olá, Arcano Digital. Sou de Goiânia e quero um diagnóstico gratuito do comercial — ROAS, custo e o que está travando o mês.",
+      "Olá, Arcano Solutions. Sou de Goiânia e quero um diagnóstico gratuito do comercial — ROAS, custo e o que está travando o mês.",
     statsNote: "Os números abaixo são de operação rastreada, não de meta arredondada.",
     pillarsLead:
       "Tráfego e neuromarketing no mesmo peso de sistema: o anúncio só escala se o caixa confirma.",
@@ -61,7 +61,7 @@ export const localMarkets: LocalMarket[] = [
     lead: "Turista decide na hora. Concorrência de comércio local é alta. O WhatsApp que trava no feriado é venda perdida — automação e sistema são o argumento, não um extra.",
     cta: "Quero um diagnóstico gratuito",
     whatsapp:
-      "Olá, Arcano Digital. Sou de Caldas Novas e quero um diagnóstico para aguentar o pico de temporada sem perder pedido no WhatsApp.",
+      "Olá, Arcano Solutions. Sou de Caldas Novas e quero um diagnóstico para aguentar o pico de temporada sem perder pedido no WhatsApp.",
     statsNote: "Volume e painel de pedido — o que a alta temporada exige ver.",
     pillarsLead:
       "Automação, IA e e-commerce no mesmo peso do marketing: atendimento que não trava quando a cidade enche.",
@@ -97,7 +97,7 @@ export const localMarkets: LocalMarket[] = [
     lead: "Público que pesquisa antes e prioriza qualidade. A Arcano apresenta método visível, números de operação e cases — tom direto, sem urgência de desconto.",
     cta: "Agendar uma conversa de diagnóstico",
     whatsapp:
-      "Olá, Arcano Digital. Sou de Brasília e gostaria de uma conversa de diagnóstico sobre marketing e sistemas para o meu negócio.",
+      "Olá, Arcano Solutions. Sou de Brasília e gostaria de uma conversa de diagnóstico sobre marketing e sistemas para o meu negócio.",
     statsNote: "Portfólio de operação e escala — o que sustenta uma decisão mais longa.",
     pillarsLead:
       "Branding, neuromarketing e sistemas no mesmo desenho. A relação é de construção, não de campanha isolada.",

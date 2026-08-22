@@ -38,7 +38,7 @@ export function CasesBoard() {
       {ops.length > 0 ? (
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {ops.map((item) => (
-            <article key={item.slug} className="panel overflow-hidden">
+            <article key={item.slug} className="group panel overflow-hidden transition duration-300 ease-out hover:-translate-y-1">
               <div className="relative h-80 bg-[#111]">
                 <Image
                   src={item.proof}
@@ -74,7 +74,7 @@ export function CasesBoard() {
           <p className="text-[11px] uppercase tracking-[0.28em] text-gold">Marcas atendidas neste recorte</p>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             {brands.map((item) => (
-              <article key={item.slug} className="panel p-6">
+              <article key={item.slug} className="panel p-6 transition duration-300 ease-out hover:-translate-y-1">
                 <p className="text-[11px] uppercase tracking-[0.22em] text-gold">{item.segment}</p>
                 <h3 className="mt-2 font-display text-2xl text-cream">{item.client}</h3>
                 <p className="mt-3 text-sm text-muted">

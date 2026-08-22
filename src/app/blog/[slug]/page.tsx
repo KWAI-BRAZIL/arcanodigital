@@ -23,7 +23,7 @@ export default async function PostPage({ params }: Props) {
 
   return (
     <main className="pt-28">
-      <article className="mx-auto max-w-3xl px-5 py-16">
+      <article className="mx-auto max-w-3xl px-5 py-24 md:py-36">
         <Kicker>{new Date(post.date).toLocaleDateString("pt-BR")}</Kicker>
         <Title>{post.title}</Title>
         <div className="mt-8 space-y-5 text-base leading-relaxed text-muted">

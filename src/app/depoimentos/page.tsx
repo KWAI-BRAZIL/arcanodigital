@@ -7,13 +7,13 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Depoimentos e provas",
   description:
-    "Painéis de resultado, recortes de comercial e depoimentos da Arcano Digital para negócios locais em Goiás.",
+    "Painéis de resultado, recortes de comercial e depoimentos da Arcano Solutions para negócios locais em Goiás.",
 };
 
 export default function DepoimentosPage() {
   return (
     <main className="pt-28">
-      <section className="mx-auto max-w-6xl px-5 py-16">
+      <section className="mx-auto max-w-6xl px-5 py-24 md:py-36">
         <Kicker>Depoimentos</Kicker>
         <Title>
           O empresário local confia no número. <span className="gold-text">Não no slogan.</span>
@@ -25,7 +25,7 @@ export default function DepoimentosPage() {
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {testimonials.map((item) => (
             <article key={item.quote} className="panel overflow-hidden">
-              <div className="relative h-96 bg-[#111]">
+              <div className="relative h-96 bg-void">
                 <Image src={item.image} alt={item.author} fill unoptimized className="object-contain object-top" />
               </div>
               <div className="p-6">

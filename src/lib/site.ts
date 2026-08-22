@@ -1,6 +1,6 @@
 export const site = {
-  name: "Arcano Digital",
-  legalName: "Arcano Digital Ltda",
+  name: "Arcano Solutions",
+  legalName: "Arcano Solutions Ltda",
   tagline: "Estratégia · Percepção · Resultados",
   positioning:
     "Neuromarketing que decide a venda — e sistemas que aguentam o volume quando a venda entra.",

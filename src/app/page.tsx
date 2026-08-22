@@ -1,71 +1,21 @@
+import { CountUp } from "@/components/CountUp";
+import { HomeHero } from "@/components/HomeHero";
 import Link from "next/link";
-import { HeroParallax } from "@/components/ScrollImmersion";
 import { DualPillars } from "@/components/DualPillars";
-import { Logo } from "@/components/Logo";
 import { ProofGallery } from "@/components/ProofGallery";
 import { Reveal } from "@/components/Reveal";
 import { StatCard } from "@/components/StatCard";
-import { CtaBand, GhostLink, Kicker, Title, WhatsAppCta } from "@/components/ui";
-import { aggregateStats, cases, cityTriggers, clients, stats } from "@/lib/content";
-import { site } from "@/lib/site";
+import { CtaBand, GhostLink, Kicker, Title } from "@/components/ui";
+import { aggregateStats, cases, cityTriggers, clients } from "@/lib/content";
 
 export default function HomePage() {
   const featured = cases.filter((item) => item.featured);
-  const lead = featured[0];
-  const rest = featured.slice(1);
 
   return (
     <main>
-      <section id="shot-hero" className="relative overflow-x-clip bg-arcano-bg pt-28 md:pt-36">
-        <div className="hero-orb pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_28%_-10%,rgba(212,165,55,0.1),transparent_48%),radial-gradient(ellipse_at_78%_8%,rgba(79,138,184,0.1),transparent_46%)]" />
-        <HeroParallax>
-        <div className="relative mx-auto max-w-4xl px-5 pb-16 text-center md:pb-20">
-          <Reveal>
-            <Kicker>Goiânia · Brasília · Caldas Novas</Kicker>
-            <h1 className="mt-6 font-display text-[1.85rem] font-medium leading-[1.18] tracking-[-0.035em] text-cream sm:text-[2.6rem] md:text-[3.15rem]">
-              Marketing e engenharia de software, na mesma equipe, para negócios que não
-              têm tempo pra terceirizar tentativa e erro.
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-[1.75] text-muted md:text-lg">
-              Neuromarketing, tráfego pago e branding para decidir a compra. Sistemas sob
-              medida e automações para sustentar essa decisão na operação. Uma agência, os
-              dois lados resolvidos — em Goiânia, Brasília e Caldas Novas.
-            </p>
-            <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-              <WhatsAppCta className="w-full sm:w-auto">Quero um diagnóstico gratuito</WhatsAppCta>
-              <GhostLink href="/cases" className="w-full sm:w-auto">
-                Ver cases e provas
-              </GhostLink>
-            </div>
-          </Reveal>
-          <Reveal delay={140}>
-            <div className="mt-14 md:mt-20">
-              <Logo size="lg" href={null} />
-            </div>
-            <p className="mt-4 font-sans text-[10px] font-medium uppercase tracking-[0.32em] text-gold/80">
-              {site.tagline}
-            </p>
-          </Reveal>
-        </div>
-        </HeroParallax>
-      </section>
+      <HomeHero />
 
-      <section id="shot-stats" className="bg-arcano-surface py-12 md:py-16">
-        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-3 px-5 md:grid-cols-4 md:gap-4">
-          {stats.map((item, i) => (
-            <StatCard key={item.label} alt accent={i % 2 ? "tech" : "gold"}>
-              <p className="font-display text-2xl font-medium tracking-[-0.03em] text-cream md:text-3xl">
-                {item.value}
-              </p>
-              <p className="mt-2 font-sans text-[10px] font-medium uppercase leading-snug tracking-[0.14em] text-muted">
-                {item.label}
-              </p>
-            </StatCard>
-          ))}
-        </div>
-      </section>
-
-      <section id="shot-provas" className="overflow-x-hidden bg-arcano-bg py-20 md:py-28">
+      <section id="shot-provas" className="relative overflow-x-hidden py-24 md:py-36">
         <div className="mx-auto max-w-6xl px-5">
           <Reveal>
             <div className="max-w-2xl">
@@ -86,7 +36,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="shot-pilares" className="bg-arcano-surface py-20 md:py-28">
+      <section id="shot-pilares" className="relative py-24 md:py-36">
         <div className="mx-auto max-w-6xl px-5">
           <Reveal>
             <Kicker>O que fazemos</Kicker>
@@ -100,7 +50,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="shot-porque" className="bg-arcano-bg py-20 md:py-28">
+      <section id="shot-porque" className="relative py-24 md:py-36">
         <div className="mx-auto max-w-6xl px-5">
           <Reveal>
             <Kicker>Por que Arcano</Kicker>
@@ -111,8 +61,8 @@ export default function HomePage() {
           <div className="mt-14 grid gap-3 md:grid-cols-4 md:gap-4">
             {aggregateStats.map((item, i) => (
               <StatCard key={item.label} accent={i % 2 ? "tech" : "gold"}>
-                <p className="font-display text-3xl font-medium tracking-[-0.03em] text-cream md:text-4xl">
-                  {item.value}
+                <p className="font-display text-3xl font-medium tracking-[-0.03em] text-ivory md:text-4xl">
+                  <CountUp value={item.value} />
                 </p>
                 <p className="mt-3 max-w-[12rem] font-sans text-[10px] font-medium uppercase leading-snug tracking-[0.14em] text-muted">
                   {item.label}
@@ -146,7 +96,7 @@ export default function HomePage() {
               </p>
             </StatCard>
             <StatCard accent="tech">
-              <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-arcano-tech">
+              <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-lilac">
                 Operação completa
               </p>
               <h3 className="mt-4 font-display text-2xl font-medium tracking-[-0.03em] text-cream">
@@ -164,7 +114,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="shot-cidades" className="bg-arcano-surface py-20 md:py-28">
+      <section id="shot-cidades" className="relative py-24 md:py-36">
         <div className="mx-auto max-w-6xl px-5">
           <Reveal>
             <Kicker>Três praças</Kicker>
@@ -184,7 +134,7 @@ export default function HomePage() {
                   </span>
                   <p
                     className={`relative font-sans text-[11px] font-medium ${
-                      i === 1 ? "text-arcano-tech" : "text-gold"
+                      i === 1 ? "text-lilac" : "text-gold"
                     }`}
                   >
                     0{i + 1}
@@ -198,7 +148,7 @@ export default function HomePage() {
                   <p className="relative mt-4 text-sm leading-[1.75] text-muted">{item.text}</p>
                   <p
                     className={`relative mt-5 font-sans text-[11px] font-medium uppercase tracking-[0.18em] ${
-                      i === 1 ? "text-arcano-tech" : "text-gold"
+                      i === 1 ? "text-lilac" : "text-gold"
                     }`}
                   >
                     Ver a praça
@@ -210,7 +160,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="shot-cases" className="bg-arcano-bg py-20 md:py-28">
+      <section id="shot-cases" className="relative py-24 md:py-36">
         <div className="mx-auto max-w-6xl px-5">
           <Reveal>
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -221,33 +171,22 @@ export default function HomePage() {
               <GhostLink href="/cases">Ver todos os cases</GhostLink>
             </div>
           </Reveal>
-          {lead ? (
-            <article className="mt-14 grid gap-8 border-t border-arcano-line pt-12 md:grid-cols-[1.1fr_0.9fr] md:gap-16">
-              <div>
+          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {featured.map((item) => (
+              <article key={item.slug} className="group glass relative overflow-hidden p-6">
                 <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-gold">
-                  {lead.segment}
+                  {item.segment}
                 </p>
-                <h3 className="mt-3 font-display text-4xl font-medium tracking-[-0.035em] text-cream">
-                  {lead.client}
+                <h3 className="mt-3 font-display text-2xl font-medium tracking-[-0.03em] text-ivory">
+                  {item.client}
                 </h3>
-                <p className="mt-6 text-base leading-[1.75] text-muted">{lead.challenge}</p>
-                <p className="mt-4 text-base text-cream/90">{lead.result}</p>
-              </div>
-              <ul className="space-y-8 md:border-l md:border-arcano-tech/25 md:pl-12">
-                {rest.map((item) => (
-                  <li key={item.slug}>
-                    <p className="font-sans text-[10px] font-medium uppercase tracking-[0.2em] text-muted">
-                      {item.segment}
-                    </p>
-                    <p className="mt-1 font-display text-2xl font-medium tracking-[-0.03em] text-cream">
-                      {item.client}
-                    </p>
-                    <p className="mt-2 text-sm leading-relaxed text-muted">{item.result}</p>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ) : null}
+                <p className="mt-4 text-sm leading-relaxed text-mist">{item.challenge}</p>
+                <p className="mt-4 max-h-0 overflow-hidden text-sm text-gold-soft opacity-0 transition-all duration-300 ease-out group-hover:max-h-40 group-hover:opacity-100">
+                  {item.result}
+                </p>
+              </article>
+            ))}
+          </div>
           <p className="mt-16 max-w-3xl font-display text-2xl font-medium leading-snug tracking-[-0.03em] text-cream/70 md:text-3xl">
             {clients.map((c) => c.name).join("  ·  ")}
           </p>

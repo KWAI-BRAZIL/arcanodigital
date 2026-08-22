@@ -18,15 +18,11 @@ export function StatCard({
     <motion.div
       initial={{ opacity: 0, y: 22 }}
       whileInView={{ opacity: 1, y: 0 }}
-      whileHover={{ y: -4 }}
+      whileHover={{ y: -6, scale: 1.01 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-      className={`rounded-lg border p-6 ${
-        alt ? "bg-arcano-surface-alt" : "bg-arcano-surface"
-      } ${
-        accent === "tech"
-          ? "border-arcano-tech/20 hover:border-arcano-tech/50"
-          : "border-arcano-line hover:border-arcano-gold/40"
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      className={`glass rounded-sm p-6 ${
+        accent === "tech" ? "hover:border-lilac/50" : "hover:border-gold/45"
       } ${className}`}
     >
       {children}

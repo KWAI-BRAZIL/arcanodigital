@@ -26,14 +26,14 @@ export function LocalMarketPage({ market }: { market: LocalMarket }) {
               <GhostLink href="/cases">Ver portfólio</GhostLink>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center rounded-lg border border-arcano-line bg-arcano-surface p-10">
+          <div className="glass flex flex-col items-center justify-center p-10">
             <Logo size="lg" href={null} />
             <p className="mt-6 text-center font-sans text-[11px] font-medium uppercase tracking-[0.28em] text-gold">
               {site.area}
             </p>
           </div>
         </div>
-        <div className="border-y border-line bg-ink-2/80">
+        <div className="border-y border-rule">
           <p className="mx-auto max-w-6xl px-5 pt-6 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
             {market.statsNote}
           </p>
@@ -57,7 +57,7 @@ export function LocalMarketPage({ market }: { market: LocalMarket }) {
         <DualPillars />
       </section>
 
-      <section className="border-y border-line bg-ink-2 py-20">
+      <section className="relative py-24 md:py-36">
         <div className="mx-auto max-w-6xl px-5">
           <Kicker>Prova</Kicker>
           <Title>O que esta praça precisa ver.</Title>

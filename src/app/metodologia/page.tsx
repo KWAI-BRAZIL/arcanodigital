@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function MetodologiaPage() {
   return (
     <main className="pt-28">
-      <section className="mx-auto max-w-6xl px-5 py-16">
+      <section className="mx-auto max-w-6xl px-5 py-24 md:py-36">
         <Kicker>Metodologia</Kicker>
         <Title>
           Cinco etapas. <span className="gold-text">Nenhuma no escuro.</span>

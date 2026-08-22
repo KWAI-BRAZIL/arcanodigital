@@ -3,15 +3,15 @@ import { CtaBand, Kicker, Title } from "@/components/ui";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Sobre a Arcano Digital",
+  title: "Sobre a Arcano Solutions",
   description:
-    "Origem e propósito da Arcano Digital em Brasília, Caldas Novas e Goiânia: neuromarketing, dado e operação para negócios locais venderem mais todo mês.",
+    "Origem e propósito da Arcano Solutions em Brasília, Caldas Novas e Goiânia: neuromarketing, dado e operação para negócios locais venderem mais todo mês.",
 };
 
 export default function SobrePage() {
   return (
     <main className="pt-28">
-      <section className="mx-auto max-w-6xl px-5 py-16">
+      <section className="mx-auto max-w-6xl px-5 py-24 md:py-36">
         <Kicker>Sobre</Kicker>
         <Title>
           Nascemos para o negócio local <span className="gold-text">parar de improvisar o mês.</span>
@@ -19,7 +19,7 @@ export default function SobrePage() {
         <div className="mt-10 grid gap-10 md:grid-cols-[1.2fr_0.8fr]">
           <div className="space-y-5 text-base leading-relaxed text-muted">
             <p>
-              A Arcano Digital existe porque a maior parte das empresas em Brasília,
+              A Arcano Solutions existe porque a maior parte das empresas em Brasília,
               Caldas Novas, Goiânia e região ainda trata marketing como post, anúncio
               solto ou “alguém que mexe no Instagram”. O caixa não espera o algoritmo.
             </p>
@@ -42,7 +42,7 @@ export default function SobrePage() {
         </div>
       </section>
 
-      <section className="border-y border-line bg-ink-2 py-16">
+      <section className="relative py-24 md:py-36">
         <div className="mx-auto max-w-6xl px-5">
           <Kicker>Como pensamos diferente</Kicker>
           <h2 className="mt-3 max-w-3xl font-display text-3xl text-cream md:text-4xl">

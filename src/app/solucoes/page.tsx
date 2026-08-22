@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function SolucoesPage() {
   return (
     <main className="pt-28">
-      <section className="mx-auto max-w-6xl px-5 py-16">
+      <section className="mx-auto max-w-6xl px-5 py-24 md:py-36">
         <Kicker>Soluções</Kicker>
         <Title>
           Marketing e sistemas. <span className="gold-text">Mesmo peso no comercial.</span>

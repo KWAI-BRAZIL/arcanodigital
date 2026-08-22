@@ -7,7 +7,7 @@ const market = getLocalMarket("caldas-novas");
 export const metadata: Metadata = {
   title: "Agência em Caldas Novas",
   description:
-    "Arcano Digital em Caldas Novas: marketing e automação para temporada — vender na alta sem perder pedido, sem morrer na baixa.",
+    "Arcano Solutions em Caldas Novas: marketing e automação para temporada — vender na alta sem perder pedido, sem morrer na baixa.",
 };
 
 export default function CaldasNovasPage() {

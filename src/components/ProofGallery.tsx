@@ -14,56 +14,82 @@ export function ProofGallery({
   items?: readonly Proof[];
 }) {
   const [active, setActive] = useState<number | null>(null);
+  const [paused, setPaused] = useState(false);
   const list = items ?? proofs;
   const selected = active !== null ? list[active] : null;
+  const track = compact ? [...list, ...list] : list;
 
   return (
     <>
       <div
         className={
           compact
-            ? "-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2"
-            : "grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+            ? "group/proofs -mx-4 overflow-hidden px-4 pb-2"
+            : "grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
         }
+        onMouseEnter={() => compact && setPaused(true)}
+        onMouseLeave={() => compact && setPaused(false)}
       >
-        {list.map((item, i) => (
+        <div
+          className={
+            compact
+              ? `proof-marquee flex gap-5 ${paused || selected ? "is-paused" : ""}`
+              : "contents"
+          }
+        >
+        {track.map((item, i) => {
+          const origin = i % list.length;
+          const alt = origin % 2 === 1;
+          return (
           <button
-            key={item.src}
+            key={`${item.src}-${i}`}
             type="button"
-            onClick={() => setActive(i)}
+            onClick={() => setActive(origin)}
+            onFocus={() => compact && setPaused(true)}
+            onBlur={() => compact && setPaused(false)}
             className={
               compact
-                ? "w-[85vw] shrink-0 snap-start overflow-hidden rounded-lg border bg-arcano-surface text-left shadow-lg shadow-black/40 sm:w-[380px] " +
-                    (i % 2 ? "border-arcano-tech/25" : "border-gold/20")
-                : "overflow-hidden rounded-lg border bg-arcano-surface text-left shadow-lg shadow-black/40 " +
-                    (i % 2 ? "border-arcano-tech/25" : "border-gold/20")
+                ? "w-[85vw] shrink-0 text-left sm:w-[340px]"
+                : "text-left"
             }
           >
-            <div className="relative aspect-[4/5] overflow-hidden bg-arcano-bg sm:aspect-[3/4]">
-              <Image
-                src={item.src}
-                alt={item.title}
-                fill
-                unoptimized
-                sizes="(min-width: 1024px) 360px, 85vw"
-                className="rounded-md object-contain object-top"
-              />
+            <div
+              className={`rounded-[1.35rem] border p-2.5 shadow-[0_20px_50px_rgba(0,0,0,0.35)] transition duration-300 ease-out hover:-translate-y-1 ${
+                alt ? "border-lilac/25 bg-panel/50" : "border-gold/25 bg-panel/50"
+              }`}
+            >
+              <div className="relative aspect-[3/4] overflow-hidden rounded-[1rem] bg-void">
+                <Image
+                  src={item.src}
+                  alt={item.title}
+                  fill
+                  unoptimized
+                  sizes="(min-width: 1024px) 340px, 85vw"
+                  className="object-contain object-top"
+                />
+              </div>
             </div>
-            <div className="p-4">
-              <p className={`font-sans text-[11px] font-medium uppercase tracking-[0.22em] ${i % 2 ? "text-arcano-tech" : "text-gold"}`}>
+            <div className="mt-4 px-1">
+              <p
+                className={`font-sans text-[11px] font-medium uppercase tracking-[0.22em] ${
+                  alt ? "text-lilac" : "text-gold"
+                }`}
+              >
                 {item.metric}
               </p>
-              <p className="mt-1 font-display text-xl font-medium tracking-[-0.03em] text-cream">
+              <p className="mt-1 font-display text-xl font-medium tracking-[-0.03em] text-ivory">
                 {item.title}
               </p>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{item.detail}</p>
+              <p className="mt-2 text-sm leading-relaxed text-mist">{item.detail}</p>
             </div>
           </button>
-        ))}
+          );
+        })}
+        </div>
       </div>
       {selected ? (
         <div
-          className="fixed inset-0 z-[80] flex items-center justify-center bg-black/85 p-4"
+          className="fixed inset-0 z-[80] flex items-center justify-center bg-[#05080f]/90 p-4"
           onClick={() => setActive(null)}
         >
           <div className="relative max-h-[90vh] w-full max-w-3xl" onClick={(e) => e.stopPropagation()}>
@@ -75,10 +101,10 @@ export function ProofGallery({
               unoptimized
               className="max-h-[80vh] w-full rounded-md object-contain shadow-lg shadow-black/40"
             />
-            <p className="mt-3 text-center text-sm text-muted">{selected.detail}</p>
+            <p className="mt-3 text-center text-sm text-mist">{selected.detail}</p>
             <button
               type="button"
-              className="gold-btn mt-4 w-full rounded-lg py-2 text-[11px] uppercase tracking-[0.2em]"
+              className="gold-btn mt-4 w-full rounded-sm py-2 text-[11px] uppercase tracking-[0.2em]"
               onClick={() => setActive(null)}
             >
               Fechar

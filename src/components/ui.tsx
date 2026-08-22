@@ -3,7 +3,7 @@ import { whatsappUrl } from "@/lib/site";
 
 export function Kicker({ children }: { children: React.ReactNode }) {
   return (
-    <p className="font-sans text-[11px] font-medium uppercase tracking-[0.32em] text-gold">
+    <p className="font-sans text-[11px] font-medium uppercase tracking-[0.28em] text-gold">
       {children}
     </p>
   );
@@ -11,7 +11,7 @@ export function Kicker({ children }: { children: React.ReactNode }) {
 
 export function Title({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="font-display text-3xl font-medium leading-tight tracking-[-0.035em] text-cream md:text-5xl">
+    <h2 className="font-display text-3xl font-medium leading-tight tracking-[-0.04em] text-ivory md:text-5xl">
       {children}
     </h2>
   );
@@ -31,7 +31,7 @@ export function WhatsAppCta({
       href={whatsappUrl(message)}
       target="_blank"
       rel="noopener noreferrer"
-      className={`gold-btn inline-flex items-center justify-center rounded-lg px-6 py-3 font-sans text-[12px] font-medium uppercase tracking-[0.18em] ${className}`}
+      className={`gold-btn inline-flex items-center justify-center rounded-sm px-8 py-3.5 font-sans text-[12px] font-medium uppercase tracking-[0.2em] ${className}`}
     >
       {children}
     </a>
@@ -50,7 +50,7 @@ export function GhostLink({
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center rounded-lg border border-gold/35 px-6 py-3 font-sans text-[12px] font-medium uppercase tracking-[0.18em] text-gold hover:border-arcano-tech hover:text-arcano-tech ${className}`}
+      className={`inline-flex items-center justify-center rounded-sm border border-gold/35 px-6 py-3.5 font-sans text-[12px] font-medium uppercase tracking-[0.2em] text-gold transition-colors duration-300 ease-out hover:border-lilac hover:text-lilac ${className}`}
     >
       {children}
     </Link>
@@ -59,14 +59,13 @@ export function GhostLink({
 
 export function CtaBand() {
   return (
-    <section id="shot-cta" className="relative overflow-hidden bg-arcano-surface px-5 py-20 md:py-28">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_32%_120%,rgba(212,165,55,0.14),transparent_50%),radial-gradient(ellipse_at_72%_120%,rgba(79,138,184,0.14),transparent_50%)]" />
-      <div className="relative mx-auto max-w-3xl text-center">
+    <section id="shot-cta" className="relative overflow-hidden px-5 py-24 md:py-36">
+      <div className="mx-auto max-w-3xl text-center">
         <Kicker>Próximo passo</Kicker>
-        <h2 className="mt-5 font-display text-3xl font-medium leading-tight tracking-[-0.035em] text-cream md:text-5xl">
+        <h2 className="mt-5 font-display text-3xl font-medium leading-tight tracking-[-0.04em] text-ivory md:text-5xl">
           Vamos olhar o seu comercial — e o sistema que está travando o mês.
         </h2>
-        <p className="mx-auto mt-5 max-w-lg text-sm leading-[1.75] text-muted">
+        <p className="mx-auto mt-5 max-w-lg text-[17px] leading-[1.8] text-mist">
           Diagnóstico inicial sem custo, para negócios em Goiânia, Brasília, Caldas Novas e região.
         </p>
         <div className="mt-10">

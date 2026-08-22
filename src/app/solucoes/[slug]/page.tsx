@@ -26,7 +26,7 @@ export default async function ServicePage({ params }: Props) {
 
   return (
     <main className="pt-28">
-      <section className="mx-auto max-w-3xl px-5 py-16">
+      <section className="mx-auto max-w-3xl px-5 py-24 md:py-36">
         <Kicker>Solução</Kicker>
         <Title>{service.title}</Title>
         <p className="mt-6 text-lg leading-relaxed text-muted">{service.description}</p>

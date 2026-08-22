@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <main className="pt-28">
-      <section className="mx-auto max-w-6xl px-5 py-16">
+      <section className="mx-auto max-w-6xl px-5 py-24 md:py-36">
         <Kicker>Conteúdo</Kicker>
         <Title>
           Neuromarketing para quem <span className="gold-text">vende na cidade.</span>

@@ -5,13 +5,13 @@ import { site, whatsappUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contato",
   description:
-    "Fale com a Arcano Digital no WhatsApp. Atendimento em Brasília, Caldas Novas, Goiânia e região metropolitana.",
+    "Fale com a Arcano Solutions no WhatsApp. Atendimento em Brasília, Caldas Novas, Goiânia e região metropolitana.",
 };
 
 export default function ContatoPage() {
   return (
     <main className="pt-28">
-      <section className="mx-auto max-w-6xl px-5 py-16">
+      <section className="mx-auto max-w-6xl px-5 py-24 md:py-36">
         <Kicker>Contato</Kicker>
         <Title>
           O caminho é o WhatsApp. <span className="gold-text">Não um formulário genérico.</span>

@@ -12,7 +12,7 @@ function PillarCard({ item, tech }: { item: Pillar; tech?: boolean }) {
       <StatCard className="h-full" alt={tech} accent={tech ? "tech" : "gold"}>
         <p
           className={`font-sans text-[11px] font-medium uppercase tracking-[0.22em] ${
-            tech ? "text-arcano-tech" : "text-gold"
+            tech ? "text-lilac" : "text-gold"
           }`}
         >
           {item.kicker}
@@ -40,7 +40,7 @@ export function DualPillars() {
         </div>
       </div>
       <div>
-        <p className="font-sans text-[11px] font-medium uppercase tracking-[0.28em] text-arcano-tech">
+        <p className="font-sans text-[11px] font-medium uppercase tracking-[0.28em] text-lilac">
           Desenvolvimento & Sistemas
         </p>
         <div className="mt-5 grid gap-4 sm:grid-cols-2">

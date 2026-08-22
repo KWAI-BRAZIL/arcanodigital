@@ -5,13 +5,13 @@ import { CtaBand, Kicker, Title } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Cases e resultados",
   description:
-    "Cases da Arcano Digital por segmento — alimentação, saúde, varejo, serviços e imobiliário em Goiás. Desafio, ação, número e prova visual.",
+    "Cases da Arcano Solutions por segmento — alimentação, saúde, varejo, serviços e imobiliário em Goiás. Desafio, ação, número e prova visual.",
 };
 
 export default function CasesPage() {
   return (
     <main className="pt-28">
-      <section className="mx-auto max-w-6xl px-5 py-16">
+      <section className="mx-auto max-w-6xl px-5 py-24 md:py-36">
         <Kicker>Cases / Resultados</Kicker>
         <Title>
           Negócio local não é genérico. <span className="gold-text">O segmento importa.</span>
