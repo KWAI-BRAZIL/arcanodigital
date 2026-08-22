@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DualPillars } from "@/components/DualPillars";
+import { ServiceIcon } from "@/components/ServiceIcon";
 import { CtaBand, Kicker, Title } from "@/components/ui";
 import { services } from "@/lib/content";
 
@@ -23,14 +24,18 @@ export default function SolucoesPage() {
           vendas online entram dentro dos cards — não como lista solta.
         </p>
         <DualPillars />
-        <div className="mt-16">
+      </section>
+      <section className="island-dark py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-5">
+        <div>
           <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted">
             Todas as páginas de serviço
           </p>
           <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {services.map((item) => (
               <Link key={item.slug} href={`/solucoes/${item.slug}`} className="panel p-6 hover:border-gold/50">
-                <h2 className="font-display text-2xl text-cream">{item.title}</h2>
+                <ServiceIcon slug={item.slug} tech={item.slug.includes("sistema") || item.slug.includes("software") || item.slug.includes("automacao") || item.slug.includes("inteligencia") || item.slug.includes("vendas")} />
+                <h2 className="mt-4 font-display text-2xl text-cream">{item.title}</h2>
                 <p className="mt-3 text-sm leading-relaxed text-muted">{item.description}</p>
                 <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.2em] text-gold">
                   Ver o que está incluso
@@ -38,6 +43,7 @@ export default function SolucoesPage() {
               </Link>
             ))}
           </div>
+        </div>
         </div>
       </section>
       <CtaBand />

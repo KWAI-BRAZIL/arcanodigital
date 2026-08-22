@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ServiceIcon } from "@/components/ServiceIcon";
 import { GhostLink, Kicker, Title, WhatsAppCta } from "@/components/ui";
 import { services } from "@/lib/content";
 
@@ -27,6 +28,13 @@ export default async function ServicePage({ params }: Props) {
   return (
     <main className="pt-28">
       <section className="mx-auto max-w-3xl px-5 py-24 md:py-36">
+        <div className="mb-5">
+          <ServiceIcon
+            slug={service.slug}
+            tech={["sistemas-personalizados", "desenvolvimento-software", "automacao", "inteligencia-artificial", "vendas-online"].includes(service.slug)}
+            size="lg"
+          />
+        </div>
         <Kicker>Solução</Kicker>
         <Title>{service.title}</Title>
         <p className="mt-6 text-lg leading-relaxed text-muted">{service.description}</p>

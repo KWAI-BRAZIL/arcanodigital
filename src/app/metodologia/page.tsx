@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { CtaBand, Kicker, Title } from "@/components/ui";
 import { methodSteps } from "@/lib/content";
+
+function StepMark({ n }: { n: string }) {
+  return (
+    <span className="relative flex h-16 w-16 items-center justify-center rounded-full border border-gold/40 bg-gold/10">
+      <span className="font-display text-2xl text-gold">{n}</span>
+    </span>
+  );
+}
 
 export const metadata: Metadata = {
   title: "Metodologia",
@@ -20,10 +29,16 @@ export default function MetodologiaPage() {
           Feito para o dono que nunca contratou agência e precisa ver o processo antes
           de colocar verba. Neuromarketing entra na estratégia; o resto executa.
         </p>
-        <ol className="mt-14 space-y-6">
+        <div className="relative mt-10 aspect-[16/8] overflow-hidden rounded-md border border-line">
+          <Image src="/photos/photo-workshop.png" alt="" fill className="object-cover" sizes="100vw" />
+        </div>
+      </section>
+      <section className="island-dark py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-5">
+        <ol className="space-y-6">
           {methodSteps.map((step) => (
-            <li key={step.n} className="panel grid gap-4 p-6 md:grid-cols-[120px_1fr] md:items-center">
-              <p className="font-display text-4xl text-gold">{step.n}</p>
+            <li key={step.n} className="panel grid gap-4 p-6 md:grid-cols-[88px_1fr] md:items-center">
+              <StepMark n={step.n} />
               <div>
                 <h2 className="font-display text-2xl text-cream">{step.title}</h2>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{step.text}</p>
@@ -31,6 +46,7 @@ export default function MetodologiaPage() {
             </li>
           ))}
         </ol>
+        </div>
       </section>
       <CtaBand />
     </main>

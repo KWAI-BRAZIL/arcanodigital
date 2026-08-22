@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useMemo, useState } from "react";
+import { DeviceFrame } from "@/components/DeviceFrame";
+import { iconSlugForSegment, ServiceIcon } from "@/components/ServiceIcon";
 import { cases, resultOps, segments } from "@/lib/content";
 
 export function CasesBoard() {
@@ -39,7 +41,8 @@ export function CasesBoard() {
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           {ops.map((item) => (
             <article key={item.slug} className="group panel overflow-hidden transition duration-300 ease-out hover:-translate-y-1">
-              <div className="relative h-80 bg-[#111]">
+              <DeviceFrame>
+              <div className="relative h-80 overflow-hidden rounded-[1rem] bg-white">
                 <Image
                   src={item.proof}
                   alt={item.title}
@@ -48,6 +51,7 @@ export function CasesBoard() {
                   className="object-contain object-top"
                 />
               </div>
+              </DeviceFrame>
               <div className="space-y-3 p-6">
                 <p className="text-[11px] uppercase tracking-[0.22em] text-gold">{item.segment}</p>
                 <h3 className="font-display text-2xl text-cream">{item.title}</h3>
@@ -74,7 +78,11 @@ export function CasesBoard() {
           <p className="text-[11px] uppercase tracking-[0.28em] text-gold">Marcas atendidas neste recorte</p>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             {brands.map((item) => (
-              <article key={item.slug} className="panel p-6 transition duration-300 ease-out hover:-translate-y-1">
+              <article key={item.slug} className="panel overflow-hidden p-0 transition duration-300 ease-out hover:-translate-y-1">
+                <div className="flex h-28 items-center justify-center bg-paper-2">
+                  <ServiceIcon slug={iconSlugForSegment(item.segment)} size="lg" />
+                </div>
+                <div className="p-6">
                 <p className="text-[11px] uppercase tracking-[0.22em] text-gold">{item.segment}</p>
                 <h3 className="mt-2 font-display text-2xl text-cream">{item.client}</h3>
                 <p className="mt-3 text-sm text-muted">
@@ -89,6 +97,7 @@ export function CasesBoard() {
                   <span className="text-cream">Resultado. </span>
                   {item.result}
                 </p>
+                </div>
               </article>
             ))}
           </div>

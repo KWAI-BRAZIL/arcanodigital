@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { DualPillars } from "@/components/DualPillars";
+import { iconSlugForSegment, ServiceIcon } from "@/components/ServiceIcon";
 import { Logo } from "@/components/Logo";
 import { ProofGallery } from "@/components/ProofGallery";
 import { CtaBand, GhostLink, Kicker, Title, WhatsAppCta } from "@/components/ui";
@@ -26,14 +28,19 @@ export function LocalMarketPage({ market }: { market: LocalMarket }) {
               <GhostLink href="/cases">Ver portfólio</GhostLink>
             </div>
           </div>
-          <div className="glass flex flex-col items-center justify-center p-10">
-            <Logo size="lg" href={null} />
-            <p className="mt-6 text-center font-sans text-[11px] font-medium uppercase tracking-[0.28em] text-gold">
+          <div className="glass flex flex-col overflow-hidden">
+            <div className="relative h-48 w-full">
+              <Image src="/photos/photo-store.png" alt="" fill className="object-cover" sizes="40vw" />
+            </div>
+            <div className="flex flex-col items-center p-8">
+            <Logo size="lg" href={null} onLight />
+            <p className="mt-6 text-center font-sans text-[11px] font-medium uppercase tracking-[0.16em] text-muted">
               {site.area}
             </p>
+            </div>
           </div>
         </div>
-        <div className="border-y border-rule">
+        <div className="island-dark border-y border-line">
           <p className="mx-auto max-w-6xl px-5 pt-6 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
             {market.statsNote}
           </p>
@@ -57,7 +64,7 @@ export function LocalMarketPage({ market }: { market: LocalMarket }) {
         <DualPillars />
       </section>
 
-      <section className="relative py-24 md:py-36">
+      <section className="island-dark relative py-24 md:py-36">
         <div className="mx-auto max-w-6xl px-5">
           <Kicker>Prova</Kicker>
           <Title>O que esta praça precisa ver.</Title>
@@ -73,18 +80,24 @@ export function LocalMarketPage({ market }: { market: LocalMarket }) {
         <Title>Recortes de operação</Title>
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
           {localCases.map((item) => (
-            <article key={item.slug} className="panel p-6">
+            <article key={item.slug} className="panel overflow-hidden p-0">
+              <div className="flex h-24 items-center justify-center bg-paper-2">
+                <ServiceIcon slug={iconSlugForSegment(item.segment)} size="lg" />
+              </div>
+              <div className="p-6">
               <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-gold">{item.segment}</p>
               <h3 className="mt-2 font-display text-2xl text-cream">{item.client}</h3>
               <p className="mt-4 text-sm text-muted">{item.challenge}</p>
               <p className="mt-3 text-sm text-gold-bright">{item.result}</p>
+              </div>
             </article>
           ))}
         </div>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {market.reasons.map((item) => (
             <article key={item.title} className="panel p-6">
-              <h3 className="font-display text-xl text-cream">{item.title}</h3>
+              <ServiceIcon slug="posicionamento" />
+              <h3 className="mt-4 font-display text-xl text-cream">{item.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted">{item.text}</p>
             </article>
           ))}

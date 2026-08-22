@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ServiceIcon } from "@/components/ServiceIcon";
 import { Kicker, Title, WhatsAppCta } from "@/components/ui";
 import { site, whatsappUrl } from "@/lib/site";
 
@@ -22,7 +23,8 @@ export default function ContatoPage() {
         </p>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           <article className="panel p-8">
-            <p className="text-[11px] uppercase tracking-[0.22em] text-gold">WhatsApp</p>
+            <ServiceIcon slug="automacao" />
+            <p className="mt-4 text-[11px] uppercase tracking-[0.22em] text-gold">WhatsApp</p>
             <p className="mt-3 font-display text-3xl text-cream">{site.phoneDisplay}</p>
             <p className="mt-3 text-sm text-muted">Resposta comercial. Diga o segmento e o que trava o mês.</p>
             <div className="mt-8">
@@ -30,7 +32,8 @@ export default function ContatoPage() {
             </div>
           </article>
           <article className="panel p-8">
-            <p className="text-[11px] uppercase tracking-[0.22em] text-gold">Onde atuamos</p>
+            <ServiceIcon slug="posicionamento" />
+            <p className="mt-4 text-[11px] uppercase tracking-[0.22em] text-gold">Onde atuamos</p>
             <p className="mt-3 font-display text-2xl text-cream">{site.area}</p>
             <p className="mt-4 text-sm text-muted">{site.email}</p>
             <p className="mt-2 text-sm text-muted">CNPJ {site.cnpj}</p>

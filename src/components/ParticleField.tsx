@@ -9,7 +9,7 @@ import {
 import { loadSlim } from "@tsparticles/slim";
 import type { ISourceOptions } from "@tsparticles/engine";
 
-function TechMesh() {
+function TechMesh({ id }: { id: string }) {
   const { loaded } = useParticlesProvider();
   const [dense, setDense] = useState(false);
 
@@ -25,29 +25,27 @@ function TechMesh() {
     (): ISourceOptions => ({
       fullScreen: { enable: false },
       background: { color: { value: "transparent" } },
-      fpsLimit: 48,
+      fpsLimit: 45,
       detectRetina: true,
       particles: {
-        number: { value: dense ? 88 : 36, density: { enable: true, width: 1100, height: 760 } },
-        color: { value: ["#6B8CA8", "#8AA8BC", "#C9A24A"] },
+        number: { value: dense ? 56 : 24, density: { enable: true, width: 1100, height: 760 } },
+        color: { value: ["#D4A017", "#E8D5F5"] },
         shape: { type: "circle" },
         links: {
           enable: true,
-          color: "#5A7A94",
-          distance: dense ? 92 : 72,
-          opacity: 0.22,
-          width: 0.45,
+          color: "#C4B5E0",
+          distance: dense ? 110 : 80,
+          opacity: 0.12,
+          width: 0.5,
         },
         move: {
           enable: true,
-          speed: dense ? 1.15 : 0.75,
+          speed: dense ? 0.7 : 0.45,
           direction: "none",
-          random: false,
-          straight: false,
-          outModes: { default: "bounce" },
+          outModes: { default: "out" },
         },
-        opacity: { value: { min: 0.25, max: 0.55 } },
-        size: { value: { min: 0.8, max: 1.6 } },
+        opacity: { value: { min: 0.15, max: 0.4 } },
+        size: { value: { min: 0.8, max: 1.8 } },
       },
       interactivity: {
         detectsOn: "window",
@@ -55,7 +53,7 @@ function TechMesh() {
           onHover: { enable: true, mode: "grab" },
         },
         modes: {
-          grab: { distance: dense ? 140 : 100, links: { opacity: 0.5 } },
+          grab: { distance: dense ? 150 : 110, links: { opacity: 0.35 } },
         },
       },
     }),
@@ -64,14 +62,10 @@ function TechMesh() {
 
   if (!loaded) return null;
 
-  return (
-    <div className="pointer-events-none fixed inset-0 z-0 h-screen w-screen" aria-hidden>
-      <Particles id="arcano-mesh" className="h-full w-full" options={options} />
-    </div>
-  );
+  return <Particles id={id} className="h-full w-full" options={options} />;
 }
 
-export function ParticleField() {
+export function ParticleField({ id = "arcano-mesh" }: { id?: string }) {
   const [ok, setOk] = useState(false);
 
   useEffect(() => {
@@ -82,8 +76,10 @@ export function ParticleField() {
   if (!ok) return null;
 
   return (
-    <ParticlesProvider init={loadSlim}>
-      <TechMesh />
-    </ParticlesProvider>
+    <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden>
+      <ParticlesProvider init={loadSlim}>
+        <TechMesh id={id} />
+      </ParticlesProvider>
+    </div>
   );
 }

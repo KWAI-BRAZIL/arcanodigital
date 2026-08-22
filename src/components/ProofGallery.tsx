@@ -54,11 +54,11 @@ export function ProofGallery({
             }
           >
             <div
-              className={`rounded-[1.35rem] border p-2.5 shadow-[0_20px_50px_rgba(0,0,0,0.35)] transition duration-300 ease-out hover:-translate-y-1 ${
-                alt ? "border-lilac/25 bg-panel/50" : "border-gold/25 bg-panel/50"
+              className={`rounded-[1.35rem] border p-2.5 shadow-[0_18px_40px_rgba(26,26,31,0.1)] transition duration-300 ease-out hover:-translate-y-1 ${
+                alt ? "border-lilac/30 bg-paper-2" : "border-gold/30 bg-paper-2"
               }`}
             >
-              <div className="relative aspect-[3/4] overflow-hidden rounded-[1rem] bg-void">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-[1rem] bg-white">
                 <Image
                   src={item.src}
                   alt={item.title}
@@ -77,10 +77,10 @@ export function ProofGallery({
               >
                 {item.metric}
               </p>
-              <p className="mt-1 font-display text-xl font-medium tracking-[-0.03em] text-ivory">
+              <p className="mt-1 font-display text-xl font-medium tracking-[-0.03em] text-cream">
                 {item.title}
               </p>
-              <p className="mt-2 text-sm leading-relaxed text-mist">{item.detail}</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{item.detail}</p>
             </div>
           </button>
           );

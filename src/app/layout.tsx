@@ -6,7 +6,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { JsonLd } from "@/components/JsonLd";
-import { ParticleField } from "@/components/ParticleField";
 import { ScrollProgressBar } from "@/components/ScrollImmersion";
 import { site } from "@/lib/site";
 
@@ -75,7 +74,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable} antialiased bg-void text-ivory`}>
+      <body className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable} antialiased bg-white text-cream`}>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-7HG8L6QWN9" strategy="afterInteractive" />
         <Script id="google-gtag" strategy="afterInteractive">
           {`
@@ -88,7 +87,6 @@ export default function RootLayout({
         <JsonLd />
         <Header />
         <ScrollProgressBar />
-        <ParticleField />
         <div className="relative z-[1]">{children}</div>
         <Footer />
         <WhatsAppFloat />

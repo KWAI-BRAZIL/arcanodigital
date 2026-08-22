@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DeviceFrame } from "@/components/DeviceFrame";
 import { ProofGallery } from "@/components/ProofGallery";
 import { CtaBand, Kicker, Title } from "@/components/ui";
 import { testimonials } from "@/lib/content";
@@ -24,10 +25,12 @@ export default function DepoimentosPage() {
         </p>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {testimonials.map((item) => (
-            <article key={item.quote} className="panel overflow-hidden">
-              <div className="relative h-96 bg-void">
+            <article key={item.quote} className="panel overflow-hidden p-3">
+              <DeviceFrame>
+              <div className="relative h-96 overflow-hidden rounded-[1rem] bg-white">
                 <Image src={item.image} alt={item.author} fill unoptimized className="object-contain object-top" />
               </div>
+              </DeviceFrame>
               <div className="p-6">
                 <p className="text-sm leading-relaxed text-cream">“{item.quote}”</p>
                 <p className="mt-4 text-[11px] uppercase tracking-[0.2em] text-gold">
@@ -38,7 +41,7 @@ export default function DepoimentosPage() {
           ))}
         </div>
       </section>
-      <section className="border-t border-line py-16">
+      <section className="island-dark border-t border-line py-16">
         <div className="mx-auto max-w-6xl px-5">
           <Kicker>Galeria de resultados</Kicker>
           <h2 className="mt-3 font-display text-3xl text-cream">Todas as provas visuais</h2>
