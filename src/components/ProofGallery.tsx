@@ -37,7 +37,7 @@ export function ProofGallery({
                 : "panel group overflow-hidden text-left"
             }
           >
-            <div className="relative aspect-[3/4] overflow-hidden bg-[#111]">
+            <div className="relative aspect-[4/5] overflow-hidden bg-[#111] sm:aspect-[3/4]">
               <Image
                 src={item.src}
                 alt={item.title}
@@ -64,8 +64,8 @@ export function ProofGallery({
             <Image
               src={selected.src}
               alt={selected.title}
-              width={2340}
-              height={3120}
+              width={1600}
+              height={2000}
               unoptimized
               className="max-h-[80vh] w-full object-contain"
             />

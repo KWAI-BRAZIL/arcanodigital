@@ -338,51 +338,73 @@ export const cases = [
 
 export const proofs = [
   {
-    src: "/proofs/proof-roas.png",
-    title: "Focopill",
-    metric: "ROAS 1,86 · margem 46,1%",
+    src: "/proofs/proof-whatsapp-saba.png",
+    title: "WhatsApp — Saba",
+    metric: "Megapiso + 20% · recorde de maio",
     detail:
-      "Faturamento líquido de R$ 99.377,92, gasto de R$ 53.536,53, lucro de R$ 45.841,39 e 1.016 vendas.",
+      "Charbel Bibi: bateu o Megapiso na primeira quinzena, subiu a meta 20% e fechou o melhor mês do Saba — recorde em vendas, pedidos e ticket médio.",
   },
   {
-    src: "/proofs/proof-whatsapp-recorde.png",
-    title: "Rainha Marketing",
-    metric: "Megapiso + 20% no alvo",
+    src: "/proofs/proof-painel-748k.png",
+    title: "Painel de operação",
+    metric: "R$ 748.372,61 · ROI 2,25",
     detail:
-      "WhatsApp da Rainha Marketing: bateu o maior piso na primeira quinzena, subiu a meta 20% e fechou o mês com recorde de vendas, pedidos e ticket médio.",
+      "Faturamento líquido de R$ 748.372,61, lucro de R$ 416.160,58, margem 55,6% e ROI 2,25 — Meta Ads, bio e YouTube na mesma leitura.",
   },
   {
-    src: "/proofs/proof-vendas.png",
-    title: "Briston Wear",
-    metric: "703 vendas · R$ 154.580,99",
-    detail: "Receita de R$ 154.580,99 com ticket médio de R$ 219,89 em operação rastreada.",
-  },
-  {
-    src: "/proofs/proof-conversao.png",
-    title: "Focopill",
-    metric: "20,21% de conversão",
+    src: "/proofs/proof-painel-232k.png",
+    title: "Painel de operação",
+    metric: "ROAS 2,81 · lucro R$ 149.656,48",
     detail:
-      "R$ 9.472,63 em vendas no dia, 38 pedidos e ticket de R$ 249,28 — funil de checkout da Focopill.",
+      "Faturamento líquido de R$ 232.302,52, gasto de R$ 82.646,04 e lucro de R$ 149.656,48.",
   },
   {
-    src: "/proofs/proof-whatsapp-feedback.png",
-    title: "Marcelo Antonio Imóveis",
-    metric: "183 conversões no mês",
+    src: "/proofs/proof-meta-116k.png",
+    title: "Meta Ads",
+    metric: "R$ 116.726,99 em conversão",
     detail:
-      "256 conversas, 183 conversões, R$ 23.800 no WhatsApp e R$ 29.200 no site. Recorde de vendas no fechamento.",
+      "Gestor de anúncios com valor de conversão consolidado de R$ 116.726,99 no recorte da campanha.",
   },
   {
-    src: "/proofs/proof-ads.png",
-    title: "Briston Wear",
-    metric: "R$ 4.101,24 em conversão",
-    detail: "Campanhas com valor de conversão somado e 2.327 visualizações de página no recorte.",
-  },
-  {
-    src: "/proofs/proof-vyria.png",
-    title: "Solaria Doceria",
-    metric: "R$ 33.030,50 no mês",
+    src: "/proofs/proof-meta-44k.png",
+    title: "Meta Ads",
+    metric: "R$ 13.444,34 → R$ 44.547,42",
     detail:
-      "Painel de pedidos: item mais vendido com 1.002 unidades e faturamento mensal de R$ 33.030,50.",
+      "R$ 13.444,34 usados e R$ 44.547,42 em valor de conversão — compras no site no mesmo recorte.",
+  },
+  {
+    src: "/proofs/proof-painel-64k.png",
+    title: "Operação de afiliados",
+    metric: "ROAS 2,44 · lucro R$ 37.824,50",
+    detail:
+      "Faturamento líquido de R$ 64.008,43, gasto de R$ 26.183,93 e ROAS 2,44.",
+  },
+  {
+    src: "/proofs/proof-tabela-roas.png",
+    title: "Conjuntos de anúncio",
+    metric: "ROAS até 308,96",
+    detail:
+      "Tabela do dia: CPA baixo, faturamento por conjunto na casa de R$ 850 e lucro em verde em cada linha.",
+  },
+  {
+    src: "/proofs/proof-ecommerce-19k.png",
+    title: "E-commerce",
+    metric: "R$ 19.896,69 · 141 pedidos",
+    detail:
+      "R$ 19.896,69 em vendas e 141 pedidos no recorte de 12 a 17 de julho, com a curva subindo no gráfico.",
+  },
+  {
+    src: "/proofs/proof-painel-nara.png",
+    title: "Painel de pagamentos",
+    metric: "R$ 33.208,40 no total",
+    detail: "Total de R$ 33.208,40 e R$ 1.757,80 no dia, com pagamento automático marcado como pago.",
+  },
+  {
+    src: "/proofs/proof-painel-euro.png",
+    title: "Dashboard — resumo do dia",
+    metric: "Margem 61,3% · lucro € 9.740,93",
+    detail:
+      "Faturamento líquido de € 15.889,16, gasto de € 6.148,23 e margem 61,3% no recorte de hoje.",
   },
 ] as const;
 
@@ -416,11 +438,11 @@ export const methodSteps = [
 
 export const testimonials = [
   {
-    author: "Rainha Marketing",
+    author: "Charbel Bibi · Saba",
     source: "WhatsApp",
     quote:
-      "Batemo o Megapiso na primeira quinzena, ajustei 20% para cima e finalizamos o mês com recorde em vendas, pedidos e ticket médio.",
-    image: "/proofs/proof-whatsapp-recorde.png",
+      "Batemos o Megapiso na primeira quinzena, ajustei 20% para cima e finalizamos o mês com recorde em vendas, pedidos e ticket médio.",
+    image: "/proofs/proof-whatsapp-saba.png",
   },
   {
     author: "Marcelo Antonio Imóveis",

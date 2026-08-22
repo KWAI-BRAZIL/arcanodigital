@@ -30,12 +30,12 @@ export const localMarkets: LocalMarket[] = [
     pillarsLead:
       "Tráfego e neuromarketing no mesmo peso de sistema: o anúncio só escala se o caixa confirma.",
     proofLead:
-      "Focopill, Briston Wear e checkout com 20,21% de conversão — prova específica, não recorte genérico.",
+      "Painéis e Meta Ads com leitura de caixa — prova específica, não recorte genérico.",
     proofSrcs: [
-      "/proofs/proof-roas.png",
-      "/proofs/proof-vendas.png",
-      "/proofs/proof-conversao.png",
-      "/proofs/proof-ads.png",
+      "/proofs/proof-painel-232k.png",
+      "/proofs/proof-meta-116k.png",
+      "/proofs/proof-tabela-roas.png",
+      "/proofs/proof-meta-44k.png",
     ],
     caseSlugs: ["focopill", "briston-wear", "marcelo-antonio-imoveis"],
     reasons: [
@@ -66,12 +66,12 @@ export const localMarkets: LocalMarket[] = [
     pillarsLead:
       "Automação, IA e e-commerce no mesmo peso do marketing: atendimento que não trava quando a cidade enche.",
     proofLead:
-      "Solaria Doceria (R$ 33.030,50 no mês, 1.002 unidades do item líder) e recortes de WhatsApp com 256 conversas / 183 conversões.",
+      "WhatsApp de recorde no mês, e-commerce com 141 pedidos e painel de pagamento no dia.",
     proofSrcs: [
-      "/proofs/proof-vyria.png",
-      "/proofs/proof-whatsapp-feedback.png",
-      "/proofs/proof-whatsapp-recorde.png",
-      "/proofs/proof-conversao.png",
+      "/proofs/proof-whatsapp-saba.png",
+      "/proofs/proof-ecommerce-19k.png",
+      "/proofs/proof-painel-nara.png",
+      "/proofs/proof-painel-64k.png",
     ],
     caseSlugs: ["solaria-doceria", "focopill", "rota-delas"],
     reasons: [
@@ -102,12 +102,12 @@ export const localMarkets: LocalMarket[] = [
     pillarsLead:
       "Branding, neuromarketing e sistemas no mesmo desenho. A relação é de construção, não de campanha isolada.",
     proofLead:
-      "Briston Wear, Rainha Marketing e Focopill — marca, comercial e mídia com leitura de caixa.",
+      "Painéis de escala, ROI e margem — portfólio que sustenta uma decisão mais longa.",
     proofSrcs: [
-      "/proofs/proof-whatsapp-recorde.png",
-      "/proofs/proof-roas.png",
-      "/proofs/proof-vendas.png",
-      "/proofs/proof-ads.png",
+      "/proofs/proof-painel-748k.png",
+      "/proofs/proof-painel-euro.png",
+      "/proofs/proof-tabela-roas.png",
+      "/proofs/proof-painel-232k.png",
     ],
     caseSlugs: ["briston-wear", "rainha-marketing", "focopill"],
     reasons: [
