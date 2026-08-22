@@ -33,8 +33,10 @@ export function ProofGallery({
             onClick={() => setActive(i)}
             className={
               compact
-                ? "w-[85vw] shrink-0 snap-start overflow-hidden rounded-lg border border-arcano-line bg-arcano-surface text-left shadow-lg shadow-black/40 sm:w-[380px]"
-                : "overflow-hidden rounded-lg border border-arcano-line bg-arcano-surface text-left shadow-lg shadow-black/40"
+                ? "w-[85vw] shrink-0 snap-start overflow-hidden rounded-lg border bg-arcano-surface text-left shadow-lg shadow-black/40 sm:w-[380px] " +
+                    (i % 2 ? "border-arcano-tech/25" : "border-gold/20")
+                : "overflow-hidden rounded-lg border bg-arcano-surface text-left shadow-lg shadow-black/40 " +
+                    (i % 2 ? "border-arcano-tech/25" : "border-gold/20")
             }
           >
             <div className="relative aspect-[4/5] overflow-hidden bg-arcano-bg sm:aspect-[3/4]">
@@ -48,7 +50,7 @@ export function ProofGallery({
               />
             </div>
             <div className="p-4">
-              <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-gold">
+              <p className={`font-sans text-[11px] font-medium uppercase tracking-[0.22em] ${i % 2 ? "text-arcano-tech" : "text-gold"}`}>
                 {item.metric}
               </p>
               <p className="mt-1 font-display text-xl font-medium tracking-[-0.03em] text-cream">

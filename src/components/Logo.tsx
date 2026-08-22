@@ -4,17 +4,17 @@ const sizes = {
   sm: {
     wrap: "leading-none",
     name: "font-display text-[1.05rem] font-semibold tracking-[-0.04em]",
-    mark: "mt-0.5 text-[8px] font-medium uppercase tracking-[0.42em] text-arcano-gold",
+        mark: "mt-0.5 text-[8px] font-medium uppercase tracking-[0.42em] text-arcano-tech",
   },
   md: {
     wrap: "leading-none",
     name: "font-display text-xl font-semibold tracking-[-0.04em]",
-    mark: "mt-1 text-[9px] font-medium uppercase tracking-[0.46em] text-arcano-gold",
+        mark: "mt-1 text-[9px] font-medium uppercase tracking-[0.46em] text-arcano-tech",
   },
   lg: {
     wrap: "leading-none",
     name: "font-display text-4xl font-medium tracking-[-0.045em] md:text-5xl",
-    mark: "mt-2 text-[11px] font-medium uppercase tracking-[0.52em] text-arcano-gold",
+        mark: "mt-2 text-[11px] font-medium uppercase tracking-[0.52em] text-arcano-tech",
   },
 } as const;
 

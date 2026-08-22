@@ -105,7 +105,7 @@ export const localMarkets: LocalMarket[] = [
       "Painéis de escala, ROI e margem — portfólio que sustenta uma decisão mais longa.",
     proofSrcs: [
       "/proofs/proof-painel-748k.png",
-      "/proofs/proof-painel-euro.png",
+      "/proofs/proof-painel-64k.png",
       "/proofs/proof-tabela-roas.png",
       "/proofs/proof-painel-232k.png",
     ],

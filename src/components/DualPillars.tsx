@@ -6,13 +6,13 @@ import { StatCard } from "@/components/StatCard";
 
 type Pillar = (typeof marketingPillars)[number] | (typeof developmentPillars)[number];
 
-function PillarCard({ item, muted }: { item: Pillar; muted?: boolean }) {
+function PillarCard({ item, tech }: { item: Pillar; tech?: boolean }) {
   return (
     <Link href={`/solucoes/${item.slug}`} className="block h-full">
-      <StatCard className="h-full" alt={muted}>
+      <StatCard className="h-full" alt={tech} accent={tech ? "tech" : "gold"}>
         <p
           className={`font-sans text-[11px] font-medium uppercase tracking-[0.22em] ${
-            muted ? "text-arcano-gold-muted" : "text-gold"
+            tech ? "text-arcano-tech" : "text-gold"
           }`}
         >
           {item.kicker}
@@ -40,12 +40,12 @@ export function DualPillars() {
         </div>
       </div>
       <div>
-        <p className="font-sans text-[11px] font-medium uppercase tracking-[0.28em] text-arcano-gold-muted">
+        <p className="font-sans text-[11px] font-medium uppercase tracking-[0.28em] text-arcano-tech">
           Desenvolvimento & Sistemas
         </p>
         <div className="mt-5 grid gap-4 sm:grid-cols-2">
           {developmentPillars.map((item) => (
-            <PillarCard key={item.slug} item={item} muted />
+            <PillarCard key={item.slug} item={item} tech />
           ))}
         </div>
       </div>

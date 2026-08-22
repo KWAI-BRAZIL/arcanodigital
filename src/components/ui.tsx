@@ -50,7 +50,7 @@ export function GhostLink({
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center rounded-lg border border-gold/40 px-6 py-3 font-sans text-[12px] font-medium uppercase tracking-[0.18em] text-gold hover:border-gold hover:text-gold-bright ${className}`}
+      className={`inline-flex items-center justify-center rounded-lg border border-gold/35 px-6 py-3 font-sans text-[12px] font-medium uppercase tracking-[0.18em] text-gold hover:border-arcano-tech hover:text-arcano-tech ${className}`}
     >
       {children}
     </Link>
@@ -60,7 +60,7 @@ export function GhostLink({
 export function CtaBand() {
   return (
     <section id="shot-cta" className="relative overflow-hidden bg-arcano-surface px-5 py-20 md:py-28">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_120%,rgba(212,165,55,0.14),transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_32%_120%,rgba(212,165,55,0.14),transparent_50%),radial-gradient(ellipse_at_72%_120%,rgba(79,138,184,0.14),transparent_50%)]" />
       <div className="relative mx-auto max-w-3xl text-center">
         <Kicker>Próximo passo</Kicker>
         <h2 className="mt-5 font-display text-3xl font-medium leading-tight tracking-[-0.035em] text-cream md:text-5xl">

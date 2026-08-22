@@ -400,11 +400,25 @@ export const proofs = [
     detail: "Total de R$ 33.208,40 e R$ 1.757,80 no dia, com pagamento automático marcado como pago.",
   },
   {
-    src: "/proofs/proof-painel-euro.png",
-    title: "Dashboard — resumo do dia",
-    metric: "Margem 61,3% · lucro € 9.740,93",
+    src: "/proofs/proof-checkout-vendas.png",
+    title: "Checkout — vendas",
+    metric: "R$ 9.472,63 · 38 pedidos",
     detail:
-      "Faturamento líquido de € 15.889,16, gasto de € 6.148,23 e margem 61,3% no recorte de hoje.",
+      "Vendas de R$ 9.472,63 no dia, +14,63% na comparação, 38 pedidos realizados e ticket médio de R$ 249,28.",
+  },
+  {
+    src: "/proofs/proof-checkout-receita.png",
+    title: "Checkout — receita",
+    metric: "R$ 7.008,33 · 28 pedidos pagos",
+    detail:
+      "Receita de R$ 7.008,33 com 28 pedidos pagos e taxa de pedidos cancelados de 26% no mesmo recorte.",
+  },
+  {
+    src: "/proofs/proof-checkout-visao.png",
+    title: "Checkout — visão geral",
+    metric: "20,21% de conversão",
+    detail:
+      "38 pedidos criados em 188 acessos ao checkout, ticket de R$ 249,28 e R$ 9.472,63 em vendas no recorte de ontem.",
   },
 ] as const;
 
@@ -443,13 +457,6 @@ export const testimonials = [
     quote:
       "Batemos o Megapiso na primeira quinzena, ajustei 20% para cima e finalizamos o mês com recorde em vendas, pedidos e ticket médio.",
     image: "/proofs/proof-whatsapp-saba.png",
-  },
-  {
-    author: "Marcelo Antonio Imóveis",
-    source: "WhatsApp",
-    quote:
-      "256 conversas, 183 conversões, R$ 23.800 no WhatsApp e R$ 29.200 no site. Recorde de vendas.",
-    image: "/proofs/proof-whatsapp-feedback.png",
   },
 ] as const;
 

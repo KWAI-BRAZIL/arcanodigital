@@ -10,8 +10,8 @@ export const site = {
   address: {
     country: "BR",
   },
-  phoneDisplay: "(62) 99559-7811",
-  phoneE164: "5562995597811",
+  phoneDisplay: "(62) 98120-1160",
+  phoneE164: "5562981201160",
   email: "arcanodigital.com.br@gmail.com",
   cnpj: "63.745.900/0001-88",
   founder: "Nara Rubia",
@@ -21,6 +21,6 @@ export const site = {
 export function whatsappUrl(message?: string) {
   const text =
     message ??
-    "Olá, Arcano Digital. Quero um diagnóstico gratuito do comercial e da operação do meu negócio.";
+    "Olá gostaria de realizar uma consultoria para o meu negocio";
   return `https://wa.me/${site.phoneE164}?text=${encodeURIComponent(text)}`;
 }

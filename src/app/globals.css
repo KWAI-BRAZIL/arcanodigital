@@ -6,6 +6,8 @@
   --arcano-surface-alt: #1c1915;
   --arcano-gold: #d4a537;
   --arcano-gold-muted: #8a7230;
+  --arcano-tech: #4f8ab8;
+  --arcano-tech-deep: #2c5574;
   --arcano-text: #f2efe9;
   --arcano-text-muted: #a39c8e;
   --arcano-line: rgba(242, 239, 233, 0.08);
@@ -28,6 +30,8 @@
   --color-arcano-surface-alt: var(--arcano-surface-alt);
   --color-arcano-gold: var(--arcano-gold);
   --color-arcano-gold-muted: var(--arcano-gold-muted);
+  --color-arcano-tech: var(--arcano-tech);
+  --color-arcano-tech-deep: var(--arcano-tech-deep);
   --color-arcano-text: var(--arcano-text);
   --color-arcano-text-muted: var(--arcano-text-muted);
   --color-arcano-line: var(--arcano-line);
@@ -84,7 +88,7 @@ body {
 }
 
 .gold-text {
-  background: linear-gradient(180deg, #f0d78a 0%, #d4a537 48%, #8a7230 100%);
+  background: linear-gradient(180deg, #f0d78a 0%, #d4a537 48%, #4f8ab8 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -92,13 +96,15 @@ body {
 
 .gold-rule {
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--arcano-gold), transparent);
+  background: linear-gradient(90deg, transparent, var(--arcano-gold), var(--arcano-tech), transparent);
 }
 
 .gold-btn {
   background: var(--arcano-gold);
   color: #140f05;
-  box-shadow: 0 8px 24px rgba(212, 165, 55, 0.18);
+  box-shadow:
+    0 8px 24px rgba(212, 165, 55, 0.18),
+    0 0 32px rgba(79, 138, 184, 0.12);
 }
 
 .gold-btn:hover {
@@ -110,22 +116,9 @@ body {
   border: 1px solid var(--arcano-line);
 }
 
-.reveal {
-  opacity: 0;
-  transform: translate3d(0, 16px, 0);
-  transition:
-    opacity 0.5s ease-out,
-    transform 0.5s ease-out;
-}
-
-.reveal-in {
-  opacity: 1;
-  transform: none;
-}
-
 .snap-x {
   scrollbar-width: thin;
-  scrollbar-color: rgba(212, 165, 55, 0.35) transparent;
+  scrollbar-color: rgba(212, 165, 55, 0.35) rgba(79, 138, 184, 0.15);
 }
 
 @keyframes orb-drift {

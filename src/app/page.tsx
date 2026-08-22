@@ -16,8 +16,8 @@ export default function HomePage() {
 
   return (
     <main>
-      <section id="shot-hero" className="relative overflow-x-hidden bg-arcano-bg pt-28 md:pt-36">
-        <div className="hero-orb pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_-10%,rgba(212,165,55,0.08),transparent_55%)]" />
+      <section id="shot-hero" className="relative overflow-x-clip bg-arcano-bg pt-28 md:pt-36">
+        <div className="hero-orb pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_28%_-10%,rgba(212,165,55,0.1),transparent_48%),radial-gradient(ellipse_at_78%_8%,rgba(79,138,184,0.1),transparent_46%)]" />
         <HeroParallax>
         <div className="relative mx-auto max-w-4xl px-5 pb-16 text-center md:pb-20">
           <Reveal>
@@ -52,8 +52,8 @@ export default function HomePage() {
 
       <section id="shot-stats" className="bg-arcano-surface py-12 md:py-16">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-3 px-5 md:grid-cols-4 md:gap-4">
-          {stats.map((item) => (
-            <StatCard key={item.label} alt>
+          {stats.map((item, i) => (
+            <StatCard key={item.label} alt accent={i % 2 ? "tech" : "gold"}>
               <p className="font-display text-2xl font-medium tracking-[-0.03em] text-cream md:text-3xl">
                 {item.value}
               </p>
@@ -109,8 +109,8 @@ export default function HomePage() {
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-3 md:grid-cols-4 md:gap-4">
-            {aggregateStats.map((item) => (
-              <StatCard key={item.label}>
+            {aggregateStats.map((item, i) => (
+              <StatCard key={item.label} accent={i % 2 ? "tech" : "gold"}>
                 <p className="font-display text-3xl font-medium tracking-[-0.03em] text-cream md:text-4xl">
                   {item.value}
                 </p>
@@ -145,8 +145,8 @@ export default function HomePage() {
                 etapa antes de assinar qualquer coisa.
               </p>
             </StatCard>
-            <StatCard>
-              <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-arcano-gold-muted">
+            <StatCard accent="tech">
+              <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-arcano-tech">
                 Operação completa
               </p>
               <h3 className="mt-4 font-display text-2xl font-medium tracking-[-0.03em] text-cream">
@@ -175,14 +175,20 @@ export default function HomePage() {
           <div className="mt-14 grid gap-4 md:grid-cols-3">
             {cityTriggers.map((item, i) => (
               <Link key={item.city} href={item.href} className="block">
-                <StatCard className="relative h-full overflow-hidden" alt>
+                <StatCard className="relative h-full overflow-hidden" alt accent={i === 1 ? "tech" : "gold"}>
                   <span
                     className="pointer-events-none absolute -right-2 -top-4 font-display text-[7rem] font-medium leading-none text-arcano-text/[0.06]"
                     aria-hidden
                   >
                     0{i + 1}
                   </span>
-                  <p className="relative font-sans text-[11px] font-medium text-gold">0{i + 1}</p>
+                  <p
+                    className={`relative font-sans text-[11px] font-medium ${
+                      i === 1 ? "text-arcano-tech" : "text-gold"
+                    }`}
+                  >
+                    0{i + 1}
+                  </p>
                   <h3 className="relative mt-3 font-display text-2xl font-medium tracking-[-0.03em] text-cream">
                     {item.city}
                   </h3>
@@ -190,7 +196,11 @@ export default function HomePage() {
                     {item.kicker}
                   </p>
                   <p className="relative mt-4 text-sm leading-[1.75] text-muted">{item.text}</p>
-                  <p className="relative mt-5 font-sans text-[11px] font-medium uppercase tracking-[0.18em] text-gold">
+                  <p
+                    className={`relative mt-5 font-sans text-[11px] font-medium uppercase tracking-[0.18em] ${
+                      i === 1 ? "text-arcano-tech" : "text-gold"
+                    }`}
+                  >
                     Ver a praça
                   </p>
                 </StatCard>
@@ -223,7 +233,7 @@ export default function HomePage() {
                 <p className="mt-6 text-base leading-[1.75] text-muted">{lead.challenge}</p>
                 <p className="mt-4 text-base text-cream/90">{lead.result}</p>
               </div>
-              <ul className="space-y-8 md:border-l md:border-arcano-line md:pl-12">
+              <ul className="space-y-8 md:border-l md:border-arcano-tech/25 md:pl-12">
                 {rest.map((item) => (
                   <li key={item.slug}>
                     <p className="font-sans text-[10px] font-medium uppercase tracking-[0.2em] text-muted">

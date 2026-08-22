@@ -22,7 +22,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-arcano-line bg-arcano-bg/80 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 overflow-hidden border-b border-arcano-line bg-arcano-bg/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
         <Logo size="sm" onClick={() => setOpen(false)} />
         <nav className="hidden items-center gap-6 lg:flex">
@@ -56,7 +56,7 @@ export function Header() {
           onClick={() => setOpen((v) => !v)}
         >
           <span className="block h-px w-6 bg-gold" />
-          <span className="mt-1.5 block h-px w-6 bg-gold" />
+          <span className="mt-1.5 block h-px w-6 bg-arcano-tech" />
           <span className="mt-1.5 block h-px w-4 bg-gold" />
         </button>
       </div>

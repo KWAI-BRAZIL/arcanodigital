@@ -27,7 +27,7 @@ export function Footer() {
           </div>
         </div>
         <div>
-          <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-gold">Atuação</p>
+          <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-arcano-tech">Atuação</p>
           <div className="mt-4 space-y-2 text-sm text-muted">
             <Link href="/goiania" className="block hover:text-cream">Goiânia</Link>
             <Link href="/brasilia" className="block hover:text-cream">Brasília</Link>

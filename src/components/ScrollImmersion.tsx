@@ -19,7 +19,7 @@ export function ScrollImmersion() {
         style={{ y: ySlow, opacity: glow }}
       />
       <motion.div
-        className="absolute -right-32 top-[48%] h-[36vw] max-h-[440px] w-[36vw] max-w-[440px] rounded-full bg-[radial-gradient(circle,rgba(138,114,48,0.18),transparent_70%)]"
+        className="absolute -right-32 top-[48%] h-[36vw] max-h-[440px] w-[36vw] max-w-[440px] rounded-full bg-[radial-gradient(circle,rgba(79,138,184,0.2),transparent_70%)]"
         style={{ y: yFast, opacity: glow }}
       />
     </div>
@@ -38,7 +38,7 @@ export function HeroParallax({ children }: { children: ReactNode }) {
   }
 
   return (
-    <motion.div className="relative z-[1]" style={{ y, opacity, scale }}>
+    <motion.div className="relative z-[1] will-change-transform" style={{ y, opacity, scale }}>
       {children}
     </motion.div>
   );
@@ -50,7 +50,7 @@ export function ScrollProgressBar() {
 
   return (
     <motion.div
-      className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-gold"
+      className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-[2px] origin-left bg-gradient-to-r from-gold via-arcano-tech to-gold"
       style={{ scaleX }}
       aria-hidden
     />
