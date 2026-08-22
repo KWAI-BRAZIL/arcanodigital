@@ -15,15 +15,14 @@ export default function HomePage() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(201,162,39,0.12),transparent_42%)]" />
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-16 pt-10 md:grid-cols-[1.15fr_0.85fr] md:pb-24">
           <div>
-            <Kicker>Brasília · Caldas Novas · Goiânia e região</Kicker>
+            <Kicker>Goiânia · Brasília · Caldas Novas</Kicker>
             <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.2] text-cream md:text-6xl">
-              Neuromarketing que decide a venda — e sistemas que{" "}
-              <em>aguentam o volume</em>.
+              O que faz sua cliente comprar. O que faz o sistema aguentar a demanda.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg">
-              Em Goiânia o critério é número (ROAS, custo, margem). Em Caldas Novas, o
-              pico de temporada sem perder pedido. Em Brasília, autoridade e método —
-              sem pacote genérico.
+              Marketing com neuromarketing, tráfego pago e branding — e desenvolvimento de
+              software sob medida, sistemas e automações. Uma operação só, para negócios que
+              não podem parar de vender.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <WhatsAppCta>Quero um diagnóstico gratuito</WhatsAppCta>
@@ -59,13 +58,11 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-20">
-        <Kicker>Dois eixos. Um comercial.</Kicker>
-        <Title>
-          Marketing e sistemas. <span className="gold-text">Mesmo peso.</span>
-        </Title>
+        <Kicker>O que fazemos</Kicker>
+        <Title>Duas frentes. Uma operação.</Title>
         <p className="mt-4 max-w-2xl text-muted">
-          Quatro frentes de percepção e aquisição. Quatro frentes de operação. Nenhum
-          serviço tratado como item de rodapé.
+          Marketing que constrói a decisão de compra. Desenvolvimento que sustenta essa
+          decisão no dia a dia do negócio.
         </p>
         <DualPillars />
       </section>
@@ -119,13 +116,13 @@ export default function HomePage() {
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <Kicker>Prova social</Kicker>
-              <Title>Números de operação. Prova visível.</Title>
+              <Title>Números de operação. Prints reais.</Title>
             </div>
             <GhostLink href="/depoimentos">Ver todas as provas</GhostLink>
           </div>
           <p className="mt-4 max-w-2xl text-muted">
-            Painéis, WhatsApp e checkout — ROAS 1,86, 1.016 vendas, margem 46,1%. O
-            número frio que Goiânia exige; o volume que a temporada precisa aguentar.
+            Painel, WhatsApp e checkout — a mesma evidência que qualquer empresário
+            reconhece, em qualquer praça: venda, margem, conversão e recorde de mês.
           </p>
           <div className="mt-10">
             <ProofGallery compact />
@@ -141,7 +138,7 @@ export default function HomePage() {
           </div>
           <GhostLink href="/cases">Ver todos os cases</GhostLink>
         </div>
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {featured.map((item) => (
             <article key={item.slug} className="panel p-6">
               <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-gold">
@@ -158,9 +155,7 @@ export default function HomePage() {
       <section className="border-y border-line bg-ink-2 py-20">
         <div className="mx-auto max-w-6xl px-5">
           <Kicker>Por que Arcano</Kicker>
-          <Title>
-            Decisão por gatilho e dado. <span className="gold-text">Não por achismo.</span>
-          </Title>
+          <Title>Decisão por gatilho e por dado — em qualquer praça onde você vende.</Title>
           <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
             {aggregateStats.map((item) => (
               <div key={item.label} className="panel p-4">
@@ -173,24 +168,33 @@ export default function HomePage() {
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <article className="panel p-6">
-              <h3 className="font-display text-xl text-cream">Diferencial técnico</h3>
+              <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-gold">
+                Diferencial técnico
+              </p>
+              <h3 className="mt-2 font-display text-xl text-cream">Neuromarketing aplicado</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted">
-                Neuromarketing aplicado à jornada: o que o cliente sente, compara e fecha
-                no WhatsApp ou no checkout. Número na mesa, não slogan.
+                O que a cliente sente, o que ela compara e o que a faz fechar — no WhatsApp,
+                no checkout ou na loja física.
               </p>
             </article>
             <article className="panel p-6">
-              <h3 className="font-display text-xl text-cream">Metodologia visível</h3>
+              <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-gold">
+                Metodologia visível
+              </p>
+              <h3 className="mt-2 font-display text-xl text-cream">Um caminho, não uma caixa-preta</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted">
-                Diagnóstico, estratégia, execução, otimização e relatório. Quem nunca
-                contratou agência enxerga o caminho antes de assinar.
+                Diagnóstico, estratégia, execução, otimização e relatório. Você enxerga cada
+                etapa antes de assinar qualquer coisa.
               </p>
             </article>
             <article className="panel panel-teal p-6">
-              <h3 className="font-display text-xl text-cream">Operação que aguenta pico</h3>
+              <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-teal">
+                Operação completa
+              </p>
+              <h3 className="mt-2 font-display text-xl text-cream">Marketing e engenharia na mesma equipe</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted">
-                IA, checkout e sistemas (a lógica de despacho e painel que já operamos em
-                produtos como o Vyria) para o comercial não morrer no feriado lotado.
+                IA, automações, e-commerce e sistemas sob medida sem precisar contratar outra
+                empresa pra parte técnica.
               </p>
             </article>
           </div>

@@ -1,8 +1,8 @@
 export const stats = [
-  { value: "R$ 154 mil", label: "Receita em operação local" },
-  { value: "1,86", label: "ROAS com lucro de 46%" },
+  { value: "R$ 154 mil", label: "Receita gerada em uma única operação local" },
+  { value: "1,86", label: "ROAS com 46% de margem líquida" },
   { value: "1.016", label: "Vendas rastreadas em um ciclo" },
-  { value: "7+", label: "Negócios locais em destaque" },
+  { value: "7+", label: "Negócios locais em operação com a Arcano" },
 ] as const;
 
 export const aggregateStats = [
@@ -28,7 +28,7 @@ export const marketingPillars = [
     title: "Neuromarketing",
     kicker: "Diferencial técnico",
     summary:
-      "Gatilhos mentais, jornada de decisão e copy que falam com o cérebro — não com o achismo.",
+      "Gatilhos mentais e jornada de decisão traduzidos em copy — o que faz a cliente fechar, não o que soa bonito.",
     bullets: ["Jornada de decisão", "Copy de resposta direta"],
   },
   {
@@ -36,7 +36,7 @@ export const marketingPillars = [
     title: "Tráfego pago",
     kicker: "Aquisição",
     summary:
-      "Meta Ads e Google Ads com funil, tracking e otimização pelo caixa, não pela vaidade.",
+      "Meta Ads e Google Ads com funil e tracking, otimizados pelo caixa — não pela vaidade do relatório.",
     bullets: ["ROAS e custo por lead", "Escala só quando o número fecha"],
   },
   {
@@ -44,7 +44,7 @@ export const marketingPillars = [
     title: "Conteúdo",
     kicker: "Percepção",
     summary:
-      "Identidade de conteúdo e calendário editorial que posicionam o negócio local como referência.",
+      "Identidade de conteúdo e calendário editorial que fazem o negócio ser lembrado antes de ser procurado.",
     bullets: ["Tom de voz", "Integração com anúncio e WhatsApp"],
   },
   {
@@ -52,7 +52,7 @@ export const marketingPillars = [
     title: "Branding",
     kicker: "Marca",
     summary:
-      "Identidade visual, naming e posicionamento para o cliente escolher você — e não o concorrente da esquina.",
+      "Identidade visual e posicionamento para a cliente escolher você — e não o concorrente da esquina.",
     bullets: ["Estratégias de posicionamento"],
   },
 ] as const;
@@ -63,15 +63,15 @@ export const developmentPillars = [
     title: "Sistemas sob medida",
     kicker: "Operação",
     summary:
-      "Painéis, gestão interna e fluxos próprios — a operação deixa de viver no improviso.",
+      "Painéis e ferramentas internas construídos para o processo real do seu negócio — não para um fluxo genérico de curso online.",
     bullets: ["Painéis operacionais", "Gestão interna"],
   },
   {
     slug: "desenvolvimento-software",
     title: "Desenvolvimento de software",
-    kicker: "Produto",
+    kicker: "Engenharia",
     summary:
-      "Web apps, integrações via API e automações sob o comercial — não o contrário.",
+      "Aplicações web, integrações e automações que tiram trabalho manual repetitivo do seu time.",
     bullets: ["Web apps", "APIs e integrações"],
   },
   {
@@ -79,15 +79,15 @@ export const developmentPillars = [
     title: "E-commerce & checkout",
     kicker: "Conversão",
     summary:
-      "Loja, funil e checkout desenhados para o pedido entrar — inclusive quando o Instagram não pega.",
+      "Loja e funil de venda online desenhados para converter — do clique ao pagamento aprovado.",
     bullets: ["Vendas online", "Recuperação de checkout"],
   },
   {
     slug: "automacao",
     title: "Automação & IA",
-    kicker: "Atendimento",
+    kicker: "Escala",
     summary:
-      "WhatsApp, CRM e respostas que não travam no feriado lotado — a máquina tria, o time fecha.",
+      "Atendimento e CRM automatizados para o comercial não travar quando o volume sobe — no feriado, na campanha ou na alta temporada.",
     bullets: ["Soluções de IA", "Follow-up e CRM"],
   },
 ] as const;
@@ -273,6 +273,18 @@ export const cases = [
       "Posicionamento de marca, conteúdo e estrutura de vendas online para a linha casual.",
     result:
       "Território visual e comercial definido para crescer além da indicação.",
+  },
+  {
+    slug: "vyria",
+    client: "Vyria",
+    segment: "Sistemas · Desenvolvimento",
+    featured: true,
+    challenge:
+      "Operação que dependia de processo manual para lógica de despacho e acompanhamento.",
+    action:
+      "A Arcano construiu o painel e o sistema que hoje sustentam essa operação em produção.",
+    result:
+      "A Arcano construiu o painel e o sistema que hoje sustentam essa operação em produção.",
   },
   {
     slug: "vidas-em-movimento",
@@ -558,4 +570,5 @@ export const segments = [
   "Varejo",
   "Serviços",
   "Imobiliário",
+  "Sistemas",
 ] as const;

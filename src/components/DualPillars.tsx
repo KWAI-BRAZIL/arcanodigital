@@ -28,7 +28,9 @@ export function DualPillars() {
   return (
     <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_auto_1fr] lg:items-stretch">
       <div>
-        <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-gold">Marketing</p>
+        <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-gold">
+          Marketing & Psicologia aplicada
+        </p>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           {marketingPillars.map((item) => (
             <PillarCard key={item.slug} item={item} accent="brass" />
@@ -41,7 +43,7 @@ export function DualPillars() {
       />
       <div>
         <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-teal">
-          Desenvolvimento
+          Desenvolvimento & Sistemas
         </p>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           {developmentPillars.map((item) => (

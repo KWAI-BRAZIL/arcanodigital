@@ -60,10 +60,13 @@ export function CtaBand() {
         <div>
           <Kicker>Próximo passo</Kicker>
           <h2 className="mt-3 max-w-xl font-display text-3xl text-cream md:text-4xl">
-            Diagnóstico do comercial e da operação — marketing e sistemas, sem pacote genérico.
+            Vamos olhar o seu comercial — e o sistema que está travando o mês.
           </h2>
+          <p className="mt-3 max-w-xl text-sm text-muted">
+            Diagnóstico inicial sem custo, para negócios em Goiânia, Brasília, Caldas Novas e região.
+          </p>
         </div>
-        <WhatsAppCta>Quero um diagnóstico gratuito</WhatsAppCta>
+        <WhatsAppCta>Falar no WhatsApp</WhatsAppCta>
       </div>
     </section>
   );
