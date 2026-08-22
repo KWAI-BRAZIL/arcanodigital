@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HeroParallax } from "@/components/ScrollImmersion";
 import { DualPillars } from "@/components/DualPillars";
 import { Logo } from "@/components/Logo";
 import { ProofGallery } from "@/components/ProofGallery";
@@ -17,6 +18,7 @@ export default function HomePage() {
     <main>
       <section id="shot-hero" className="relative overflow-x-hidden bg-arcano-bg pt-28 md:pt-36">
         <div className="hero-orb pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_-10%,rgba(212,165,55,0.08),transparent_55%)]" />
+        <HeroParallax>
         <div className="relative mx-auto max-w-4xl px-5 pb-16 text-center md:pb-20">
           <Reveal>
             <Kicker>Goiânia · Brasília · Caldas Novas</Kicker>
@@ -45,6 +47,7 @@ export default function HomePage() {
             </p>
           </Reveal>
         </div>
+        </HeroParallax>
       </section>
 
       <section id="shot-stats" className="bg-arcano-surface py-12 md:py-16">

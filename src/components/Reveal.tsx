@@ -1,5 +1,6 @@
 "use client";
 
+import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
 export function Reveal({
@@ -11,13 +12,14 @@ export function Reveal({
   className?: string;
   delay?: number;
 }) {
+  const reduce = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
   const [on, setOn] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (reduce) {
       setOn(true);
       return;
     }
@@ -28,19 +30,25 @@ export function Reveal({
           io.disconnect();
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+      { threshold: 0.14, rootMargin: "0px 0px -10% 0px" },
     );
     io.observe(el);
     return () => io.disconnect();
-  }, []);
+  }, [reduce]);
+
+  if (reduce) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
-    <div
+    <motion.div
       ref={ref}
-      className={`reveal ${on ? "reveal-in" : ""} ${className}`}
-      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
+      className={className}
+      initial={{ opacity: 0, y: 28, filter: "blur(8px)" }}
+      animate={on ? { opacity: 1, y: 0, filter: "blur(0px)" } : undefined}
+      transition={{ duration: 0.7, delay: delay / 1000, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }
