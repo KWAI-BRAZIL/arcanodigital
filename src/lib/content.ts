@@ -22,13 +22,14 @@ export const clients = [
   { name: "Marcelo Antonio Imóveis", segment: "Imobiliário", slug: "marcelo-antonio-imoveis" },
 ] as const;
 
-export const pillars = [
+export const marketingPillars = [
   {
     slug: "neuromarketing",
     title: "Neuromarketing",
     kicker: "Diferencial técnico",
     summary:
       "Gatilhos mentais, jornada de decisão e copy que falam com o cérebro — não com o achismo.",
+    bullets: ["Jornada de decisão", "Copy de resposta direta"],
   },
   {
     slug: "trafego-pago",
@@ -36,6 +37,7 @@ export const pillars = [
     kicker: "Aquisição",
     summary:
       "Meta Ads e Google Ads com funil, tracking e otimização pelo caixa, não pela vaidade.",
+    bullets: ["ROAS e custo por lead", "Escala só quando o número fecha"],
   },
   {
     slug: "conteudo",
@@ -43,6 +45,7 @@ export const pillars = [
     kicker: "Percepção",
     summary:
       "Identidade de conteúdo e calendário editorial que posicionam o negócio local como referência.",
+    bullets: ["Tom de voz", "Integração com anúncio e WhatsApp"],
   },
   {
     slug: "branding",
@@ -50,8 +53,46 @@ export const pillars = [
     kicker: "Marca",
     summary:
       "Identidade visual, naming e posicionamento para o cliente escolher você — e não o concorrente da esquina.",
+    bullets: ["Estratégias de posicionamento"],
   },
 ] as const;
+
+export const developmentPillars = [
+  {
+    slug: "sistemas-personalizados",
+    title: "Sistemas sob medida",
+    kicker: "Operação",
+    summary:
+      "Painéis, gestão interna e fluxos próprios — a operação deixa de viver no improviso.",
+    bullets: ["Painéis operacionais", "Gestão interna"],
+  },
+  {
+    slug: "desenvolvimento-software",
+    title: "Desenvolvimento de software",
+    kicker: "Produto",
+    summary:
+      "Web apps, integrações via API e automações sob o comercial — não o contrário.",
+    bullets: ["Web apps", "APIs e integrações"],
+  },
+  {
+    slug: "vendas-online",
+    title: "E-commerce & checkout",
+    kicker: "Conversão",
+    summary:
+      "Loja, funil e checkout desenhados para o pedido entrar — inclusive quando o Instagram não pega.",
+    bullets: ["Vendas online", "Recuperação de checkout"],
+  },
+  {
+    slug: "automacao",
+    title: "Automação & IA",
+    kicker: "Atendimento",
+    summary:
+      "WhatsApp, CRM e respostas que não travam no feriado lotado — a máquina tria, o time fecha.",
+    bullets: ["Soluções de IA", "Follow-up e CRM"],
+  },
+] as const;
+
+export const pillars = marketingPillars;
 
 export const services = [
   {
@@ -178,6 +219,20 @@ export const services = [
       "Apps web e fluxos internos",
       "Integração com WhatsApp, ads e pagamentos",
       "Operação replicável para o time",
+    ],
+  },
+  {
+    slug: "desenvolvimento-software",
+    title: "Desenvolvimento de software",
+    audience: "Empresas que precisam de web app, integração via API ou automação que o software de prateleira não cobre.",
+    description:
+      "Construímos o software em torno do comercial: painel, integração e fluxo interno que o time usa de verdade — sem stack de vaidade.",
+    includes: [
+      "Web apps e painéis sob medida",
+      "Integrações via API (ads, WhatsApp, pagamento, ERP)",
+      "Automações de operação e atendimento",
+      "Arquitetura enxuta, documentação e handoff",
+      "Evolução contínua com leitura de uso",
     ],
   },
 ] as const;
@@ -469,6 +524,30 @@ export const resultOps = [
       "Roteiro, tráfego e leitura unificada de conversão entre conversa e site.",
     result: "256 conversas · 183 conversões · R$ 53 mil no consolidado do mês",
     proof: "/proofs/proof-whatsapp-feedback.png",
+  },
+] as const;
+
+export const cityTriggers = [
+  {
+    city: "Goiânia",
+    href: "/goiania",
+    kicker: "Número frio",
+    title: "ROAS, custo por lead, margem — sem pacote inflado.",
+    text: "Quem já contratou agência e viu só relatório de clique decide por especificidade. Diagnóstico primeiro. Orçamento depois.",
+  },
+  {
+    city: "Caldas Novas",
+    href: "/caldas-novas",
+    kicker: "Temporada",
+    title: "Vender na alta sem perder pedido. Não morrer na baixa.",
+    text: "Pico de turista trava WhatsApp. Automação e sistema são o argumento — atendimento que aguenta feriado lotado.",
+  },
+  {
+    city: "Brasília",
+    href: "/brasilia",
+    kicker: "Autoridade",
+    title: "Portfólio, método e relação longa. Sem linguagem de promoção.",
+    text: "Público que pesquisa antes e escolhe qualidade. Tom direto, formal o suficiente — urgência de desconto fica de fora.",
   },
 ] as const;
 

@@ -41,7 +41,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-[11px] font-medium uppercase tracking-[0.22em] transition ${
+                className={`font-mono text-[11px] font-medium uppercase tracking-[0.22em] transition ${
                   active ? "text-gold-bright" : "text-muted hover:text-cream"
                 }`}
               >
@@ -61,7 +61,7 @@ export function Header() {
         <button
           type="button"
           className="text-gold lg:hidden"
-          aria-label="Abrir menu"
+          aria-label="Abrir ou fechar menu"
           onClick={() => setOpen((v) => !v)}
         >
           <span className="block h-px w-6 bg-gold" />

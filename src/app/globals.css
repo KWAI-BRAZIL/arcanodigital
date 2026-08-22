@@ -1,43 +1,72 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #050505;
-  --ink-2: #0c0b09;
-  --ink-3: #141210;
+  --ink: #0e1116;
+  --ink-2: #151920;
+  --ink-3: #1b2129;
+  --brass: #c9a227;
   --gold: #c9a227;
   --gold-bright: #e8c96a;
   --gold-deep: #8a6a1a;
-  --cream: #f4eee0;
-  --muted: #9c9484;
+  --teal: #3ea39a;
+  --cream: #f3f1ea;
+  --muted: #98a0ad;
   --line: rgba(201, 162, 39, 0.22);
+  --line-teal: rgba(62, 163, 154, 0.28);
 }
 
 @theme inline {
   --color-ink: var(--ink);
   --color-ink-2: var(--ink-2);
   --color-ink-3: var(--ink-3);
+  --color-brass: var(--brass);
   --color-gold: var(--gold);
   --color-gold-bright: var(--gold-bright);
   --color-gold-deep: var(--gold-deep);
+  --color-teal: var(--teal);
   --color-cream: var(--cream);
   --color-muted: var(--muted);
   --color-line: var(--line);
-  --font-display: var(--font-cinzel);
-  --font-sans: var(--font-montserrat);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   background: var(--ink);
   color: var(--cream);
-  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
 }
 
 .font-display {
   font-family: var(--font-display), "Palatino Linotype", Palatino, "Times New Roman", serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
 }
 
 .gold-text {
@@ -45,6 +74,10 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.teal-text {
+  color: var(--teal);
 }
 
 .gold-rule {
@@ -63,8 +96,12 @@ body {
 }
 
 .panel {
-  background: linear-gradient(180deg, rgba(20, 18, 16, 0.92), rgba(10, 9, 8, 0.92));
+  background: linear-gradient(180deg, rgba(21, 25, 32, 0.96), rgba(14, 17, 22, 0.96));
   border: 1px solid var(--line);
+}
+
+.panel-teal {
+  border-color: var(--line-teal);
 }
 
 .grain {

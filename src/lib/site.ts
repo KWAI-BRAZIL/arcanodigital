@@ -3,7 +3,7 @@ export const site = {
   legalName: "Arcano Digital Ltda",
   tagline: "Estratégia · Percepção · Resultados",
   positioning:
-    "Agência especializada em negócios locais que usam neuromarketing, conteúdo e branding pra vender mais todo mês.",
+    "Neuromarketing que decide a venda — e sistemas que aguentam o volume quando a venda entra.",
   city: "Goiânia",
   region: "Centro-Oeste",
   area: "Brasília, Caldas Novas, Goiânia e região metropolitana",
@@ -21,6 +21,6 @@ export const site = {
 export function whatsappUrl(message?: string) {
   const text =
     message ??
-    "Olá, Arcano Digital. Quero entender como neuromarketing, conteúdo e branding podem vender mais no meu negócio local.";
+    "Olá, Arcano Digital. Quero um diagnóstico gratuito do comercial e da operação do meu negócio.";
   return `https://wa.me/${site.phoneE164}?text=${encodeURIComponent(text)}`;
 }

@@ -4,15 +4,23 @@ import Image from "next/image";
 import { useState } from "react";
 import { proofs } from "@/lib/content";
 
-export function ProofGallery({ compact = false }: { compact?: boolean }) {
+type Proof = (typeof proofs)[number];
+
+export function ProofGallery({
+  compact = false,
+  items,
+}: {
+  compact?: boolean;
+  items?: readonly Proof[];
+}) {
   const [active, setActive] = useState<number | null>(null);
-  const items = compact ? proofs.slice(0, 6) : proofs;
-  const selected = active !== null ? items[active] : null;
+  const list = items ?? (compact ? proofs.slice(0, 6) : proofs);
+  const selected = active !== null ? list[active] : null;
 
   return (
     <>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((item, i) => (
+        {list.map((item, i) => (
           <button
             key={item.src}
             type="button"

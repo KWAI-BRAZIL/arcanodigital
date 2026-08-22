@@ -3,7 +3,7 @@ import { whatsappUrl } from "@/lib/site";
 
 export function Kicker({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-gold">{children}</p>
+    <p className="font-mono text-[11px] font-medium uppercase tracking-[0.32em] text-gold">{children}</p>
   );
 }
 
@@ -18,16 +18,18 @@ export function Title({ children }: { children: React.ReactNode }) {
 export function WhatsAppCta({
   children,
   className = "",
+  message,
 }: {
   children: React.ReactNode;
   className?: string;
+  message?: string;
 }) {
   return (
     <a
-      href={whatsappUrl()}
+      href={whatsappUrl(message)}
       target="_blank"
       rel="noopener noreferrer"
-      className={`gold-btn inline-flex items-center justify-center rounded-sm px-6 py-3 text-[12px] font-semibold uppercase tracking-[0.18em] ${className}`}
+      className={`gold-btn inline-flex items-center justify-center rounded-sm px-6 py-3 font-mono text-[12px] font-semibold uppercase tracking-[0.18em] ${className}`}
     >
       {children}
     </a>
@@ -44,7 +46,7 @@ export function GhostLink({
   return (
     <Link
       href={href}
-      className="inline-flex items-center justify-center rounded-sm border border-gold/40 px-6 py-3 text-[12px] font-semibold uppercase tracking-[0.18em] text-gold hover:border-gold hover:text-gold-bright"
+      className="inline-flex items-center justify-center rounded-sm border border-gold/40 px-6 py-3 font-mono text-[12px] font-semibold uppercase tracking-[0.18em] text-gold hover:border-gold hover:text-gold-bright"
     >
       {children}
     </Link>
@@ -58,10 +60,10 @@ export function CtaBand() {
         <div>
           <Kicker>Próximo passo</Kicker>
           <h2 className="mt-3 max-w-xl font-display text-3xl text-cream md:text-4xl">
-            Vamos olhar o seu comercial — e o que está travando o mês.
+            Diagnóstico do comercial e da operação — marketing e sistemas, sem pacote genérico.
           </h2>
         </div>
-        <WhatsAppCta>Falar no WhatsApp</WhatsAppCta>
+        <WhatsAppCta>Quero um diagnóstico gratuito</WhatsAppCta>
       </div>
     </section>
   );

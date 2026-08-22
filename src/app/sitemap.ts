@@ -4,7 +4,19 @@ import { site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const staticRoutes = ["", "/sobre", "/solucoes", "/cases", "/metodologia", "/blog", "/depoimentos", "/contato"];
+  const staticRoutes = [
+    "",
+    "/sobre",
+    "/solucoes",
+    "/cases",
+    "/metodologia",
+    "/blog",
+    "/depoimentos",
+    "/contato",
+    "/goiania",
+    "/brasilia",
+    "/caldas-novas",
+  ];
 
   return [
     ...staticRoutes.map((path) => ({

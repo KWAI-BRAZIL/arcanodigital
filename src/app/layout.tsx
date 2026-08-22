@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cinzel, Montserrat } from "next/font/google";
+import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -7,18 +7,27 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { JsonLd } from "@/components/JsonLd";
 import { site } from "@/lib/site";
 
-const cinzel = Cinzel({
-  variable: "--font-cinzel",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin", "latin-ext"],
-  weight: ["400", "600", "700"],
+  weight: ["500", "600", "700", "800"],
+  style: ["normal", "italic"],
   display: "swap",
   preload: true,
 });
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+  preload: true,
+});
+
+const jetbrains = JetBrains_Mono({
+  variable: "--font-jetbrains",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600"],
   display: "swap",
   preload: true,
 });
@@ -30,7 +39,7 @@ export const metadata: Metadata = {
     template: "%s | Arcano Digital",
   },
   description:
-    "Agência especializada em negócios locais em Brasília, Caldas Novas, Goiânia e região metropolitana que usam neuromarketing, conteúdo e branding pra vender mais todo mês. Tráfego pago, IA, vendas online e sistemas.",
+    "Marketing e sistemas para negócios locais em Brasília, Caldas Novas, Goiânia e região metropolitana: neuromarketing, tráfego, branding, e-commerce e automações.",
   keywords: [
     "agência de marketing Goiânia",
     "agência de marketing Brasília",
@@ -44,7 +53,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     type: "website",
     siteName: site.name,
-    title: "Arcano Digital — neuromarketing para negócios locais",
+    title: "Arcano Digital — marketing e sistemas para negócios locais",
     description: site.positioning,
     images: [{ url: "/brand/logo.png", width: 1200, height: 630, alt: "Arcano Digital" }],
   },
@@ -63,7 +72,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${cinzel.variable} ${montserrat.variable} antialiased bg-ink text-cream`}>
+      <body className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable} antialiased bg-ink text-cream`}>
         <JsonLd />
         <Header />
         {children}
