@@ -3,52 +3,42 @@ import { developmentPillars, marketingPillars } from "@/lib/content";
 
 type Pillar = (typeof marketingPillars)[number] | (typeof developmentPillars)[number];
 
-function PillarCard({ item, accent }: { item: Pillar; accent: "brass" | "teal" }) {
-  const border =
-    accent === "teal" ? "panel panel-teal hover:border-teal/50" : "panel hover:border-gold/50";
-  const kicker = accent === "teal" ? "text-teal" : "text-gold";
+function PillarRow({ item, accent }: { item: Pillar; accent: "brass" | "teal" }) {
+  const title = accent === "teal" ? "group-hover:text-teal" : "group-hover:text-gold";
 
   return (
-    <Link href={`/solucoes/${item.slug}`} className={`${border} p-5 md:p-6`}>
-      <p className={`font-mono text-[11px] uppercase tracking-[0.22em] ${kicker}`}>{item.kicker}</p>
-      <h3 className="mt-3 font-display text-2xl text-cream">{item.title}</h3>
-      <p className="mt-3 text-sm leading-relaxed text-muted">{item.summary}</p>
-      <ul className="mt-4 space-y-1">
-        {item.bullets.map((line) => (
-          <li key={line} className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
-            — {line}
-          </li>
-        ))}
-      </ul>
+    <Link
+      href={`/solucoes/${item.slug}`}
+      className="group grid gap-1 border-b border-white/[0.06] py-5 last:border-0 md:grid-cols-[minmax(140px,0.4fr)_1fr] md:items-baseline md:gap-8"
+    >
+      <p className={`font-display text-xl text-cream transition ${title} md:text-2xl`}>
+        {item.title}
+      </p>
+      <p className="text-sm leading-relaxed text-muted">{item.summary}</p>
     </Link>
   );
 }
 
 export function DualPillars() {
   return (
-    <div className="mt-8 grid gap-10 lg:mt-10 lg:grid-cols-[1fr_auto_1fr] lg:items-stretch">
+    <div className="mt-12 grid gap-16 lg:mt-16 lg:grid-cols-2 lg:gap-20">
       <div>
         <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-gold">
           Marketing & Psicologia aplicada
         </p>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        <div className="mt-2">
           {marketingPillars.map((item) => (
-            <PillarCard key={item.slug} item={item} accent="brass" />
+            <PillarRow key={item.slug} item={item} accent="brass" />
           ))}
         </div>
       </div>
-      <div className="h-px bg-gradient-to-r from-gold via-line to-teal lg:hidden" aria-hidden />
-      <div
-        className="hidden w-px bg-gradient-to-b from-gold via-line to-teal lg:block"
-        aria-hidden
-      />
       <div>
         <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-teal">
           Desenvolvimento & Sistemas
         </p>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        <div className="mt-2">
           {developmentPillars.map((item) => (
-            <PillarCard key={item.slug} item={item} accent="teal" />
+            <PillarRow key={item.slug} item={item} accent="teal" />
           ))}
         </div>
       </div>

@@ -57,18 +57,18 @@ export function GhostLink({
 
 export function CtaBand() {
   return (
-    <section className="border-y border-line bg-ink-2">
-      <div className="mx-auto flex max-w-6xl flex-col items-stretch gap-6 px-5 py-12 md:flex-row md:items-center md:justify-between md:py-16">
-        <div>
-          <Kicker>Próximo passo</Kicker>
-          <h2 className="mt-3 max-w-xl font-display text-3xl text-cream md:text-4xl">
-            Vamos olhar o seu comercial — e o sistema que está travando o mês.
-          </h2>
-          <p className="mt-3 max-w-xl text-sm text-muted">
-            Diagnóstico inicial sem custo, para negócios em Goiânia, Brasília, Caldas Novas e região.
-          </p>
+    <section className="px-5 py-20 md:py-28">
+      <div className="mx-auto max-w-3xl text-center">
+        <Kicker>Próximo passo</Kicker>
+        <h2 className="mt-5 font-display text-3xl leading-tight text-cream md:text-5xl">
+          Vamos olhar o seu comercial — e o sistema que está travando o mês.
+        </h2>
+        <p className="mx-auto mt-5 max-w-lg text-sm leading-[1.75] text-muted">
+          Diagnóstico inicial sem custo, para negócios em Goiânia, Brasília, Caldas Novas e região.
+        </p>
+        <div className="mt-10">
+          <WhatsAppCta>Falar no WhatsApp</WhatsAppCta>
         </div>
-        <WhatsAppCta className="w-full md:w-auto">Falar no WhatsApp</WhatsAppCta>
       </div>
     </section>
   );

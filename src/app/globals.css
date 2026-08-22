@@ -9,8 +9,8 @@
   --gold-bright: #c9a45a;
   --gold-deep: #8a6a1a;
   --teal: #3ea39a;
-  --cream: #f3f1ea;
-  --muted: #98a0ad;
+  --cream: #ebe6d8;
+  --muted: #9a9486;
   --line: rgba(184, 144, 42, 0.22);
   --line-teal: rgba(62, 163, 154, 0.28);
 }
@@ -96,8 +96,8 @@ body {
 }
 
 .panel {
-  background: linear-gradient(180deg, rgba(21, 25, 32, 0.96), rgba(14, 17, 22, 0.96));
-  border: 1px solid var(--line);
+  background: rgba(18, 22, 28, 0.55);
+  border: 1px solid rgba(184, 144, 42, 0.14);
 }
 
 .panel-teal {

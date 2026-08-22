@@ -14,18 +14,28 @@ export function ProofGallery({
   items?: readonly Proof[];
 }) {
   const [active, setActive] = useState<number | null>(null);
-  const list = items ?? (compact ? proofs.slice(0, 6) : proofs);
+  const list = items ?? proofs;
   const selected = active !== null ? list[active] : null;
 
   return (
     <>
-      <div className="-mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-3">
+      <div
+        className={
+          compact
+            ? "-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2"
+            : "grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        }
+      >
         {list.map((item, i) => (
           <button
             key={item.src}
             type="button"
             onClick={() => setActive(i)}
-            className="panel group w-[85%] shrink-0 snap-start overflow-hidden text-left sm:w-auto sm:shrink"
+            className={
+              compact
+                ? "panel w-[min(78%,320px)] shrink-0 snap-start overflow-hidden text-left sm:w-[280px]"
+                : "panel group overflow-hidden text-left"
+            }
           >
             <div className="relative aspect-[3/4] overflow-hidden bg-[#111]">
               <Image
