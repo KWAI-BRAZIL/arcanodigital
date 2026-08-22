@@ -3,8 +3,8 @@ import Link from "next/link";
 const sizes = {
   sm: {
     wrap: "leading-none",
-    name: "font-display text-[1.05rem] font-bold tracking-[-0.04em]",
-        mark: "mt-0.5 text-[8px] font-medium uppercase tracking-[0.28em] text-arcano-tech",
+    name: "font-display text-[0.92rem] font-bold tracking-[-0.04em] md:text-[1.05rem]",
+        mark: "mt-0.5 text-[7px] font-medium uppercase tracking-[0.24em] text-arcano-tech md:text-[8px] md:tracking-[0.28em]",
   },
   md: {
     wrap: "leading-none",

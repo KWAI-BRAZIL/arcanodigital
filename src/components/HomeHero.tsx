@@ -27,11 +27,9 @@ export function HomeHero() {
           </p>
         </HeroEntrance>
         <HeroEntrance delay={0.24}>
-          <div className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-            <WhatsAppCta className="w-full sm:w-auto">Quero um diagnóstico gratuito</WhatsAppCta>
-            <GhostLink href="/cases" className="w-full sm:w-auto">
-              Ver cases e provas
-            </GhostLink>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:mt-10 sm:gap-3">
+            <WhatsAppCta>Quero um diagnóstico gratuito</WhatsAppCta>
+            <GhostLink href="/cases">Ver cases e provas</GhostLink>
           </div>
         </HeroEntrance>
         <HeroEntrance delay={0.34}>

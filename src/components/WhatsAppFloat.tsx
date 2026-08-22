@@ -6,7 +6,7 @@ export function WhatsAppFloat() {
       href={whatsappUrl()}
       target="_blank"
       rel="noopener noreferrer"
-      className="gold-btn fixed bottom-5 right-5 z-50 rounded-lg px-4 py-3 font-sans text-[11px] font-medium uppercase tracking-[0.16em] max-md:bottom-4"
+      className="gold-btn fixed bottom-5 right-5 z-50 rounded-md px-3 py-2 font-sans text-[9px] font-medium uppercase tracking-[0.14em] max-md:bottom-4 sm:px-4 sm:py-3 sm:text-[11px] sm:tracking-[0.16em]"
       aria-label="Abrir WhatsApp"
     >
       WhatsApp

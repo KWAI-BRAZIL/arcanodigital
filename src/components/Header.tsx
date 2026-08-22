@@ -37,7 +37,7 @@ export function Header() {
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 md:py-5">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-2.5 md:px-5 md:py-5">
         <Logo size="sm" onClick={() => setOpen(false)} />
         <nav className="hidden items-center gap-7 lg:flex">
           {links.map((link) => {
@@ -80,14 +80,14 @@ export function Header() {
         </button>
       </div>
       {open ? (
-        <div className="border-t border-rule bg-void/95 px-5 py-6 backdrop-blur-xl lg:hidden">
-          <div className="flex flex-col gap-4">
+        <div className="border-t border-rule bg-void/95 px-4 py-4 backdrop-blur-xl lg:hidden">
+          <div className="flex flex-col gap-2.5">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="font-sans text-sm font-medium uppercase tracking-[0.18em] text-ivory"
+                className="py-1 font-sans text-[11px] font-medium uppercase tracking-[0.14em] text-ivory"
               >
                 {link.label}
               </Link>
@@ -96,7 +96,7 @@ export function Header() {
               href={whatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="gold-btn mt-2 inline-flex justify-center rounded-sm px-4 py-3 font-sans text-[11px] font-medium uppercase tracking-[0.2em]"
+              className="gold-btn mt-1 inline-flex justify-center rounded-sm px-3 py-2 font-sans text-[10px] font-medium uppercase tracking-[0.14em]"
             >
               Falar no WhatsApp
             </a>

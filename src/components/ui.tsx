@@ -31,7 +31,7 @@ export function WhatsAppCta({
       href={whatsappUrl(message)}
       target="_blank"
       rel="noopener noreferrer"
-      className={`gold-btn inline-flex items-center justify-center rounded-sm px-8 py-3.5 font-sans text-[12px] font-medium uppercase tracking-[0.2em] ${className}`}
+      className={`gold-btn inline-flex items-center justify-center rounded-sm px-4 py-2 font-sans text-[10px] font-medium uppercase tracking-[0.14em] sm:px-8 sm:py-3.5 sm:text-[12px] sm:tracking-[0.2em] ${className}`}
     >
       {children}
     </a>
@@ -50,7 +50,7 @@ export function GhostLink({
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center rounded-sm border border-gold/35 px-6 py-3.5 font-sans text-[12px] font-medium uppercase tracking-[0.2em] text-gold transition-colors duration-300 ease-out hover:border-lilac hover:text-lilac ${className}`}
+      className={`inline-flex items-center justify-center rounded-sm border border-gold/35 px-4 py-2 font-sans text-[10px] font-medium uppercase tracking-[0.14em] text-gold transition-colors duration-300 ease-out hover:border-lilac hover:text-lilac sm:px-6 sm:py-3.5 sm:text-[12px] sm:tracking-[0.2em] ${className}`}
     >
       {children}
     </Link>
