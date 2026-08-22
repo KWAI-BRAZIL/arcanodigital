@@ -7,7 +7,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Depoimentos e provas",
   description:
-    "Prints de WhatsApp, painéis de venda e depoimentos reais da Arcano Digital para negócios locais em Goiás.",
+    "Painéis de resultado, recortes de comercial e depoimentos da Arcano Digital para negócios locais em Goiás.",
 };
 
 export default function DepoimentosPage() {
@@ -16,11 +16,11 @@ export default function DepoimentosPage() {
       <section className="mx-auto max-w-6xl px-5 py-16">
         <Kicker>Depoimentos</Kicker>
         <Title>
-          O empresário local confia no print. <span className="gold-text">Não no slogan.</span>
+          O empresário local confia no número. <span className="gold-text">Não no slogan.</span>
         </Title>
         <p className="mt-4 max-w-2xl text-muted">
-          WhatsApp, painel e checkout — a prova que circula no grupo da família e na
-          reunião de segunda.
+          WhatsApp, painel e checkout — recortes de operação com os mesmos indicadores
+          que o cliente vê no mês.
         </p>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {testimonials.map((item) => (

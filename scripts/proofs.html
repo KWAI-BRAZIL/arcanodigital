@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Proof captures</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #222; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .shot { width: 780px; height: 1040px; overflow: hidden; }
+
+    /* WhatsApp — full-bleed print */
+    .wa {
+      background: #0b141a;
+      font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    .wa-top { background: #1f2c34; color: #e9edef; padding: 18px 16px 14px; display: flex; align-items: center; gap: 12px; }
+    .wa-ava { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-weight: 700; }
+    .wa-name { font-size: 17px; font-weight: 600; }
+    .wa-sub { font-size: 12px; color: #8696a0; }
+    .wa-thread {
+      height: 940px;
+      background: #0b141a;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath fill='%23182229' d='M8 24h14v2H8zm40 18h20v2H48zM22 70h10v2H22zm60 30h16v2H82z'/%3E%3C/svg%3E");
+      padding: 22px 16px;
+    }
+    .wa-day { text-align: center; margin-bottom: 16px; }
+    .wa-day span { background: #182229; color: #8696a0; font-size: 12px; padding: 5px 12px; border-radius: 8px; }
+    .wa-in {
+      max-width: 78%;
+      background: #202c33;
+      color: #e9edef;
+      border-radius: 8px 8px 8px 2px;
+      padding: 10px 12px 22px;
+      font-size: 15.5px;
+      line-height: 1.4;
+      position: relative;
+    }
+    .wa-in .t { position: absolute; right: 10px; bottom: 6px; font-size: 11px; color: #8696a0; }
+
+    /* Profit dashboard — navy + lime (tipo painel de drop) */
+    .profit { background: #15202b; color: #fff; padding: 28px 26px; font-family: Inter, Roboto, sans-serif; }
+    .profit h1 { font-size: 20px; font-weight: 600; }
+    .profit .acct { color: #8b9bb4; font-size: 13px; margin: 6px 0 22px; }
+    .pgrid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+    .pcard { background: #1e2d3d; border-radius: 8px; padding: 16px; }
+    .pcard .l { font-size: 11px; color: #8b9bb4; }
+    .pcard .v { font-size: 22px; font-weight: 700; margin-top: 8px; }
+    .lime { color: #3dd68c; }
+    .pcard.span2 { grid-column: span 2; }
+    .pcard.span3 { grid-column: span 3; }
+
+    /* Shopify */
+    .shop { background: #f1f2f4; font-family: Inter, "Helvetica Neue", sans-serif; display: flex; }
+    .shop-nav { width: 72px; background: #1a1a1a; }
+    .shop-main { flex: 1; padding: 24px 28px; }
+    .shop h1 { font-size: 24px; color: #1a1a1a; }
+    .shop .acct { color: #616161; font-size: 13px; margin: 4px 0 20px; }
+    .scard { background: #fff; border: 1px solid #e3e3e3; border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+    .dot { width: 10px; height: 10px; border-radius: 2px; display: inline-block; margin-right: 8px; }
+    .scard .l { font-size: 13px; color: #616161; display: flex; align-items: center; }
+    .scard .v { font-size: 32px; font-weight: 650; color: #1a1a1a; margin-top: 10px; }
+
+    /* Nuvemshop / checkout — purple */
+    .nuvem { background: #f7f4fb; padding: 24px 28px; font-family: Inter, sans-serif; }
+    .nuvem-bar { background: #5c2d91; color: #fff; padding: 12px 16px; border-radius: 8px; font-size: 13px; margin-bottom: 18px; display: flex; justify-content: space-between; }
+    .nuvem h1 { font-size: 22px; color: #2e1652; }
+    .nuvem .acct { color: #6b5a80; font-size: 13px; margin: 4px 0 16px; }
+    .ngrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .ncard { background: #fff; border: 1px solid #e8ddf5; border-radius: 10px; padding: 16px; }
+    .ncard .l { font-size: 11px; color: #7a6a90; text-transform: uppercase; letter-spacing: .04em; }
+    .ncard .v { font-size: 24px; font-weight: 700; color: #2e1652; margin-top: 6px; }
+    .up { color: #1f9d55; font-size: 13px; font-weight: 600; }
+    .funnel { display: flex; align-items: flex-end; gap: 10px; height: 140px; margin-top: 14px; }
+    .funnel b { flex: 1; border-radius: 6px 6px 0 0; display: block; }
+    .funnel p { font-size: 11px; color: #6b5a80; text-align: center; margin-top: 6px; }
+
+    /* Meta Ads Manager */
+    .meta { background: #fff; font-family: Helvetica, Arial, sans-serif; display: flex; }
+    .meta-nav { width: 64px; background: #0866ff; }
+    .meta-main { flex: 1; padding: 20px 24px; }
+    .meta-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+    .meta h1 { font-size: 20px; color: #1c1e21; }
+    .pill { background: #e7f3ff; color: #0866ff; font-size: 12px; font-weight: 600; padding: 6px 10px; border-radius: 16px; }
+    table.ads { width: 100%; border-collapse: collapse; font-size: 13px; }
+    table.ads th { text-align: left; background: #f0f2f5; color: #65676b; padding: 10px 8px; font-weight: 600; }
+    table.ads td { padding: 12px 8px; border-bottom: 1px solid #e4e6eb; color: #1c1e21; }
+    table.ads tr.tot td { background: #e7f3ff; font-weight: 700; color: #0866ff; }
+
+    /* iFood / pedidos — red-orange */
+    .ifood { background: #f5f5f5; padding: 0; font-family: Inter, sans-serif; }
+    .ifood-head { background: #ea1d2c; color: #fff; padding: 18px 24px; }
+    .ifood-head h1 { font-size: 18px; font-weight: 700; }
+    .ifood-head p { font-size: 13px; opacity: .9; margin-top: 4px; }
+    .ifood-body { padding: 20px 24px; }
+    .ibox { background: #fff; border-radius: 12px; padding: 18px; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+    .ibox .l { font-size: 12px; color: #717171; }
+    .ibox .v { font-size: 32px; font-weight: 800; color: #ea1d2c; margin-top: 6px; }
+    .item { margin-top: 14px; }
+    .item strong { font-size: 14px; color: #1a1a1a; }
+    .ibar { height: 10px; background: #f0f0f0; border-radius: 99px; margin-top: 6px; overflow: hidden; }
+    .ibar > i { display: block; height: 100%; background: #ea1d2c; }
+  </style>
+</head>
+<body>
+
+<section id="roas" class="shot profit">
+  <h1>Resultados da conta</h1>
+  <p class="acct">Focopill · Meta Ads · ciclo rastreado</p>
+  <div class="pgrid">
+    <div class="pcard span2"><div class="l">Faturamento líquido</div><div class="v">R$ 99.377,92</div></div>
+    <div class="pcard"><div class="l">Gastos com anúncios</div><div class="v">R$ 53.536,53</div></div>
+    <div class="pcard"><div class="l">ROAS</div><div class="v lime">1,86</div></div>
+    <div class="pcard"><div class="l">Lucro</div><div class="v lime">R$ 45.841,39</div></div>
+    <div class="pcard"><div class="l">Margem</div><div class="v lime">46,1%</div></div>
+    <div class="pcard"><div class="l">ROI</div><div class="v lime">1,86</div></div>
+    <div class="pcard"><div class="l">Vendas pendentes</div><div class="v">R$ 0,00</div></div>
+    <div class="pcard span2"><div class="l">Vendas</div><div class="v">Total 1.016</div></div>
+    <div class="pcard span3"><div class="l">Conta</div><div class="v" style="font-size:16px">Focopill — suplementos · venda 100% online</div></div>
+  </div>
+</section>
+
+<section id="whatsapp-recorde" class="shot wa">
+  <div class="wa-top">
+    <div class="wa-ava" style="background:#00a884">RM</div>
+    <div>
+      <div class="wa-name">Rainha Marketing</div>
+      <div class="wa-sub">online</div>
+    </div>
+  </div>
+  <div class="wa-thread">
+    <div class="wa-day"><span>terça-feira, 30 de abril</span></div>
+    <div class="wa-in">
+      Excelente noite time! Passando pra agradecer por esse mês que foi surreal, batemos o Megapiso na primeira quinzena, ajustei em 20% para cima e finalizamos o mês com esse resultado. Recorde em vendas, recorde de pedidos, recorde de TM. Pra cima!
+      <span class="t">19:40</span>
+    </div>
+  </div>
+</section>
+
+<section id="vendas" class="shot shop">
+  <div class="shop-nav"></div>
+  <div class="shop-main">
+    <h1>Análise</h1>
+    <p class="acct">Briston Wear · últimos 30 dias</p>
+    <div class="scard">
+      <div class="l"><span class="dot" style="background:#de3618"></span>Vendas</div>
+      <div class="v">703</div>
+    </div>
+    <div class="scard">
+      <div class="l"><span class="dot" style="background:#c057c4"></span>Receita</div>
+      <div class="v">R$ 154.580,99</div>
+    </div>
+    <div class="scard">
+      <div class="l"><span class="dot" style="background:#5c6ac4"></span>Ticket médio</div>
+      <div class="v">R$ 219,89</div>
+    </div>
+  </div>
+</section>
+
+<section id="conversao" class="shot nuvem">
+  <div class="nuvem-bar"><span>Visão geral</span><span>Ontem · 19/02</span></div>
+  <h1>Checkout</h1>
+  <p class="acct">Focopill · loja Nuvemshop</p>
+  <div class="ngrid">
+    <div class="ncard">
+      <div class="l">Vendas</div>
+      <div class="v">R$ 9.472,63</div>
+      <div class="up">▲ 14,63% · 38 pedidos</div>
+    </div>
+    <div class="ncard">
+      <div class="l">Conversão do checkout</div>
+      <div class="v" style="color:#5c2d91">20,21%</div>
+      <div class="l" style="margin-top:8px;text-transform:none">38 pedidos · 188 acessos</div>
+    </div>
+    <div class="ncard">
+      <div class="l">Ticket médio</div>
+      <div class="v">R$ 249,28</div>
+    </div>
+    <div class="ncard">
+      <div class="l">Pedidos pagos</div>
+      <div class="v">28</div>
+    </div>
+    <div class="ncard" style="grid-column:1/-1">
+      <div class="l">Funil do checkout</div>
+      <div class="funnel">
+        <div style="flex:1;text-align:center"><b style="height:100%;background:#2ec4b6"></b><p>Dados</p></div>
+        <div style="flex:1;text-align:center"><b style="height:72%;background:#5dade2"></b><p>Entrega</p></div>
+        <div style="flex:1;text-align:center"><b style="height:41%;background:#e8a0bf"></b><p>Pagamento</p></div>
+        <div style="flex:1;text-align:center"><b style="height:20%;background:#5c2d91"></b><p>Pedido</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="whatsapp-feedback" class="shot wa">
+  <div class="wa-top">
+    <div class="wa-ava" style="background:#53bdeb">MA</div>
+    <div>
+      <div class="wa-name">Marcelo Antonio Imóveis</div>
+      <div class="wa-sub">visto por último hoje às 09:12</div>
+    </div>
+  </div>
+  <div class="wa-thread">
+    <div class="wa-day"><span>hoje</span></div>
+    <div class="wa-in">
+      Bom dia. Passando para dar o feedback do mês:<br/><br/>
+      Conversas WhatsApp: 256<br/>
+      Conversão: 183<br/>
+      Valor fechado WhatsApp: R$ 23.800<br/>
+      Valor site: R$ 29.200<br/><br/>
+      Recorde de vendas!!!
+      <span class="t">09:14</span>
+    </div>
+  </div>
+</section>
+
+<section id="ads" class="shot meta">
+  <div class="meta-nav"></div>
+  <div class="meta-main">
+    <div class="meta-top">
+      <div>
+        <h1>Gerenciador de anúncios</h1>
+        <p style="color:#65676b;font-size:13px;margin-top:4px">Briston Wear · campanhas</p>
+      </div>
+      <span class="pill">Ativo</span>
+    </div>
+    <table class="ads">
+      <thead>
+        <tr>
+          <th>Campanha</th>
+          <th>Valor de conversão</th>
+          <th>Visualizações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Conversão — catálogo</td><td>R$ 1.665,15</td><td>3</td></tr>
+        <tr><td>Remarketing — carrinho</td><td>R$ 1.317,64</td><td>240</td></tr>
+        <tr><td>Tráfego — novidades</td><td>R$ 283,96</td><td>289</td></tr>
+        <tr><td>Vendas — principal</td><td>R$ 834,49</td><td>1.645</td></tr>
+        <tr class="tot"><td>Total</td><td>R$ 4.101,24</td><td>2.327</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="vyria" class="shot ifood">
+  <div class="ifood-head">
+    <h1>Pedidos</h1>
+    <p>Solaria Doceria · operação do mês</p>
+  </div>
+  <div class="ifood-body">
+    <div class="ibox">
+      <div class="l">FATURAMENTO DO MÊS</div>
+      <div class="v">R$ 33.030,50</div>
+    </div>
+    <div class="ibox">
+      <div class="l">MAIS VENDIDOS</div>
+      <div class="item"><strong>Fatia de bolo — 1.002 un.</strong><div class="ibar"><i style="width:100%"></i></div></div>
+      <div class="item"><strong>Brigadeiro gourmet — 125 un.</strong><div class="ibar"><i style="width:18%"></i></div></div>
+      <div class="item"><strong>Bolo de pote — 121 un.</strong><div class="ibar"><i style="width:16%"></i></div></div>
+      <div class="item"><strong>Cookie — 27 un.</strong><div class="ibar"><i style="width:6%"></i></div></div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

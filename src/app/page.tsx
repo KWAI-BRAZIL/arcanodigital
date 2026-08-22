@@ -114,7 +114,7 @@ export default function HomePage() {
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <Kicker>Prova social</Kicker>
-            <Title>Números de operação. Prints reais.</Title>
+            <Title>Números de operação. Prova visível.</Title>
           </div>
           <GhostLink href="/depoimentos">Ver todas as provas</GhostLink>
         </div>

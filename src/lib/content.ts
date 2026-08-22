@@ -272,47 +272,47 @@ export const cases = [
 export const proofs = [
   {
     src: "/proofs/proof-roas.png",
-    title: "Lucro e margem reais",
+    title: "Focopill",
     metric: "ROAS 1,86 · margem 46,1%",
     detail:
       "Faturamento líquido de R$ 99.377,92, gasto de R$ 53.536,53, lucro de R$ 45.841,39 e 1.016 vendas.",
   },
   {
     src: "/proofs/proof-whatsapp-recorde.png",
-    title: "Recorde no comercial",
+    title: "Rainha Marketing",
     metric: "Megapiso + 20% no alvo",
     detail:
-      "Print de cliente: bateu o maior piso na primeira quinzena, subiu a meta 20% e fechou o mês com recorde de vendas, pedidos e ticket médio.",
+      "WhatsApp da Rainha Marketing: bateu o maior piso na primeira quinzena, subiu a meta 20% e fechou o mês com recorde de vendas, pedidos e ticket médio.",
   },
   {
     src: "/proofs/proof-vendas.png",
-    title: "E-commerce em volume",
+    title: "Briston Wear",
     metric: "703 vendas · R$ 154.580,99",
     detail: "Receita de R$ 154.580,99 com ticket médio de R$ 219,89 em operação rastreada.",
   },
   {
     src: "/proofs/proof-conversao.png",
-    title: "Checkout que converte",
+    title: "Focopill",
     metric: "20,21% de conversão",
     detail:
-      "R$ 9.472,63 em vendas no dia, 38 pedidos e ticket de R$ 249,28 — com funil de checkout visível.",
+      "R$ 9.472,63 em vendas no dia, 38 pedidos e ticket de R$ 249,28 — funil de checkout da Focopill.",
   },
   {
     src: "/proofs/proof-whatsapp-feedback.png",
-    title: "WhatsApp + site",
+    title: "Marcelo Antonio Imóveis",
     metric: "183 conversões no mês",
     detail:
       "256 conversas, 183 conversões, R$ 23.800 no WhatsApp e R$ 29.200 no site. Recorde de vendas no fechamento.",
   },
   {
     src: "/proofs/proof-ads.png",
-    title: "Conversão de mídia",
+    title: "Briston Wear",
     metric: "R$ 4.101,24 em conversão",
     detail: "Campanhas com valor de conversão somado e 2.327 visualizações de página no recorte.",
   },
   {
     src: "/proofs/proof-vyria.png",
-    title: "Operação de alimentação",
+    title: "Solaria Doceria",
     metric: "R$ 33.030,50 no mês",
     detail:
       "Painel de pedidos: item mais vendido com 1.002 unidades e faturamento mensal de R$ 33.030,50.",
@@ -349,14 +349,14 @@ export const methodSteps = [
 
 export const testimonials = [
   {
-    author: "Cliente — operação local",
+    author: "Rainha Marketing",
     source: "WhatsApp",
     quote:
       "Batemo o Megapiso na primeira quinzena, ajustei 20% para cima e finalizamos o mês com recorde em vendas, pedidos e ticket médio.",
     image: "/proofs/proof-whatsapp-recorde.png",
   },
   {
-    author: "Feedback de mês",
+    author: "Marcelo Antonio Imóveis",
     source: "WhatsApp",
     quote:
       "256 conversas, 183 conversões, R$ 23.800 no WhatsApp e R$ 29.200 no site. Recorde de vendas.",
@@ -406,7 +406,7 @@ export const posts = [
 export const resultOps = [
   {
     slug: "ecommerce-volume",
-    title: "E-commerce local",
+    title: "Briston Wear",
     segment: "Varejo",
     challenge:
       "Venda online sem leitura clara de ticket, volume e criativo que realmente fecha.",
@@ -417,8 +417,8 @@ export const resultOps = [
   },
   {
     slug: "roas-lucro",
-    title: "Mídia com lucro",
-    segment: "Varejo",
+    title: "Focopill — mídia com lucro",
+    segment: "Saúde",
     challenge:
       "Investimento em anúncio que gerava clique, mas a conta de margem não aparecia no relatório.",
     action:
@@ -428,7 +428,7 @@ export const resultOps = [
   },
   {
     slug: "alimentacao-mes",
-    title: "Alimentação e delivery",
+    title: "Solaria Doceria",
     segment: "Alimentação",
     challenge:
       "Cardápio forte, operação no improviso: o item que mais saía não virava estratégia de mídia e de pedido.",
@@ -439,8 +439,8 @@ export const resultOps = [
   },
   {
     slug: "checkout-conversao",
-    title: "Checkout de alta conversão",
-    segment: "Varejo",
+    title: "Focopill — checkout",
+    segment: "Saúde",
     challenge:
       "Tráfego chegava e o pedido morria no funil de dados, entrega e pagamento.",
     action:
@@ -450,7 +450,7 @@ export const resultOps = [
   },
   {
     slug: "whatsapp-recorde",
-    title: "Comercial no WhatsApp",
+    title: "Rainha Marketing",
     segment: "Serviços",
     challenge:
       "Meta do mês travada. Time comercial sem previsibilidade e sem leitura de piso.",
@@ -461,8 +461,8 @@ export const resultOps = [
   },
   {
     slug: "whatsapp-site",
-    title: "Leads que fecham",
-    segment: "Serviços",
+    title: "Marcelo Antonio Imóveis",
+    segment: "Imobiliário",
     challenge:
       "Conversas demais, fechamento de menos. Site e WhatsApp desconectados.",
     action:
