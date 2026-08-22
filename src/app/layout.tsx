@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin", "latin-ext"],
-  weight: ["500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
   preload: true,
@@ -73,7 +73,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable} antialiased bg-ink text-cream`}>
+      <body className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable} antialiased bg-arcano-bg text-arcano-text`}>
         <JsonLd />
         <Header />
         <ScrollProgress />

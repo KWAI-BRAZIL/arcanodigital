@@ -22,7 +22,7 @@ export function ProofGallery({
       <div
         className={
           compact
-            ? "-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2"
+            ? "-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2"
             : "grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
         }
       >
@@ -33,23 +33,27 @@ export function ProofGallery({
             onClick={() => setActive(i)}
             className={
               compact
-                ? "panel w-[min(78%,320px)] shrink-0 snap-start overflow-hidden text-left sm:w-[280px]"
-                : "panel group overflow-hidden text-left"
+                ? "w-[85vw] shrink-0 snap-start overflow-hidden rounded-lg border border-arcano-line bg-arcano-surface text-left shadow-lg shadow-black/40 sm:w-[380px]"
+                : "overflow-hidden rounded-lg border border-arcano-line bg-arcano-surface text-left shadow-lg shadow-black/40"
             }
           >
-            <div className="relative aspect-[4/5] overflow-hidden bg-[#111] sm:aspect-[3/4]">
+            <div className="relative aspect-[4/5] overflow-hidden bg-arcano-bg sm:aspect-[3/4]">
               <Image
                 src={item.src}
                 alt={item.title}
                 fill
                 unoptimized
-                sizes="(min-width: 1024px) 360px, 90vw"
-                className="object-contain object-top"
+                sizes="(min-width: 1024px) 360px, 85vw"
+                className="rounded-md object-contain object-top"
               />
             </div>
             <div className="p-4">
-              <p className="text-[11px] uppercase tracking-[0.22em] text-gold">{item.metric}</p>
-              <p className="mt-1 font-display text-xl text-cream">{item.title}</p>
+              <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-gold">
+                {item.metric}
+              </p>
+              <p className="mt-1 font-display text-xl font-medium tracking-[-0.03em] text-cream">
+                {item.title}
+              </p>
               <p className="mt-2 text-sm leading-relaxed text-muted">{item.detail}</p>
             </div>
           </button>
@@ -67,12 +71,12 @@ export function ProofGallery({
               width={1600}
               height={2000}
               unoptimized
-              className="max-h-[80vh] w-full object-contain"
+              className="max-h-[80vh] w-full rounded-md object-contain shadow-lg shadow-black/40"
             />
             <p className="mt-3 text-center text-sm text-muted">{selected.detail}</p>
             <button
               type="button"
-              className="gold-btn mt-4 w-full rounded-sm py-2 text-[11px] uppercase tracking-[0.2em]"
+              className="gold-btn mt-4 w-full rounded-lg py-2 text-[11px] uppercase tracking-[0.2em]"
               onClick={() => setActive(null)}
             >
               Fechar

@@ -1,20 +1,22 @@
-import Image from "next/image";
 import Link from "next/link";
+import { Logo } from "@/components/Logo";
 import { site, whatsappUrl } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="border-t border-line bg-ink-2">
+    <footer className="border-t border-arcano-line bg-arcano-surface">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
-          <Image src="/brand/logo.png" alt="Arcano Digital" width={180} height={72} className="h-14 w-auto" />
+          <Logo size="md" />
           <p className="mt-4 max-w-md text-sm leading-relaxed text-muted">
             {site.positioning}
           </p>
-          <p className="mt-4 text-[11px] uppercase tracking-[0.28em] text-gold">{site.tagline}</p>
+          <p className="mt-4 font-sans text-[11px] font-medium uppercase tracking-[0.28em] text-gold">
+            {site.tagline}
+          </p>
         </div>
         <div>
-          <p className="text-[11px] uppercase tracking-[0.22em] text-gold">Mapa</p>
+          <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-gold">Mapa</p>
           <div className="mt-4 flex flex-col gap-2 text-sm text-muted">
             <Link href="/sobre" className="hover:text-cream">Sobre</Link>
             <Link href="/solucoes" className="hover:text-cream">Soluções</Link>
@@ -25,7 +27,7 @@ export function Footer() {
           </div>
         </div>
         <div>
-          <p className="text-[11px] uppercase tracking-[0.22em] text-gold">Atuação</p>
+          <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-gold">Atuação</p>
           <div className="mt-4 space-y-2 text-sm text-muted">
             <Link href="/goiania" className="block hover:text-cream">Goiânia</Link>
             <Link href="/brasilia" className="block hover:text-cream">Brasília</Link>
@@ -40,7 +42,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-line py-5 text-center text-[11px] uppercase tracking-[0.18em] text-muted">
+      <div className="border-t border-arcano-line py-5 text-center font-sans text-[11px] uppercase tracking-[0.18em] text-muted">
         © {new Date().getFullYear()} {site.name} · {site.legalName}
       </div>
     </footer>

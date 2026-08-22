@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { Logo } from "@/components/Logo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -22,18 +22,9 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-ink/80 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-arcano-line bg-arcano-bg/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
-        <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <Image
-            src="/brand/logo.png"
-            alt="Arcano Digital"
-            width={160}
-            height={64}
-            className="h-11 w-auto"
-            priority
-          />
-        </Link>
+        <Logo size="sm" onClick={() => setOpen(false)} />
         <nav className="hidden items-center gap-6 lg:flex">
           {links.map((link) => {
             const active = pathname === link.href;
@@ -54,7 +45,7 @@ export function Header() {
           href={whatsappUrl()}
           target="_blank"
           rel="noopener noreferrer"
-          className="gold-btn hidden rounded-sm px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] lg:inline-flex"
+          className="gold-btn hidden rounded-lg px-4 py-2 font-sans text-[11px] font-medium uppercase tracking-[0.18em] lg:inline-flex"
         >
           WhatsApp
         </a>
@@ -86,7 +77,7 @@ export function Header() {
               href={whatsappUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="gold-btn mt-2 inline-flex justify-center rounded-sm px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.18em]"
+              className="gold-btn mt-2 inline-flex justify-center rounded-lg px-4 py-3 font-sans text-[11px] font-medium uppercase tracking-[0.18em]"
             >
               Falar no WhatsApp
             </a>

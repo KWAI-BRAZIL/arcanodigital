@@ -1,21 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #0e1116;
-  --ink-2: #151920;
-  --ink-3: #1b2129;
-  --brass: #b8902a;
-  --gold: #b8902a;
-  --gold-bright: #c9a45a;
-  --gold-deep: #8a6a1a;
-  --teal: #3ea39a;
-  --cream: #ebe6d8;
-  --muted: #9a9486;
-  --line: rgba(184, 144, 42, 0.22);
-  --line-teal: rgba(62, 163, 154, 0.28);
+  --arcano-bg: #0b0a08;
+  --arcano-surface: #151310;
+  --arcano-surface-alt: #1c1915;
+  --arcano-gold: #d4a537;
+  --arcano-gold-muted: #8a7230;
+  --arcano-text: #f2efe9;
+  --arcano-text-muted: #a39c8e;
+  --arcano-line: rgba(242, 239, 233, 0.08);
+
+  --ink: var(--arcano-bg);
+  --ink-2: var(--arcano-surface);
+  --ink-3: var(--arcano-surface-alt);
+  --brass: var(--arcano-gold);
+  --gold: var(--arcano-gold);
+  --gold-bright: #e4c15a;
+  --gold-deep: var(--arcano-gold-muted);
+  --cream: var(--arcano-text);
+  --muted: var(--arcano-text-muted);
+  --line: var(--arcano-line);
 }
 
 @theme inline {
+  --color-arcano-bg: var(--arcano-bg);
+  --color-arcano-surface: var(--arcano-surface);
+  --color-arcano-surface-alt: var(--arcano-surface-alt);
+  --color-arcano-gold: var(--arcano-gold);
+  --color-arcano-gold-muted: var(--arcano-gold-muted);
+  --color-arcano-text: var(--arcano-text);
+  --color-arcano-text-muted: var(--arcano-text-muted);
+  --color-arcano-line: var(--arcano-line);
   --color-ink: var(--ink);
   --color-ink-2: var(--ink-2);
   --color-ink-3: var(--ink-3);
@@ -23,7 +38,6 @@
   --color-gold: var(--gold);
   --color-gold-bright: var(--gold-bright);
   --color-gold-deep: var(--gold-deep);
-  --color-teal: var(--teal);
   --color-cream: var(--cream);
   --color-muted: var(--muted);
   --color-line: var(--line);
@@ -51,8 +65,8 @@ html {
 }
 
 body {
-  background: var(--ink);
-  color: var(--cream);
+  background: var(--arcano-bg);
+  color: var(--arcano-text);
   font-family: var(--font-inter), system-ui, sans-serif;
 }
 
@@ -65,30 +79,26 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--brass);
+  outline: 2px solid var(--arcano-gold);
   outline-offset: 3px;
 }
 
 .gold-text {
-  background: linear-gradient(180deg, #e6d08a 0%, #b8902a 48%, #7a5c12 100%);
+  background: linear-gradient(180deg, #f0d78a 0%, #d4a537 48%, #8a7230 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-.teal-text {
-  color: var(--teal);
-}
-
 .gold-rule {
   height: 1px;
-  background: linear-gradient(90deg, transparent, #b8902a, transparent);
+  background: linear-gradient(90deg, transparent, var(--arcano-gold), transparent);
 }
 
 .gold-btn {
-  background: #b8902a;
+  background: var(--arcano-gold);
   color: #140f05;
-  box-shadow: 0 8px 24px rgba(184, 144, 42, 0.16);
+  box-shadow: 0 8px 24px rgba(212, 165, 55, 0.18);
 }
 
 .gold-btn:hover {
@@ -96,20 +106,16 @@ body {
 }
 
 .panel {
-  background: rgba(18, 22, 28, 0.55);
-  border: 1px solid rgba(184, 144, 42, 0.14);
-}
-
-.panel-teal {
-  border-color: var(--line-teal);
+  background: var(--arcano-surface);
+  border: 1px solid var(--arcano-line);
 }
 
 .reveal {
   opacity: 0;
-  transform: translate3d(0, 32px, 0);
+  transform: translate3d(0, 16px, 0);
   transition:
-    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
 }
 
 .reveal-in {
@@ -119,7 +125,7 @@ body {
 
 .snap-x {
   scrollbar-width: thin;
-  scrollbar-color: rgba(184, 144, 42, 0.4) transparent;
+  scrollbar-color: rgba(212, 165, 55, 0.35) transparent;
 }
 
 @keyframes orb-drift {

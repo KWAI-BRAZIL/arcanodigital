@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { DualPillars } from "@/components/DualPillars";
+import { Logo } from "@/components/Logo";
 import { ProofGallery } from "@/components/ProofGallery";
 import { CtaBand, GhostLink, Kicker, Title, WhatsAppCta } from "@/components/ui";
 import { aggregateStats, stats } from "@/lib/content";
@@ -26,16 +26,9 @@ export function LocalMarketPage({ market }: { market: LocalMarket }) {
               <GhostLink href="/cases">Ver portfólio</GhostLink>
             </div>
           </div>
-          <div className="panel relative overflow-hidden p-4">
-            <Image
-              src="/brand/logo.png"
-              alt="Arcano Digital"
-              width={720}
-              height={480}
-              className="h-auto w-full"
-              priority
-            />
-            <p className="mt-3 text-center font-mono text-[11px] uppercase tracking-[0.28em] text-gold">
+          <div className="flex flex-col items-center justify-center rounded-lg border border-arcano-line bg-arcano-surface p-10">
+            <Logo size="lg" href={null} />
+            <p className="mt-6 text-center font-sans text-[11px] font-medium uppercase tracking-[0.28em] text-gold">
               {site.area}
             </p>
           </div>
