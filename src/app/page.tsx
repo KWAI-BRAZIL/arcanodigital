@@ -10,12 +10,12 @@ export default function HomePage() {
 
   return (
     <main>
-      <section className="grain relative overflow-hidden pt-28">
+      <section className="grain relative overflow-x-hidden pt-28">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(201,162,39,0.12),transparent_42%)]" />
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-16 pt-10 md:grid-cols-[1.15fr_0.85fr] md:pb-24">
           <div>
             <Kicker>Goiânia · Senador Canedo · Goiás</Kicker>
-            <h1 className="mt-5 font-display text-4xl leading-[1.1] text-cream md:text-6xl">
+            <h1 className="mt-5 font-display text-4xl leading-[1.2] text-cream md:text-6xl">
               {site.positioning}
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg">
