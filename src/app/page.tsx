@@ -16,16 +16,17 @@ export default function HomePage() {
     <main>
       <section className="relative overflow-x-hidden pt-28 md:pt-36">
         <div className="hero-orb pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_-10%,rgba(184,144,42,0.07),transparent_55%)]" />
-        <div className="mx-auto max-w-3xl px-5 pb-16 text-center md:pb-24">
+        <div className="mx-auto max-w-4xl px-5 pb-16 text-center md:pb-24">
           <Reveal>
             <Kicker>Goiânia · Brasília · Caldas Novas</Kicker>
-            <h1 className="mt-6 font-display text-[2rem] font-semibold leading-[1.18] text-cream sm:text-5xl md:text-[3.5rem]">
-              O que faz sua cliente comprar. O que faz o sistema aguentar a demanda.
+            <h1 className="mt-6 font-display text-[1.85rem] font-semibold leading-[1.18] text-cream sm:text-[2.6rem] md:text-[3.15rem]">
+              Marketing e engenharia de software, na mesma equipe, para negócios que não
+              têm tempo pra terceirizar tentativa e erro.
             </h1>
-            <p className="mx-auto mt-6 max-w-xl text-[15px] leading-[1.75] text-muted md:text-lg">
-              Marketing com neuromarketing, tráfego pago e branding — e desenvolvimento de
-              software sob medida, sistemas e automações. Uma operação só, para negócios que
-              não podem parar de vender.
+            <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-[1.75] text-muted md:text-lg">
+              Neuromarketing, tráfego pago e branding para decidir a compra. Sistemas sob
+              medida e automações para sustentar essa decisão na operação. Uma agência, os
+              dois lados resolvidos — em Goiânia, Brasília e Caldas Novas.
             </p>
             <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
               <WhatsAppCta className="w-full sm:w-auto">Quero um diagnóstico gratuito</WhatsAppCta>
