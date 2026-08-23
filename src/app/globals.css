@@ -1,38 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #ffffff;
-  --paper-2: #f6f6f4;
-  --void: #1a1a1f;
-  --panel: #ffffff;
-  --panel-2: #f6f6f4;
-  --gold: #9a6b12;
-  --gold-soft: #b45309;
-  --tech: #44403c;
-  --lilac: #57534e;
-  --ivory: #fafafa;
-  --mist: #57534e;
-  --rule: rgba(26, 26, 31, 0.1);
+  --paper: #0d0f14;
+  --paper-2: #000000;
+  --void: #000000;
+  --panel: #12141c;
+  --panel-2: #0d0f14;
+  --gold: #e1a954;
+  --gold-soft: #f3d29a;
+  --tech: #b5b7be;
+  --lilac: #b5b7be;
+  --ivory: #f5f5f5;
+  --mist: #b5b7be;
+  --rule: rgba(181, 183, 190, 0.16);
 
   --arcano-bg: var(--paper);
   --arcano-surface: var(--panel);
   --arcano-surface-alt: var(--panel-2);
   --arcano-gold: var(--gold);
-  --arcano-gold-muted: #8a6a12;
+  --arcano-gold-muted: #c48a3a;
   --arcano-tech: var(--tech);
-  --arcano-tech-deep: #3d5a70;
+  --arcano-tech-deep: #8e9199;
   --arcano-text: var(--ivory);
   --arcano-text-muted: var(--mist);
   --arcano-line: var(--rule);
 
-  --ink: var(--void);
-  --ink-2: var(--panel-2);
-  --ink-3: #ece9e2;
+  --ink: var(--ivory);
+  --ink-2: var(--panel);
+  --ink-3: #1a1d26;
   --brass: var(--gold);
   --gold-bright: var(--gold-soft);
   --gold-deep: var(--arcano-gold-muted);
-  --cream: #1a1a1f;
-  --muted: #5c5c66;
+  --cream: #f5f5f5;
+  --muted: #b5b7be;
   --line: var(--rule);
 }
 
@@ -68,8 +68,8 @@
   --color-cream: var(--cream);
   --color-muted: var(--muted);
   --color-line: var(--line);
-  --font-display: var(--font-fraunces);
-  --font-sans: var(--font-inter);
+  --font-display: var(--font-raleway);
+  --font-sans: var(--font-raleway);
   --font-mono: var(--font-jetbrains);
 }
 
@@ -95,43 +95,27 @@ html {
 body {
   background: var(--paper);
   color: var(--cream);
-  font-family: var(--font-inter), system-ui, sans-serif;
-}
-
-body::before {
-  display: none;
+  font-family: var(--font-raleway), system-ui, sans-serif;
 }
 
 .island-dark {
-  --cream: #f4f0e8;
-  --muted: #b4b0aa;
-  --mist: #b4b0aa;
-  --paper: #1a1a1f;
-  --paper-2: #24242b;
-  --panel: #24242b;
-  --line: rgba(244, 240, 232, 0.14);
-  --rule: rgba(244, 240, 232, 0.14);
-  background: #1a1a1f;
-  color: #f4f0e8;
+  --paper: #000000;
+  --paper-2: #0d0f14;
+  --panel: #12141c;
+  --line: rgba(181, 183, 190, 0.14);
+  --rule: rgba(181, 183, 190, 0.14);
+  background: #000000;
+  color: #f5f5f5;
 }
 
 .island-dark .panel,
 .island-dark .glass {
-  background: #24242b;
-  border-color: rgba(244, 240, 232, 0.14);
-}
-
-.island-dark .gold-btn {
-  background: #f4f0e8;
-  color: #1a1a1f;
-}
-
-.island-dark .gold-btn:hover {
-  background: #fff;
+  background: rgba(13, 15, 20, 0.72);
+  border-color: rgba(225, 169, 84, 0.22);
 }
 
 .font-display {
-  font-family: var(--font-display), "Palatino Linotype", Palatino, "Times New Roman", serif;
+  font-family: var(--font-display), system-ui, sans-serif;
 }
 
 .font-mono {
@@ -149,36 +133,49 @@ body::before {
 
 .gold-rule {
   height: 1px;
-  background: var(--rule);
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
 .gold-btn {
-  background: #1a1a1f;
-  color: #fff;
-  transition: background 0.2s ease;
+  background: var(--gold);
+  color: #0d0f14;
+  transition: background 0.2s ease, filter 0.2s ease;
   box-shadow: none;
 }
 
 .gold-btn:hover {
-  background: #2a2a30;
+  background: #f3d29a;
 }
 
 .glass {
-  background: #fff;
-  border: 1px solid rgba(26, 26, 31, 0.1);
+  background: rgba(18, 20, 28, 0.72);
+  border: 1px solid rgba(225, 169, 84, 0.22);
+  backdrop-filter: blur(16px);
 }
 
 .panel {
-  background: #ffffff;
-  border: 1px solid rgba(26, 26, 31, 0.1);
+  background: rgba(18, 20, 28, 0.88);
+  border: 1px solid rgba(181, 183, 190, 0.16);
   transition: border-color 0.2s ease;
 }
 
 .panel:hover {
-  border-color: rgba(26, 26, 31, 0.22);
+  border-color: rgba(225, 169, 84, 0.45);
+}
+
+.pattern-neural {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='180' fill='none'><path d='M0 40c80 30 140-20 220 10s140 40 200-10 140-20 220 16' stroke='%23E1A954' stroke-opacity='.28' stroke-width='1.2'/><path d='M0 90c90-24 150 28 240 4s150-36 220 8 120 20 180-12' stroke='%23E1A954' stroke-opacity='.2' stroke-width='1.2'/><path d='M0 140c70 18 160-30 250-8s170 34 230-6 110-10 160 14' stroke='%23B5B7BE' stroke-opacity='.18' stroke-width='1.1'/><circle cx='220' cy='50' r='2.2' fill='%23E1A954' fill-opacity='.55'/><circle cx='460' cy='84' r='2' fill='%23E1A954' fill-opacity='.4'/></svg>");
+  background-repeat: repeat-x;
+  background-size: 640px 180px;
+}
+
+.pattern-circuit {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='160' fill='none'><path d='M0 30h180l20 20h80' stroke='%23B5B7BE' stroke-opacity='.28' stroke-width='1.1'/><path d='M0 70h90l24-16h140l18 18h120' stroke='%23B5B7BE' stroke-opacity='.22' stroke-width='1.1'/><path d='M40 110h200l16 16h180' stroke='%23E1A954' stroke-opacity='.18' stroke-width='1.1'/><circle cx='200' cy='50' r='3' stroke='%23B5B7BE' stroke-opacity='.4'/><circle cx='352' cy='72' r='3' stroke='%23B5B7BE' stroke-opacity='.35'/><circle cx='436' cy='126' r='3' stroke='%23E1A954' stroke-opacity='.35'/></svg>");
+  background-repeat: repeat-x;
+  background-size: 640px 160px;
 }
 
 .snap-x {
   scrollbar-width: thin;
-  scrollbar-color: rgba(212, 160, 23, 0.4) rgba(245, 243, 238, 0.8);
+  scrollbar-color: rgba(225, 169, 84, 0.45) rgba(13, 15, 20, 0.8);
 }

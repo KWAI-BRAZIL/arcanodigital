@@ -1,7 +1,7 @@
 export const site = {
   name: "Arcano Solutions",
   legalName: "Arcano Solutions Ltda",
-  tagline: "Estratégia · Percepção · Resultados",
+  tagline: "Da mente ao código",
   positioning:
     "Neuromarketing que decide a venda — e sistemas que aguentam o volume quando a venda entra.",
   city: "Goiânia",

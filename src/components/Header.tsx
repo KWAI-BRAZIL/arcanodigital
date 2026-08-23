@@ -22,9 +22,9 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-white">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-paper/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 md:px-5">
-        <Logo size="sm" onLight onClick={() => setOpen(false)} />
+        <Logo size="sm" onClick={() => setOpen(false)} />
         <nav className="hidden items-center gap-6 lg:flex">
           {links.map((link) => {
             const active = pathname === link.href;
@@ -61,7 +61,7 @@ export function Header() {
         </button>
       </div>
       {open ? (
-        <div className="border-t border-line bg-white px-4 py-4 lg:hidden">
+        <div className="border-t border-line bg-paper px-4 py-4 lg:hidden">
           <div className="flex flex-col gap-2">
             {links.map((link) => (
               <Link

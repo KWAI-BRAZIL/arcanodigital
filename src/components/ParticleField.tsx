@@ -29,11 +29,11 @@ function TechMesh({ id }: { id: string }) {
       detectRetina: true,
       particles: {
         number: { value: dense ? 56 : 24, density: { enable: true, width: 1100, height: 760 } },
-        color: { value: ["#D4A017", "#E8D5F5"] },
+        color: { value: ["#E1A954", "#B5B7BE"] },
         shape: { type: "circle" },
         links: {
           enable: true,
-          color: "#C4B5E0",
+          color: "#B5B7BE",
           distance: dense ? 110 : 80,
           opacity: 0.12,
           width: 0.5,

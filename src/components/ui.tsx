@@ -76,7 +76,7 @@ export function GhostLink({
 
 export function CtaBand() {
   return (
-    <section id="shot-cta" className="border-t border-line bg-white px-5 py-20 md:py-28">
+    <section id="shot-cta" className="border-t border-line bg-paper px-5 py-20 md:py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2">
         <div className="relative aspect-[16/10] overflow-hidden rounded-md border border-line">
           <Image src="/photos/photo-workshop.png" alt="" fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" />

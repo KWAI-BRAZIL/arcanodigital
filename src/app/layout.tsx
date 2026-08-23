@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Raleway } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/Header";
@@ -9,19 +9,10 @@ import { JsonLd } from "@/components/JsonLd";
 import { ScrollProgressBar } from "@/components/ScrollImmersion";
 import { site } from "@/lib/site";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const raleway = Raleway({
+  variable: "--font-raleway",
   subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  display: "swap",
-  preload: true,
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
   preload: true,
 });
@@ -57,7 +48,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: "Arcano Solutions — marketing e sistemas para negócios locais",
     description: site.positioning,
-    images: [{ url: "/brand/logo.png", width: 1200, height: 630, alt: "Arcano Solutions" }],
+    images: [{ url: "/brand/logo.png", width: 1024, height: 819, alt: "Arcano Solutions" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -74,7 +65,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable} antialiased bg-white text-cream`}>
+      <body className={`${raleway.variable} ${jetbrains.variable} antialiased bg-paper text-cream`}>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-7HG8L6QWN9" strategy="afterInteractive" />
         <Script id="google-gtag" strategy="afterInteractive">
           {`

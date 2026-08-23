@@ -38,11 +38,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="shot-pilares" className="relative bg-white py-24 md:py-36">
+      <section id="shot-pilares" className="relative bg-paper py-24 md:py-36">
         <div className="mx-auto max-w-6xl px-5">
           <Reveal>
             <Kicker>O que fazemos</Kicker>
-            <Title>Duas frentes. Uma operação.</Title>
+            <Title>Três pilares. Uma operação.</Title>
             <p className="mt-5 max-w-xl text-[15px] leading-[1.75] text-muted md:text-base">
               Marketing que constrói a decisão de compra. Desenvolvimento que sustenta essa
               decisão no dia a dia do negócio.
@@ -122,7 +122,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="shot-cidades" className="relative bg-white py-24 md:py-36">
+      <section id="shot-cidades" className="relative bg-paper py-24 md:py-36">
         <div className="mx-auto max-w-6xl px-5">
           <Reveal>
             <Kicker>Três praças</Kicker>

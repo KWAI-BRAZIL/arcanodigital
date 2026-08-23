@@ -15,11 +15,11 @@ export function ScrollImmersion() {
   return (
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden>
       <motion.div
-        className="absolute -left-24 top-[12%] h-[42vw] max-h-[520px] w-[42vw] max-w-[520px] rounded-full bg-[radial-gradient(circle,rgba(212,165,55,0.16),transparent_68%)]"
+        className="absolute -left-24 top-[12%] h-[42vw] max-h-[520px] w-[42vw] max-w-[520px] rounded-full bg-[radial-gradient(circle,rgba(225,169,84,0.16),transparent_68%)]"
         style={{ y: ySlow, opacity: glow }}
       />
       <motion.div
-        className="absolute -right-32 top-[48%] h-[36vw] max-h-[440px] w-[36vw] max-w-[440px] rounded-full bg-[radial-gradient(circle,rgba(79,138,184,0.2),transparent_70%)]"
+        className="absolute -right-32 top-[48%] h-[36vw] max-h-[440px] w-[36vw] max-w-[440px] rounded-full bg-[radial-gradient(circle,rgba(181,183,190,0.16),transparent_70%)]"
         style={{ y: yFast, opacity: glow }}
       />
     </div>

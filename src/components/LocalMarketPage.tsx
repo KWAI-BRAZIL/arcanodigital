@@ -33,7 +33,7 @@ export function LocalMarketPage({ market }: { market: LocalMarket }) {
               <Image src="/photos/photo-store.png" alt="" fill className="object-cover" sizes="40vw" />
             </div>
             <div className="flex flex-col items-center p-8">
-            <Logo size="lg" href={null} onLight />
+            <Logo size="lg" href={null} />
             <p className="mt-6 text-center font-sans text-[11px] font-medium uppercase tracking-[0.16em] text-muted">
               {site.area}
             </p>

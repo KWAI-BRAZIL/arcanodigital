@@ -7,23 +7,27 @@ import Image from "next/image";
 
 export function HomeHero() {
   return (
-    <section id="shot-hero" className="bg-white pt-28 md:pt-32">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 md:grid-cols-2 md:pb-24">
+    <section id="shot-hero" className="relative overflow-hidden bg-paper pt-28 md:pt-32">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-48 pattern-neural opacity-70" aria-hidden />
+      <div className="relative z-[1] mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 md:grid-cols-2 md:pb-24">
         <div>
           <HeroEntrance>
-            <Kicker>Goiânia · Brasília · Caldas Novas</Kicker>
+            <Kicker>Neuromarketing · Marketing · Software</Kicker>
+            <p className="mt-3 font-sans text-[12px] font-semibold uppercase tracking-[0.28em] text-gold">
+              Da mente ao código
+            </p>
           </HeroEntrance>
           <HeroEntrance delay={0.08}>
             <h1 className="mt-5 font-display text-[1.85rem] font-semibold leading-[1.15] tracking-[-0.03em] text-cream sm:text-4xl md:text-[2.75rem]">
-              Marketing e engenharia de software, na mesma equipe, para negócios que não
-              têm tempo pra terceirizar tentativa e erro.
+              Neuromarketing e engenharia de software, na mesma equipe, para negócios que não
+              podem perder mais tempo e dinheiro testando agência atrás de agência.
             </h1>
           </HeroEntrance>
           <HeroEntrance delay={0.16}>
             <p className="mt-6 max-w-xl text-[16px] leading-[1.75] text-muted">
-              Neuromarketing, tráfego pago e branding para decidir a compra. Sistemas sob
-              medida e automações para sustentar essa decisão na operação. Uma agência, os
-              dois lados resolvidos — em Goiânia, Brasília e Caldas Novas.
+              Aplicamos princípios de comportamento do consumidor ao seu marketing e engenharia
+              de verdade à sua operação. Decisão de compra e capacidade de sustentar ela,
+              resolvidas juntas. Em Goiânia, Brasília e Caldas Novas.
             </p>
           </HeroEntrance>
           <HeroEntrance delay={0.24}>

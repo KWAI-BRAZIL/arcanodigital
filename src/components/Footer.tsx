@@ -4,16 +4,19 @@ import { site, whatsappUrl } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="island-dark relative z-[1]">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-4">
+    <footer className="island-dark relative z-[1] pattern-circuit">
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-5 py-14 md:flex-row md:items-center md:justify-between">
+        <Logo size="md" />
+        <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-ivory">
+          Neuromarketing · Marketing · Software
+        </p>
+        <p className="font-sans text-[12px] font-semibold uppercase tracking-[0.28em] text-gold">
+          {site.tagline}.
+        </p>
+      </div>
+      <div className="mx-auto grid max-w-6xl gap-10 border-t border-line px-5 py-10 md:grid-cols-4">
         <div className="md:col-span-2">
-          <Logo size="md" />
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-muted">
-            {site.positioning}
-          </p>
-          <p className="mt-4 font-sans text-[11px] font-medium uppercase tracking-[0.16em] text-muted">
-            {site.tagline}
-          </p>
+          <p className="max-w-md text-sm leading-relaxed text-muted">{site.positioning}</p>
         </div>
         <div>
           <p className="font-sans text-[11px] font-medium uppercase tracking-[0.16em] text-cream">Mapa</p>

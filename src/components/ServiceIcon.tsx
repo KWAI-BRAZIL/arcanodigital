@@ -40,6 +40,15 @@ function iconPath(slug: string) {
           <path d="M10 10h.01M14 10h.01M10.5 13.2c.8.7 2.2.7 3 0" />
         </>
       );
+    case "marketing-estrategico":
+      return (
+        <>
+          <circle cx="12" cy="12" r="7" />
+          <circle cx="12" cy="12" r="3.2" />
+          <path d="M12 5v2.2M19 12h-2.2M12 19v-2.2M5 12h2.2" />
+          <path d="M16.2 7.8 14.6 9.4" />
+        </>
+      );
     case "trafego-pago":
       return (
         <>
