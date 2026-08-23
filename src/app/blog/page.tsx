@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ServiceIcon } from "@/components/ServiceIcon";
-import { CtaBand, Kicker, Title } from "@/components/ui";
+import { CtaBand, Kicker, PageTitle } from "@/components/ui";
 import { posts } from "@/lib/content";
 
 function postIcon(slug: string) {
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <main className="pt-28">
-      <section className="mx-auto max-w-6xl px-5 py-24 md:py-36">
+    <main>
+      <section className="mx-auto max-w-6xl px-5 pt-28 pb-16 md:pt-32 md:pb-24">
         <Kicker>Conteúdo</Kicker>
-        <Title>
+        <PageTitle>
           Neuromarketing para quem <span className="gold-text">vende na cidade.</span>
-        </Title>
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
+        </PageTitle>
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
           {posts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="panel p-6 hover:border-gold/50">
               <ServiceIcon slug={postIcon(post.slug)} />

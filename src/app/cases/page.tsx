@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { CasesBoard } from "@/components/CasesBoard";
-import { CtaBand, Kicker, Title } from "@/components/ui";
+import { CtaBand, Kicker, PageLead, PageTitle } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Cases e resultados",
@@ -10,17 +10,17 @@ export const metadata: Metadata = {
 
 export default function CasesPage() {
   return (
-    <main className="pt-28">
-      <section className="mx-auto max-w-6xl px-5 py-24 md:py-36">
+    <main>
+      <section className="mx-auto max-w-6xl px-5 pt-28 pb-16 md:pt-32 md:pb-24">
         <Kicker>Cases / Resultados</Kicker>
-        <Title>
+        <PageTitle>
           Negócio local não é genérico. <span className="gold-text">O segmento importa.</span>
-        </Title>
-        <p className="mt-4 max-w-2xl text-muted">
+        </PageTitle>
+        <PageLead>
           Filtre por mercado. Cada recorte mostra desafio, ação, resultado numérico e
           o print da operação — mais as marcas que a Arcano atende em Goiás.
-        </p>
-        <div className="mt-12">
+        </PageLead>
+        <div className="mt-10">
           <CasesBoard />
         </div>
       </section>

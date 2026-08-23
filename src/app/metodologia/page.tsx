@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { CtaBand, Kicker, Title } from "@/components/ui";
+import { CtaBand, Kicker, PageLead, PageTitle } from "@/components/ui";
 import { methodSteps } from "@/lib/content";
 
 function StepMark({ n }: { n: string }) {
@@ -19,16 +19,16 @@ export const metadata: Metadata = {
 
 export default function MetodologiaPage() {
   return (
-    <main className="pt-28">
-      <section className="mx-auto max-w-6xl px-5 py-24 md:py-36">
+    <main>
+      <section className="mx-auto max-w-6xl px-5 pt-28 pb-16 md:pt-32 md:pb-24">
         <Kicker>Metodologia</Kicker>
-        <Title>
+        <PageTitle>
           Cinco etapas. <span className="gold-text">Nenhuma no escuro.</span>
-        </Title>
-        <p className="mt-4 max-w-2xl text-muted">
+        </PageTitle>
+        <PageLead>
           Feito para o dono que nunca contratou agência e precisa ver o processo antes
           de colocar verba. Neuromarketing entra na estratégia; o resto executa.
-        </p>
+        </PageLead>
         <div className="relative mt-10 aspect-[16/8] overflow-hidden rounded-md border border-line">
           <Image src="/photos/photo-workshop.png" alt="" fill className="object-cover" sizes="100vw" />
         </div>

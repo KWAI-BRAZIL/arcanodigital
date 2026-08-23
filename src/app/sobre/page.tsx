@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ServiceIcon } from "@/components/ServiceIcon";
-import { CtaBand, Kicker, Title } from "@/components/ui";
+import { CtaBand, Kicker, PageTitle } from "@/components/ui";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 
 export default function SobrePage() {
   return (
-    <main className="pt-28">
-      <section className="mx-auto max-w-6xl px-5 py-24 md:py-36">
+    <main>
+      <section className="mx-auto max-w-6xl px-5 pt-28 pb-16 md:pt-32 md:pb-24">
         <Kicker>Sobre</Kicker>
-        <Title>
+        <PageTitle>
           Nascemos para o negócio local <span className="gold-text">parar de improvisar o mês.</span>
-        </Title>
-        <div className="mt-12 grid items-start gap-10 md:grid-cols-[1.15fr_0.85fr]">
+        </PageTitle>
+        <div className="mt-10 grid items-start gap-10 md:grid-cols-[1.15fr_0.85fr]">
           <div className="space-y-5 text-base leading-relaxed text-muted">
             <p>
               A Arcano Solutions existe porque a maior parte das empresas em Brasília,
@@ -47,10 +47,10 @@ export default function SobrePage() {
         </div>
       </section>
 
-      <section className="island-dark py-24 md:py-36">
+      <section className="island-dark py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-5">
           <Kicker>Como pensamos diferente</Kicker>
-          <h2 className="mt-3 max-w-3xl font-display text-3xl text-cream md:text-4xl">
+          <h2 className="mt-4 max-w-3xl font-display text-3xl font-medium tracking-[-0.035em] text-cream md:text-4xl">
             Gatilho mental e dado. O palpite fica de fora da reunião.
           </h2>
           <div className="mt-10 grid gap-4 md:grid-cols-3">
@@ -82,7 +82,7 @@ export default function SobrePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-24 md:py-36">
+      <section className="mx-auto max-w-6xl px-5 py-20 md:py-28">
         <Kicker>Como operamos</Kicker>
         <div className="mt-8 grid items-center gap-10 md:grid-cols-2">
           <div className="relative min-h-[280px] overflow-hidden rounded-md border border-line">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ServiceIcon } from "@/components/ServiceIcon";
-import { GhostLink, Kicker, Title, WhatsAppCta } from "@/components/ui";
+import { CtaBand, GhostLink, Kicker, PageTitle, WhatsAppCta } from "@/components/ui";
 import { services } from "@/lib/content";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -26,8 +26,8 @@ export default async function ServicePage({ params }: Props) {
   if (!service) notFound();
 
   return (
-    <main className="pt-28">
-      <section className="mx-auto max-w-3xl px-5 py-24 md:py-36">
+    <main>
+      <section className="mx-auto max-w-3xl px-5 pt-28 pb-16 md:pt-32 md:pb-24">
         <div className="mb-5">
           <ServiceIcon
             slug={service.slug}
@@ -36,8 +36,8 @@ export default async function ServicePage({ params }: Props) {
           />
         </div>
         <Kicker>Solução</Kicker>
-        <Title>{service.title}</Title>
-        <p className="mt-6 text-lg leading-relaxed text-muted">{service.description}</p>
+        <PageTitle>{service.title}</PageTitle>
+        <p className="mt-5 text-lg leading-relaxed text-muted">{service.description}</p>
         <div className="panel mt-10 p-6">
           <p className="text-[11px] uppercase tracking-[0.22em] text-gold">Para quem serve</p>
           <p className="mt-3 text-cream">{service.audience}</p>
@@ -57,6 +57,7 @@ export default async function ServicePage({ params }: Props) {
           <GhostLink href="/solucoes">Todas as soluções</GhostLink>
         </div>
       </section>
+      <CtaBand />
     </main>
   );
 }

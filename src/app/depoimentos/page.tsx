@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DeviceFrame } from "@/components/DeviceFrame";
 import { ProofGallery } from "@/components/ProofGallery";
-import { CtaBand, Kicker, Title } from "@/components/ui";
+import { CtaBand, Kicker, PageLead, PageTitle } from "@/components/ui";
 import { testimonials } from "@/lib/content";
 import Image from "next/image";
 
@@ -13,17 +13,17 @@ export const metadata: Metadata = {
 
 export default function DepoimentosPage() {
   return (
-    <main className="pt-28">
-      <section className="mx-auto max-w-6xl px-5 py-24 md:py-36">
+    <main>
+      <section className="mx-auto max-w-6xl px-5 pt-28 pb-16 md:pt-32 md:pb-24">
         <Kicker>Depoimentos</Kicker>
-        <Title>
+        <PageTitle>
           O empresário local confia no número. <span className="gold-text">Não no slogan.</span>
-        </Title>
-        <p className="mt-4 max-w-2xl text-muted">
+        </PageTitle>
+        <PageLead>
           WhatsApp, painel e checkout — recortes de operação com os mesmos indicadores
           que o cliente vê no mês.
-        </p>
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        </PageLead>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
           {testimonials.map((item) => (
             <article key={item.quote} className="panel overflow-hidden p-3">
               <DeviceFrame>
@@ -41,10 +41,12 @@ export default function DepoimentosPage() {
           ))}
         </div>
       </section>
-      <section className="island-dark border-t border-line py-16">
+      <section className="island-dark border-t border-line py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-5">
           <Kicker>Galeria de resultados</Kicker>
-          <h2 className="mt-3 font-display text-3xl text-cream">Todas as provas visuais</h2>
+          <h2 className="mt-4 font-display text-3xl font-medium tracking-[-0.035em] text-cream md:text-4xl">
+            Todas as provas visuais
+          </h2>
           <div className="mt-10">
             <ProofGallery />
           </div>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceIcon } from "@/components/ServiceIcon";
-import { Kicker, Title, WhatsAppCta } from "@/components/ui";
+import { Kicker, PageLead, PageTitle, WhatsAppCta } from "@/components/ui";
 import { site, whatsappUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -11,17 +11,17 @@ export const metadata: Metadata = {
 
 export default function ContatoPage() {
   return (
-    <main className="pt-28">
-      <section className="mx-auto max-w-6xl px-5 py-24 md:py-36">
+    <main>
+      <section className="mx-auto max-w-6xl px-5 pt-28 pb-16 md:pt-32 md:pb-24">
         <Kicker>Contato</Kicker>
-        <Title>
+        <PageTitle>
           O caminho é o WhatsApp. <span className="gold-text">Não um formulário genérico.</span>
-        </Title>
-        <p className="mt-4 max-w-xl text-muted">
+        </PageTitle>
+        <PageLead className="max-w-xl">
           Diagnóstico direto, sem fila de CRM de agência grande. Região de atuação:
           {` ${site.area}`}.
-        </p>
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        </PageLead>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
           <article className="panel p-8">
             <ServiceIcon slug="automacao" />
             <p className="mt-4 text-[11px] uppercase tracking-[0.22em] text-gold">WhatsApp</p>

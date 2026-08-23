@@ -182,27 +182,3 @@ body::before {
   scrollbar-width: thin;
   scrollbar-color: rgba(212, 160, 23, 0.4) rgba(245, 243, 238, 0.8);
 }
-
-@keyframes proof-marquee {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
-.proof-marquee {
-  animation: proof-marquee 48s linear infinite;
-  width: max-content;
-}
-
-.proof-marquee.is-paused {
-  animation-play-state: paused;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .proof-marquee {
-    animation: none;
-  }
-}

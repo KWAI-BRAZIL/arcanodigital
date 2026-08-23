@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { GhostLink, Kicker, Title } from "@/components/ui";
+import { CtaBand, GhostLink, Kicker, PageTitle } from "@/components/ui";
 import { posts } from "@/lib/content";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -22,10 +22,10 @@ export default async function PostPage({ params }: Props) {
   if (!post) notFound();
 
   return (
-    <main className="pt-28">
-      <article className="mx-auto max-w-3xl px-5 py-24 md:py-36">
+    <main>
+      <article className="mx-auto max-w-3xl px-5 pt-28 pb-16 md:pt-32 md:pb-24">
         <Kicker>{new Date(post.date).toLocaleDateString("pt-BR")}</Kicker>
-        <Title>{post.title}</Title>
+        <PageTitle>{post.title}</PageTitle>
         <div className="mt-8 space-y-5 text-base leading-relaxed text-muted">
           {post.body.map((p) => (
             <p key={p}>{p}</p>
@@ -35,6 +35,7 @@ export default async function PostPage({ params }: Props) {
           <GhostLink href="/blog">Voltar ao blog</GhostLink>
         </div>
       </article>
+      <CtaBand />
     </main>
   );
 }

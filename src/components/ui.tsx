@@ -12,9 +12,25 @@ export function Kicker({ children }: { children: React.ReactNode }) {
 
 export function Title({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="font-display text-3xl font-medium leading-tight tracking-[-0.04em] text-cream md:text-5xl">
+    <h2 className="mt-4 font-display text-3xl font-medium leading-tight tracking-[-0.04em] text-cream md:text-5xl">
       {children}
     </h2>
+  );
+}
+
+export function PageTitle({ children }: { children: React.ReactNode }) {
+  return (
+    <h1 className="mt-5 font-display text-3xl font-medium leading-tight tracking-[-0.04em] text-cream md:text-5xl">
+      {children}
+    </h1>
+  );
+}
+
+export function PageLead({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+  return (
+    <p className={`mt-5 max-w-2xl text-[15px] leading-[1.75] text-muted md:text-base ${className}`}>
+      {children}
+    </p>
   );
 }
 
