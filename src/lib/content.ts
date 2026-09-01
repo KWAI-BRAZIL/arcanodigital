@@ -544,28 +544,6 @@ export const resultOps = [
     result: "20,21% de conversão · R$ 9.472,63 no dia · ticket R$ 249,28",
     proof: "/proofs/proof-conversao.png",
   },
-  {
-    slug: "whatsapp-recorde",
-    title: "Rainha Marketing",
-    segment: "Serviços",
-    challenge:
-      "Meta do mês travada. Time comercial sem previsibilidade e sem leitura de piso.",
-    action:
-      "Oferta, follow-up e pressão positiva de meta com operação acompanhada de perto.",
-    result: "Megapiso na 1ª quinzena · meta +20% · recorde de vendas, pedidos e TM",
-    proof: "/proofs/proof-whatsapp-recorde.png",
-  },
-  {
-    slug: "whatsapp-site",
-    title: "Marcelo Antonio Imóveis",
-    segment: "Imobiliário",
-    challenge:
-      "Conversas demais, fechamento de menos. Site e WhatsApp desconectados.",
-    action:
-      "Roteiro, tráfego e leitura unificada de conversão entre conversa e site.",
-    result: "256 conversas · 183 conversões · R$ 53 mil no consolidado do mês",
-    proof: "/proofs/proof-whatsapp-feedback.png",
-  },
 ] as const;
 
 export const cityTriggers = [
