@@ -15,7 +15,7 @@ export const site = {
   email: "arcanodigital.com.br@gmail.com",
   cnpj: "63.745.900/0001-88",
   founder: "Nara Rubia",
-  url: "https://arcanosolutions.com.br",
+  url: "https://www.arcanosolutions.com.br",
 } as const;
 
 export function whatsappUrl(message?: string) {
